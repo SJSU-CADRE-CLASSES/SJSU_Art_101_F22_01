@@ -15,3 +15,6 @@ Class Website: https://github.com/ablanton/SJSU_ART_101_F22_01
 [GreenSheet](https://github.com/ablanton/SJSU_Art_101_F22_01/blob/master/GREENSHEET.md)
 | [Resources](https://github.com/ablanton/SJSU_Art_101_F22_01/blob/master/RESOURCES.md)
 | [Class Website](https://github.com/ablanton/SJSU_Art_101_F22_01)
+
+Resources
+---------
