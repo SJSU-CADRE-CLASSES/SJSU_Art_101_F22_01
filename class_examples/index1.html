@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <canvas id="newCanvas" width="300" height="150" style="border:1px solid #ffff00"></canvas>
+
+    <script>
+     let c = document.getElementById("newCanvas");
+     let ctxt = c.getContext("2d");
+     ctxt.beginPath();
+     ctxt.arc(100,75,50,0,2*Math.PI);
+     ctxt.stroke();  
+    </script>
+
+</head>
+
+<body>
+
+    <div id="myDiv">
+        hi
+    </div>
+
+</body>
+
+</html>
