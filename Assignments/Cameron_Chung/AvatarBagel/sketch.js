@@ -1,44 +1,54 @@
 let detailY;
 let c = 800;
-let d = 800
-
-//sensitivity fir orbit control
+let d = 800;
+  //sensitivity for orbit control
 let sesitivityX;
 let sensitivityY;
 let sensitivityZ;
+  //mic global
+let mic;
 
 function setup() {
   
   createCanvas(c, d, WEBGL);
+  
+  //audio setup
+  mic = new p5.AudioIn(); 
+  mic.start();
 
   //slider for bagel evolution
-  detailY = createSlider(0, 16, 0);
+  detailY = createSlider(0, 17, 0);
   detailY.position(10, height + 10);
   detailY.style('width', '800px');
 }
 
 function draw() {
-
+  
+  //mic.getLevel
+  micLevel = mic.getLevel();
+  
   //light and movement of background
-  background(190, 80, 100);
+  background(micLevel*2000, micLevel*1000, micLevel*1600);
   let radius = width * 1.5;
- // rotateX(frameCount * 0.007);
+  
+  //auto rotation
   rotateY(frameCount * 0.007);
-  ambientLight(30);
-  orbitControl(3, 3, 3);
+  ambientLight(10);
+  orbitControl(3,3,3);
 
   //point light
   let locX = mouseX - width / 2;
   let locY = mouseY - height / 2;
-  pointLight(255, 100, 120, locX, locY, 50);
+  pointLight(255, 100, 120, locX, locY, micLevel* 3000);
   specularMaterial(250);
   shininess(50);
   
   //personl bagel
-  torus(100, 50, detailY.value());
+  torus(windowWidth/10, 50, detailY.value());
   noStroke();
+  console.log(windowWidth)
 
-  //surrounding environment / movement
+  //surrounding environment / movement of surrounding torus
   for (let i = 0; i <= 12; i++) {
     for (let j = 0; j <= 12; j++) {
       push();
@@ -55,6 +65,8 @@ function draw() {
       torus(25, 10, detailY.value());
       }
       pop();
+      
+      
     }
   }
 }
