@@ -2,21 +2,48 @@ var firstBallSize = 50;
 var secondBall = 30;
 var thirdBall = 80;
 
+let count = 0;
+
+let test = [];
+
 let mic;
 
 function setup() {
   createCanvas(400, 400);
   mic = new p5.AudioIn();
   mic.start(); 
+  
+  test[1] = new SummonCircles(width/2, height/2, random(1));
+  test[2] = new SummonCircles(3, 3, random(1.5));
 }
 
 function draw() {
   micLevel = mic.getLevel();
-  fullPortrait();
+  
+  // New BG
+  if(mouseIsPressed){
+    count++;
+  }
+  if(count > 20){
+    background('rgba(10,122,122,0.01)');
+  
+  test[0] = new SummonCircles(random(width),random(height),micLevel);
+  
+  //test[1] = new SummonCircles(width/2, height/2, mic.getLevel());
+  
+  test[0].display();
+  test[1].display();
+  test[1].move();
+  test[2].display();
+  test[2].move();
+  }
+  else{
+    fullPortrait();
   head(random(10));
   console.log(micLevel); 
   star(micLevel);
   crossHairs();
+  }
   }
 
 function body(){
