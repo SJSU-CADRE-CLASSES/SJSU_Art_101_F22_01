@@ -12,7 +12,6 @@ let colorChange = false;
 
 let eyecolor = ["#030303","#EDF8E1", "#FAEDE2", "#FFFFFF" ];
 
-
 function setup() {
   let cnv = createCanvas(400, 400);
 
