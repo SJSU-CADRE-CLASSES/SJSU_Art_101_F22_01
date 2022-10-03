@@ -12,32 +12,33 @@ let colorChange = false;
 
 let eyecolor = ["#030303","#EDF8E1", "#FAEDE2", "#FFFFFF" ];
 
-
-function setup() {  
+function setup() {
   let cnv = createCanvas(400, 400);
+
+  createButton("Start").mousePressed(startSketch);
   cnv.mousePressed(userStartAudio);
   textAlign(CENTER);
   mic = new p5.AudioIn();
-  mic.start(); 
+  mic.start();
 }
 
 function draw() {
   background(244,172,183);
- 
+
   let x = width/2;
   let y = height*3/10;
-  
+
      if (count<360){
     count++
   }else if (count==360)(count=0);
-  
+
 //cursor following
   push();
   fill("#bde0fe")
   ellipse(mouseX, mouseY, 25)
   pop(close);
-  
-  
+
+
 //flower1
   push();
   scale(0.5);
@@ -46,7 +47,7 @@ function draw() {
   translate(p5.Vector.fromAngle(millis() / 1000, 40));
   flower(1,2,3);
   pop();
-  
+
   //flower2
   push();
   scale(0.9);
@@ -54,7 +55,7 @@ function draw() {
   translate(p5.Vector.fromAngle(millis() / 1000, 40));
   flower(4,3,4);
   pop();
-  
+
   //flower3
   push();
  scale(0.7);
@@ -62,7 +63,7 @@ function draw() {
   translate(p5.Vector.fromAngle(millis() / 700, 40));
   flower(6);
   pop();
-  
+
     //flower4
   push();
  scale(0.4);
@@ -70,8 +71,8 @@ function draw() {
   translate(p5.Vector.fromAngle(millis() / 1000, 40));
   flower(12,1.2,7);
   pop();
-  
-  
+
+
   //flower4
   push();
  scale(0.8);
@@ -79,46 +80,46 @@ translate(width*.9,height*1.1);
 translate(p5.Vector.fromAngle(millis() / 1000, 50));
   flower();
   pop();
-  
+
   Cupunderlayer();
-  
+
   angleMode(DEGREES)
-  
+
   milktea();
-  
+
  teatop();
-   
+
   straw();
- 
+
   Bubbles();
-  
+
  cupUpperlayer();
-  
+
   eyes(1.3);
-  
+
   mouth();
-  
+
  // console.log('my mouseX is:'+ mouseX);
  // console.log('my mouseY is:'+ mouseY);
-  
+
   myMap = map(mouseX,0,width,0,-10);
-  
+
 }
  function mousePressed(){
-   
+
    if(mouseX>width*0.5 &&
-      mouseX<width *0.7 && 
-      mouseY>height*0.2 && 
+      mouseX<width *0.7 &&
+      mouseY>height*0.2 &&
       mouseY<height*0.8){
-   console.log("mouse!");  
-   } 
+   console.log("mouse!");
+   }
    else if (mouseX<width*0.3||
              mouseX>width*0.9){
-        circleChange = !circleChange;    
+        circleChange = !circleChange;
        scaleChange = !scaleChange;
      colorChange =!colorChange;
               }
- } 
+ }
 
  function mouth (){
   push();
@@ -128,7 +129,7 @@ translate(p5.Vector.fromAngle(millis() / 1000, 50));
   ellipse(width/2, height*.70, m*600,m*400);
   pop();
 }
-  
+
 function flower(xpos,ypos,rot){
  if (colorChange == true){
   push();
@@ -142,7 +143,7 @@ function flower(xpos,ypos,rot){
   //orange circle
   fill(255, 165, 0)
   ellipse(18,4,70,70);
-  pop();   
+  pop();
  }
 }
 
@@ -159,12 +160,12 @@ function milktea(){
 }
 
 function teatop(){
-    //tea top  
+    //tea top
   ellipse(160,240,125.5,80);
    fill(254,254,254,250)
    ellipse(249,245,106,85);
 }
-  
+
 function straw (){
    //Straw
   push();
@@ -225,34 +226,33 @@ function cupUpperlayer(){
   vertex (width*0.7,height*1)
   vertex (width*0.3,height*1)
   endShape(close)
-  pop(); 
+  pop();
 }
 
 function eyes(){
   //eyes
-  push();  
+  push();
   fill(0)
   circle(width*.39,height*.55,65)
   circle(width*.62,height*.55,65)
- if(scaleChange == false){ 
+ if(scaleChange == false){
   fill(random(eyecolor))
    push();
    posX = constrain (mouseX,width*0.36, width*0.42)
    posY = constrain (mouseY, height*0.53, height*0.58)
   circle(posX,posY,35)
    pop();
-   
+
    push();
    posX = constrain (mouseX,width*0.59,width*0.65)
    posY = constrain (mouseY,height*0.53,height*0.58)
   circle(posX,posY,35)
- } 
+ }
 if(scaleChange == true){
- scale(0.97) 
+ scale(0.97)
   fill(255)
   circle(width*.39,height*.55,35)
-  circle(width*.62,height*.55,35) 
+  circle(width*.62,height*.55,35)
   pop();
-} 
-} 
-  
+}
+}
