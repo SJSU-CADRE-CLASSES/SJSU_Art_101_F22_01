@@ -36,7 +36,6 @@ function setup() {
   chainDownUpFromLeft[8] = new chainDownUpFromLeftClass(width*.0, height*1.80);
   chainDownUpFromLeft[9] = new chainDownUpFromLeftClass(width*-.1, height*1.90);
 
-
   chainDownUpFromRight[0] = new chainDownUpFromRightClass (width*-.1,height*1);
   chainDownUpFromRight[1] = new chainDownUpFromRightClass (width*0,height*1.10);
   chainDownUpFromRight[2] = new chainDownUpFromRightClass (width*.1,height*1.20);
