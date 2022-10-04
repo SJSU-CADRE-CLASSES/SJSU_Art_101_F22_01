@@ -14,13 +14,15 @@ function setup() {
   background(155);
   textSize(20);
   text("CLICK", width/2, height/2);
+
+  mousePressed();
 }
 
 function draw() {
   //background(200);
   //colors[0].display();
   //colors[0].getName();
-  //colors[0].getColor();
+  //colors[0].getColor(); 
 }
 
 function mousePressed() {
