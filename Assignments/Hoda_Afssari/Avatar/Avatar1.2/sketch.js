@@ -23,7 +23,7 @@ function setup() {
 
     sketchStarted = true
 
-    console.log(mic.getLevel());
+    console.log(mic.getLevel())
   }
   
   function draw() {
