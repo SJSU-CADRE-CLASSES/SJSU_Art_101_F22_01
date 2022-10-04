@@ -15,7 +15,7 @@ let eyecolor = ["#030303","#EDF8E1", "#FAEDE2", "#FFFFFF" ];
 function setup() {
   let cnv = createCanvas(400, 400);
 
-  createButton("Start").mousePressed(startSketch);
+  // createButton("Start").mousePressed(startSketch);
   cnv.mousePressed(userStartAudio);
   textAlign(CENTER);
   mic = new p5.AudioIn();
