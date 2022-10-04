@@ -20,7 +20,7 @@ function draw() {
   //background(200);
   //colors[0].display();
   //colors[0].getName();
-  //colors[0].getColor();
+  //colors[0].getColor(); 
 }
 
 function mousePressed() {
