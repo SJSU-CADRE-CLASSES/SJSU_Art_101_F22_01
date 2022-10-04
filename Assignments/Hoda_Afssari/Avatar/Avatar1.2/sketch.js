@@ -1,6 +1,6 @@
 //let count = 0
 let mic;
-let micLevel;
+//let micLevel;
 let sketchStarted = false
 function setup() {
     createCanvas(500,500);
@@ -23,7 +23,7 @@ function setup() {
 
     sketchStarted = true
 
-    console.log('sketch started')
+    console.log(mic.getLevel());
   }
   
   function draw() {
