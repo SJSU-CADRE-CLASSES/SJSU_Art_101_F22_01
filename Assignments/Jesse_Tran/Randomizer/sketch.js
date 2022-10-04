@@ -14,8 +14,6 @@ function setup() {
   background(155);
   textSize(20);
   text("CLICK", width/2, height/2);
-
-  mousePressed();
 }
 
 function draw() {
