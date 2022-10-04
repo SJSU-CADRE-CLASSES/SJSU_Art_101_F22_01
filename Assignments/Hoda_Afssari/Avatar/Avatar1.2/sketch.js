@@ -24,7 +24,7 @@ function setup() {
     sketchStarted = true
 
     console.log(mic.getLevel())
-    console.log('testing')
+    console.log('I'm testing')
   }
   
   function draw() {
