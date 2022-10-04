@@ -22,6 +22,8 @@ function setup() {
     mic.start();
 
     sketchStarted = true
+
+    console.log('sketch started')
   }
   
   function draw() {
