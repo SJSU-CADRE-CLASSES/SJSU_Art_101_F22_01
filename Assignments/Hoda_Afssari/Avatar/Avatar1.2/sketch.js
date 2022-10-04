@@ -22,6 +22,8 @@ function setup() {
     mic.start();
 
     sketchStarted = true
+
+    console.log('sketch started')
   }
   
   function draw() {
@@ -44,7 +46,7 @@ function setup() {
       legs();
       feet();
 
-      console.log(mic.getLevel());
+      console.log(mic.getLevel()*500);
 
     }
    
