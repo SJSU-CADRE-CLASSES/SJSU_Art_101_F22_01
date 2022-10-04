@@ -44,7 +44,7 @@ function setup() {
       legs();
       feet();
 
-      console.log(mic.getLevel());
+      console.log(mic.getLevel()*500);
 
     }
    
