@@ -7,9 +7,12 @@ function setup() {
   background (200);
 
 
-  console.log(dogs[0]);
+  console.log(dogs.length);
+
+
 }
 
 function draw () {
+    background (200);
 
 }
