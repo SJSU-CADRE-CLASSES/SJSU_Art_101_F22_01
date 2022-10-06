@@ -1,6 +1,6 @@
 //let count = 0
 let mic;
-//let micLevel;
+let micLevel;
 let sketchStarted = false
 function setup() {
     createCanvas(500,500);
@@ -22,9 +22,6 @@ function setup() {
     mic.start();
 
     sketchStarted = true
-
-    console.log(mic.getLevel())
-    console.log('testing')
   }
   
   function draw() {
@@ -38,7 +35,7 @@ function setup() {
       eyebrows();
       eyes();
       nose();
-      mouth(mic.getLevel());
+      mouth();
       body();
       pocket();
       smileyFace();
@@ -47,7 +44,7 @@ function setup() {
       legs();
       feet();
 
-      console.log(mic.getLevel()*500);
+      console.log(mic.getLevel()*500)
 
     }
    
@@ -174,11 +171,11 @@ function setup() {
     
   }
   
-  function mouth (mySound){
+  function mouth (){
    let x = width/2 //x=250
     let y = height/3.33 //y=150 
    push();
-    ellipse (width/2,height/2.85,width/20,mySound*500)
+   ellipse (width/2,height/2.85,width/20,micLevel*500)
     pop();
   }
   
