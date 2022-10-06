@@ -69,4 +69,3 @@ fill(a);
 function mouth(mouthX,mouthY){
 arc(mouthX,mouthY,width*.4,height*.3,0,PI);
 }
-
