@@ -1,12 +1,12 @@
 //card rarities
 let rare = [{
     name: "Common", nation: "Dragon" }, {
-    name: "Holo Rare", nation: Dark}, {
-    name: "Special Parallel", nation: Keter}, {
-    name: "Rare", nation: Stoicheia}, {
-    name: "Double Rare", nation: Brandt}, {
-    name: "Triple Rare", nation: Lyrical}, {
-    name: "DSR", nation: Drajeweled}]
+    name: "Holo Rare", nation: "Dark"}, {
+    name: "Special Parallel", nation: "Keter"}, {
+    name: "Rare", nation: "Stoicheia"}, {
+    name: "Double Rare", nation: "Brandt"}, {
+    name: "Triple Rare", nation: "Lyrical"}, {
+    name: "DSR", nation: "Drajeweled"}]
 
 let randomIndex;
 
