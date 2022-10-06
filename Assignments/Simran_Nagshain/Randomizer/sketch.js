@@ -1,15 +1,15 @@
 //dog's favorite colors
 
 let dogs = [{
-    name: "mowgli", color: "red"
+    name: "mowgli", color: "to run"
 }, {
-    name: "rico", color: "purple"
+    name: "rico", color: "to sleep"
 }, {
-    name: "scooby", color: "blue"
+    name: "scooby", color: "to play"
 }, {
-    name: "simba", color: "yellow"
+    name: "simba", color: "to eat"
 }, {
-    name: "coco", color: "green"
+    name: "coco", color: "to destroy things"
 }];
 let randomIndex;
 
