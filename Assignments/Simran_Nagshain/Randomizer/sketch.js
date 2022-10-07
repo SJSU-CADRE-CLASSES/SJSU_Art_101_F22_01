@@ -2,19 +2,19 @@
 
 let dogs = [{
     //red
-    name: "mowgli", color: "to run"
+    name: "mowgli", habit: "to run", color: 'red'
 }, {
     //purple
-    name: "rico", color: "to sleep"
+    name: "rico", habit: "to sleep", color: 'rgba(100%,0%,100%,0.5)'
 }, {
     //blue
-    name: "scooby", color: "to play"
+    name: "scooby", habit: "to play", color: 'rgb(0,0,255)'
 }, {
     //yellow
-    name: "simba", color: "to eat"
+    name: "simba", habit: "to eat", color: 'rgb(255,255,0)'
 }, {
     //green
-    name: "coco", color: "to destroy things"
+    name: "coco", habit: "to destroy things", color: 'rgb(0,255,0)'
 }];
 let randomIndex;
 
@@ -31,9 +31,12 @@ function draw () {
 
 }
 function mousePressed () {
-    background (random(200, 225));
+    clear();
     randomIndex = int(random (dogs.length));
+//    background (random(200, 225));
+    background (dogs[randomIndex].color);
+  
     text(dogs[randomIndex].name, 50, 50);
-    console.log ("likes", dogs[randomIndex].color);
-    dogs.splice(randomIndex, 1);
+    text(concat(" likes ", dogs[randomIndex].habit), 50 + 6 * dogs[randomIndex].name.length, 50);
+
 }
