@@ -35,7 +35,7 @@ function setup() {
       eyebrows();
       eyes();
       nose();
-      mouth(mic.getLevel());
+      mouth();
       body();
       pocket();
       smileyFace();
@@ -43,6 +43,8 @@ function setup() {
       hands();
       legs();
       feet();
+
+      console.log(mic.getLevel()*500)
 
     }
    
@@ -169,11 +171,11 @@ function setup() {
     
   }
   
-  function mouth (mySound){
+  function mouth (){
    let x = width/2 //x=250
     let y = height/3.33 //y=150 
    push();
-    ellipse (width/2,height/2.85,width/20,mySound*500)
+   ellipse (width/2,height/2.85,width/20,micLevel*500)
     pop();
   }
   
