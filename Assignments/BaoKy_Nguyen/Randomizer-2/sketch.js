@@ -1,21 +1,25 @@
 //Boba Milkteas
 let milkteas = [{
-  name: "brownSugar",
+  name: "Brown sugar boba milktea",
   color: "brown and black"
 }, {
-  name:"Matcha",
+  name:"Matcha latte",
   color:"green"
 }, {
-  name: "thaiTea",
+  name: "Thai tea",
   color: "orange"
 }, {
-  name: "fruitTea",
-  color:"colorful"
+  name: "Fruit tea",
+  color:"rainbow color"
 }];
 
-let mycolors = ["#cdb4db","#ffc8dd","#8BC34A", "#f4a261", "#bde0fe", "#ffc8dd","#ffb4a2","#bbd0ff", "#d0f4de"];
+let colorful = ["#cdb4db","#ffc8dd","#8BC34A", "#f4a261", "#bde0fe", "#ffc8dd","#ffb4a2","#bbd0ff", "#d0f4de"];
 
 let randomIndex;
+
+// let counter = 0
+
+let animating = false;
 
 function setup(){
   createCanvas(displayWidth,displayHeight);
@@ -23,6 +27,8 @@ function setup(){
   textSize(45);
 
   text("Click to Randomize", width/2, height/2);
+
+  // setTimeout(changeBackground,2000);
 //console.log("initial array is")
 //console.log(milkteas);
 
@@ -49,17 +55,39 @@ function setup(){
 }
 
 function draw(){
+  if(animating == true){
+    noStroke();
+    fill(random(colorful));
+    ellipse(random(width),random(height),random(10,300));
+  }
+}
 
+// function changeBackground(){
+//   if (counter <= 10){
+//     counter++;
+//   background(random(230),random(250),random(200));
+//   setTimeout(changeBackground, 2500);
+// } else {
+// }
+// }
+
+function randomizer(){
+  animating = false;
+
+  if (milkteas[0]){
+  background(0);
+  randomIndex = int(random(milkteas.length));
+ text(`${milkteas[randomIndex].name}'s favourite color is ${milkteas[randomIndex].color}.`,width*0.1,height*0.2);
+ // text(milkteas[randomIndex].name + "'s favourite color is " + milkteas[randomIndex].color + ".",width*0.1,height*0.2);
+ milkteas.splice(randomIndex,1);
+} else {
+  background(0);
+  text("Nothing Left!", width/2, height*0.2);
+  }
 }
 
 function mousePressed(){
-  if (milkteas[0]){
-  background(random(mycolors));
-  randomIndex = int(random(milkteas.length));
- text(milkteas[randomIndex].name ,width/3,height*0.2);
- milkteas.splice(randomIndex,1);
-} else {
-  background(random(mycolors));
-  text("nothing left!", width/3, height*0.2);
-  }
+  animating = true;
+  setTimeout(randomizer,2000);
+
 }
