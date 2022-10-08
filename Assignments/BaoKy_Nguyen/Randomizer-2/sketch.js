@@ -22,7 +22,7 @@ function setup(){
   background(21,116,200);
   textSize(45);
 
-
+  text("Click to Randomize", width/2, height/2);
 //console.log("initial array is")
 //console.log(milkteas);
 
