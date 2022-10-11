@@ -48,7 +48,7 @@ let owls = [{
   }
   
   function mousePressed(){
-    background(random(colorful));
+    background(random(star));
     randomIndex = int(random(owls.length));
    text(owls[randomIndex].name ,width/3,height*0.2);
    owls.splice(randomIndex,1);
