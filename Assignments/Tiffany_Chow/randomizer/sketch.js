@@ -9,6 +9,27 @@ let owls =[{
   name:"happy",
   color:"six" 
 }];
+let owls = [{
+    name: "sad",
+    color: "red and blue"
+  }, {
+    name:"joy",
+    color:"pink"
+  }, {
+    name: "bonk",
+    color: "white"
+  }, {
+    name: "mull",
+    color:"yellow"
+  }];
+  
+
+  
+  let randomIndex;
+  
+  function setup(){
+    createCanvas(displayWidth,displayHeight);
+    background(121,6,20);
 
 // function setup() {
 //     cearteCanvas(600,600);
@@ -30,22 +51,14 @@ let owls =[{
 
 // }
 
-let randomIndex;
-
-function setup() {
-  createCanvas(600,600);
-  background(200);
-
- 
- 
-}
-function mousePressed() {
-  background(random(200,255));
-   randomIndex = int(random(owls.length));
-  Text(owls[randomIndex].name,50,50);
-  owls.splice(randomIndex, 1);
-}
-
 function draw(){
+
+}
+
+function mousePressed(){
+  background(random(colorful));
+  randomIndex = int(random(owls.length));
+ text(owls[randomIndex].name ,width/3,height*0.2);
+owls.splice(randomIndex,1);
 
 }
