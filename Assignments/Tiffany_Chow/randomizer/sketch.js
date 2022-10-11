@@ -13,13 +13,14 @@ let owls = [{
     color:"star"
   }];
   
-  let colorful = ["#E6E82D","#FF4F00","#C2FFCD", "#EEC2FF","#EEFFFF"];
+  let star = ["#E6E82D","#FF4F00","#C2FFCD", "#EEC2FF","#EEFFFF"];
   
   let randomIndex;
   
   function setup(){
     createCanvas(displayWidth,displayHeight);
     background(186, 136, 240 );
+  }
   
  // function setup() {
 //     cearteCanvas(600,600);
@@ -40,7 +41,7 @@ let owls = [{
 //     console.log(owls);
 
 // }
-  }
+
   
   function draw(){
   
