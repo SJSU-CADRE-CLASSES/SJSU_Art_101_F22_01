@@ -75,7 +75,7 @@ function randomizer(){
     cars.splice(randomIndex, 1);
   } else {
     background(random(200,225));
-    text("noting left!", 50, 50);
+    text("nothing left", 50, 50);
   }
 }
 
