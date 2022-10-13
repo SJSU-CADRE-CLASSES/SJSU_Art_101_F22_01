@@ -16,16 +16,15 @@ let randomIndex;
 // let counter = 0
  let button;
 
-let toppings = [];
-
 let animating = false;
+
+let toppings = [];
 
 let imageCounter = 0;
 
 function preload(){
   for ( let i = 0; i <= 3 ; i++ ){
-    toppings[i] = loadImage(`Scaled_Images/
-    Toppings_${i}.png`)
+    toppings[i] = loadImage(`images/toppings_${i}.png`)
   }
 }
 
@@ -33,8 +32,10 @@ function setup(){
   createCanvas(displayWidth,displayHeight);
   background(21,116,200);
   textSize(45);
+  imageMode(CENTER);
+  frameRate(6);
 
-  text("What drink should you get today?", width/2, height/2);
+  text("What drink should you get today?", width*0.2, height/4);
 
 
   button = createButton("Click to randomize");
@@ -60,19 +61,19 @@ function randomizer(){
   animating = false;
 
   if (milkteas[0]){
-  background(0);
+    clear();
   randomIndex = int(random(milkteas.length));
  text(`You should get ${milkteas[randomIndex].name} with`,width*0.1,height*0.2);
-
- milkteas.splice(randomIndex,1);
+image(random(toppings), width/2, height/2);
+ // milkteas.splice(randomIndex,1);
 } else {
-  background(0);
-  text("Nothing Left!", width/2, height*0.2);
+  background(colorful);
+  text("Don't Drink Anymore!", width/2, height*0.2);
   }
 }
 
 function pressingButton(){
   animating = true;
-  setTimeout(randomizer,2000);
+  setTimeout(randomizer, 2000);
 
 }
