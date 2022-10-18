@@ -1,8 +1,15 @@
+var img; 
+
 let colors = [];
 let num;
 let bgColor = 155;
 let txtSize = 20; 
 let animating = false; 
+
+function preload() {
+  // preload() runs once, it may make you wait
+    img = loadImage('Saintquartz.png');
+  }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -30,7 +37,8 @@ function draw() {
   
   if(animating == true){
     fill(random(255), random(255), random(255));
-    ellipse(random(width), random(height), random(20,300)); 
+    size = random(50, 500); 
+    image(img, random(width)-100, random(height)-100, size, size); 
   }
 }
 
