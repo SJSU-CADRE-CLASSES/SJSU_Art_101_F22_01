@@ -1,0 +1,39 @@
+// Character classes in Dungeons & Dragons
+let dnd = [{name: "Bard", color: "green"},{name: "Paladin", color: "yellow"}, {name: "Wizard", color: "red"}, {name: "Sorceror", color: "orange"}, {name:"Rogue", color: "black"}, {name: "Cleric", color: "grey"}, {name: "Barbarian", color: "magenta"}, {name: "Druid", color: "darkgreen"}, {name: "Fighter", color: "darkorange"}, {name: "Monk", color: "pink"}, {name: "Ranger", color: "brown"}, "Warlock", "Artificer"];
+
+function setup() {
+  createCanvas(600, 600);
+  background (200);
+  
+  dnd[0] = "Bard";
+  dnd[1] = "Paladin";
+  dnd[2] = "Wizard";
+  dnd[3] = "Sorceror";
+  dnd[4] = "Rogue";
+  dnd[5] = "Cleric";
+  dnd[6] = "Barbarian";
+  dnd[7] = "Druid";
+  dnd[8] = "Fighter"
+  dnd[9] = "Monk"
+  dnd[10] = "Ranger"
+  dnd[11] = "Warlock"
+  dnd[12] = "Artificer"
+  
+  
+  console.log ("initial array is");
+  console.log (dnd);
+  console.log(dnd[int(random(12))]);
+
+  dnd.pop();
+  console.log ("array after pop");
+  console.log (dnd);
+  
+  dnd.push();
+  console.log ("array after push");
+  console.log (dnd);
+
+}
+
+function draw() {
+  background(220);
+}
