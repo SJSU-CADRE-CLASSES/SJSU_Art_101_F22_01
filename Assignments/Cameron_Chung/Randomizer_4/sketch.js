@@ -34,7 +34,6 @@ function preload(){
 }
 
 function setup() {
-    console.log("Randomizer_4");
     createCanvas(1000, 800);
     background(200);
     textSize(32);
