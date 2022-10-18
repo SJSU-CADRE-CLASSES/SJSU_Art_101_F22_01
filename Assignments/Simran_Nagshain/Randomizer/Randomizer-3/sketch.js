@@ -45,7 +45,7 @@ function setup() {
 
 function draw () {
 
-if (animating == true){
+if (animating = true){
     clear(); 
    image(dog[imageCounter],width/2, height/2);
 
@@ -59,6 +59,7 @@ if (animating == true){
 }    
 
 }
+
 function randomizer (){
     animating = false;
     clear();
