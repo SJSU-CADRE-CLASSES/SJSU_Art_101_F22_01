@@ -16,7 +16,7 @@ function preload(){
   for (let i = 0; i <= 19; i++){
     avatar[i] = loadImage(`assets/avatar${i}.jpg`)
     BGimg = loadImage(`assets/gameboybg.jpg`)
-    bButton = loadImage('assets/RandomizerB.jpg')
+    bButton = loadImage('assets/randomizerb.jpg')
   pixelFont = loadFont(`assets/minecraft.ttf`)
   }
 
