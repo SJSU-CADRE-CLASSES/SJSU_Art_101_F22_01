@@ -16,7 +16,7 @@ let cats = [{
     name: "Cookie", 
     owner: "Maryam"
 }, {
-    name: "Meowmeow" , 
+    name: "Meowmeow", 
     owner: "Afssari"
 }, {
     name: "Meowmeow's triplets", 
@@ -25,9 +25,7 @@ let cats = [{
 
 //calling variable
 let randomIndex;
- let animating = true; 
-
- 
+let animating = false;
 
 //runs once and stays
 function setup () {
@@ -35,54 +33,59 @@ function setup () {
     background (168,250,240);
     textSize (windowWidth/25);
 
-//WHERE DO I CALL IT??????!!!!let mousePressed; 
+     //saying this so user knows to click to start randomizer
+textAlign (CENTER);
+text ('click to reveal a random cat name/owner name from a selection',windowWidth/2,windowHeight/2);mousePressed () 
     
 }
 
+
 function draw () { 
 
-    //saying this so user knows to click to start randomizer
-textAlign (CENTER);
-text ('click to reveal a random cat name/owner name from a selection',windowWidth/2,windowHeight/2);mousePressed () 
+    if (animating == true){
 
-  if(animating == true){
-    ellipse (random(width), random(height), random(windowWidth/5, windowWidth/10));
+ ellipse (random(width), random(height), random(windowWidth/5, windowWidth/10));
 
-
-  }
-
-
-    
+ background(168,250,240);
+    }
+   
 }    
 
-function randomizer (){
+function randomizer(){
+    animating = true
 
-    if (cats[0]){ //if something in array/if not in array 
+if (cats[0]){ //if something in array/if not in array 
+
 
     // defining variable: int makes it a whole number, random(cats.length) chooses a random number within the array
 randomIndex = int(random(cats.length));
    //writes out the random number, .key is what category it chooses, and then at what location on screen
-  text(cats[randomIndex].name,windowWidth/2,windowHeight/2);
+  
+   text(`${cats[randomIndex].name}'s owner is  ${cats[randomIndex].owner}`, windowWidth/2,windowHeight/2);
+  
+   // text(cats[randomIndex].name + "'s owner is" + cats[randomIndex].owner, windowWidth/2,windowHeight/2);
   //removes chosen number from array in this instance
-  cats.splice(random.Index,1);
+cats.splice(random.Index,1);
+
 
 } else { //if not in array the display
+    background(random(200, 255))
     textAlign (CENTER);
-text ('no more group of cats :(',windowWidth/2,windowHeight/2);mousePressed () //nothing left game over 
+text ('no more group of cats :(,',windowWidth/2,windowHeight/2) //nothing left game over 
 
+  //////background restated so that the array text doesn't stack up on each other and "erases" it
+  background(168,250,240);
 
 }
-
-
 }
 
 function mousePressed () {
 
-    //background restated so that the array text doesn't stack up on each other and "erases" it
-background(168,250,240);
+    animating = true
+    setTimeout(randomizer, 2000);
 
-setTimeout(randomizer, 2000);
 
 
 
 }
+// }

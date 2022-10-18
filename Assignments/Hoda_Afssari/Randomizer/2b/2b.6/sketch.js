@@ -53,8 +53,8 @@ function changeBackground(){
         counter++;
         console.log(counter)
         
-    background(random(255), random(255), random(255));
-    setTimeout(changeBackground, 1000);
+    background(random(200), random(200), random(255));
+    setTimeout(changeBackground, 5000);
 
     } else {
 
