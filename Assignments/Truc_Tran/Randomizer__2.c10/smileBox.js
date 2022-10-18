@@ -4,10 +4,11 @@ title(){push();
       textSize(46);
       textFont('Comic Sans MS');
       
-      //text("MESSAGE FOR YOU", width*.04+3,height*.52+3);
       rotate(5)
-      fill(random(myColors));
       noStroke();
+      fill("#836953");
+      rect(width*0.06+3, height*.38+3, width*.1, height*.10)
+      fill(random(myColors));
       rect(width*0.06, height*.38, width*.1, height*.10)
       fill('white')
       text("M", width*.07, height*.46)
