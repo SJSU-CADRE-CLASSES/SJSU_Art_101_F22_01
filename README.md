@@ -1,4 +1,4 @@
-**SJSU ART 101 Fall 2022 Section 2**
+**SJSU ART 101 Fall 2022 Section 1**
 ======================
 Department of Art and Art History
 Art 101, Fall 2021
