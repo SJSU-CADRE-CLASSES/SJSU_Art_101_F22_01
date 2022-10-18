@@ -1,6 +1,8 @@
 // my favorite sanrio characters
 let randomIndex;
 let animating = false;
+let characters = [];
+let imageCounter = 0;
 let sanrio = [{
     name:"Kuromi", 
     color:"black"
@@ -21,21 +23,40 @@ let sanrio = [{
     color:"white"
 }];
 
+function preload(){
+
+    for (let i = 1; i <= 6; i++){
+        characters[i] = loadImage(`assets/character_${i}.jpg`);
+    }
+
+}
+
 function setup() {
     createCanvas(600, 600);
     background(200);
     textSize(32);
+    imageMode(CENTER);
+    frameRate(12);
 
     text("Click to Randomize", 50, 50);
+    console.log(characters);
 }
 
 function draw() {
-
+    
     if(animating == true){
-        ellipse(random(width), random(height), random(50, 200));
+        clear();
+        image(characters[imageCounter], width / 2, height / 2);
+
+        if (imageCounter < characters.length - 1){
+            imageCounter++;
+            console.log(imageCounter);
+        } else {
+            imageCounter = 0;
+        }
+    }
     }
 
-}
 
 function randomizer(){
     animating = false;
