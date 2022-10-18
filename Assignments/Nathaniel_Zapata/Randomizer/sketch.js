@@ -14,8 +14,8 @@ let BGimg;
 function preload(){
 
   for (let i = 0; i <= 9; i++){
-    avatar[i] = loadImage(`assets/avatar${i}.JPG`)
-    BGimg = loadImage(`assets/gameboybg.JPG`)
+    avatar[i] = loadImage(`assets/avatar${i}.jpg`)
+    BGimg = loadImage(`assets/gameboybg.jpg`)
 
   pixelFont = loadFont(`assets/minecraft.ttf`)
   }
