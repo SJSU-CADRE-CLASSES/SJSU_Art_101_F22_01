@@ -3,6 +3,7 @@ let randomIndex;
 let animating = false;
 let characters = [];
 let imageCounter = 0;
+
 let sanrio = [{
     name:"Kuromi", 
     color:"black"
@@ -25,7 +26,7 @@ let sanrio = [{
 
 function preload(){
 
-    for (let i = 1; i <= 6; i++){
+    for (let i = 1; i <= 5; i++){
         characters[i] = loadImage(`assets/character_${i}.jpg`);
     }
 
@@ -62,9 +63,11 @@ function randomizer(){
     animating = false;
     if(sanrio[0]){
     // dispays random name and splices it out if the array
-    background(random(200, 255));
+    //background(random(200, 255));
+    clear();
     randomIndex = int(random(sanrio.length));
-    text(`${sanrio[randomIndex].name}'s color is ${sanrio[randomIndex].color}`, 50, 50);
+    text(sanrio[randomIndex].name, 50, 50);
+    image(random(characters), width / 2, height / 2);
     //text(sanrio[randomIndex].name + "'s color is " + sanrio[randomIndex].color, 50, 50);
     sanrio.splice(randomIndex, 1);
     } else{
