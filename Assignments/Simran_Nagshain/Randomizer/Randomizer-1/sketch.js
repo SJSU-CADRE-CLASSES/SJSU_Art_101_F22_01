@@ -1,4 +1,4 @@
-//dog's favorite colors
+//dog's habit and favorite colors
 
 let dogs = [{
     //red
