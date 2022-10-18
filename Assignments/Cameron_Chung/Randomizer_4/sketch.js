@@ -27,7 +27,7 @@ let sanrio = [{
 
 function preload(){
 
-    for (let i = 1; i <= 5; i++){
+    for (let i = 0; i <= 5; i++){
         characters[i] = loadImage(`assets/character_${i}.jpg`);
     }
 
