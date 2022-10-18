@@ -73,6 +73,6 @@ image(random(toppings), width/2, height/2);
 
 function pressingButton(){
   animating = true;
-  setTimeout(randomizer, 1500);
+  setTimeout(randomizer, 2500);
 
 }
