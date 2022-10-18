@@ -45,7 +45,7 @@ function setup() {
 
 function draw () {
 
-if (animating = true){
+if (animating == true){
     clear(); 
    image(dog[imageCounter],width/2, height/2);
 
@@ -65,9 +65,12 @@ function randomizer (){
     clear();
     randomIndex = int(random (dogs.length));
 //    background (random(200, 225));
-    background (dogs[randomIndex].color);
-    text(`${dogs[randomIndex].name} likes ${dogs[randomIndex].habit}`, width/2, height - 50);
-   image(random(dog),width/2, height/2);
+
+    image(random(dog),width/2, height/2);
+    textSize (32);
+    text(`${dogs[randomIndex].name} likes ${dogs[randomIndex].habit}`, width/6, height - 150);
+    fill(dogs[randomIndex].color);
+
     //text(concat(" likes ", dogs[randomIndex].habit), 50 + 6 * dogs[randomIndex].name.length, 50);
 
 }
