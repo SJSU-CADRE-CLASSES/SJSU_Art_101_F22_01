@@ -1,5 +1,8 @@
 let colors = [];
 let num;
+let bgColor = 155;
+let txtSize = 20; 
+let animating = false; 
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -11,22 +14,41 @@ function setup() {
   colors[4] = new FavColor("Davis", 'black');
   colors[5] = new FavColor("Brandon", 'gold');
   
-  background(155);
-  textSize(20);
-  text("CLICK", width/2, height/2);
+  background(bgColor);
+  textSize(txtSize);
+  text("CLICK to randomize", width/2.3, height/2); 
+
+  // Changes the background after 1 second. 1000 = 1 second. 1000ms
+  //setTimeout(changeBackGround, 1000); 
 }
 
 function draw() {
-  //background(200);
+  //background(bgColor);
   //colors[0].display();
   //colors[0].getName();
-  //colors[0].getColor(); 
+  //colors[0].getColor();
+  
+  if(animating == true){
+    fill(random(255), random(255), random(255));
+    ellipse(random(width), random(height), random(20,300)); 
+  }
 }
 
 function mousePressed() {
-  background(155);
+  animating = true; 
+ 
+  setTimeout(Randomizer, 3000); 
+}
+
+function Randomizer(){
+  animating = false; 
+
+  background(random(bgColor), random(bgColor), random(bgColor));
   num = random(colors.length);
   colors[int(num)].display();
-  colors[int(num)].whoWhos(); 
-  return false;
+  colors[int(num)].whoWhos();
 }
+
+//function changeBackGround(){
+//   background(random(255), random(255), random(255)); 
+//}
