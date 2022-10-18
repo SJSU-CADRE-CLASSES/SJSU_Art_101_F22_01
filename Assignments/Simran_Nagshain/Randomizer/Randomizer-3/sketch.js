@@ -1,4 +1,4 @@
-//dog's favorite colors
+//dog's habit and favorite colors
 
 let dogs = [{
     //red
@@ -24,8 +24,8 @@ let button;
 
 function preload(){
     for (let i = 0; i <=4; i++){
-        dog[i] = loadImage('images/reduced size/dog_#{i}.jpg')
-    }
+       dog[i] = loadImage('images/dog_'+i+'.jpg')
+   }
 }
 
 
@@ -34,7 +34,7 @@ function setup() {
 
   createCanvas (600, 600);
   background (200);
-  imageMode(center);
+  imageMode(CENTER);
   frameRate(5);
   text ("click to randomize", 50, 50);
   console.log (dog);
@@ -57,16 +57,20 @@ if (animating == true){
    }
    
 }    
-
+    
 }
+
 function randomizer (){
     animating = false;
     clear();
     randomIndex = int(random (dogs.length));
 //    background (random(200, 225));
-    background (dogs[randomIndex].color);
-    text(`${dogs[randomIndex].name} likes ${dogs[randomIndex].habit}`, width/2, height - 50);
-   image(random(dog),width/2, height/2);
+
+    image(random(dog),width/2, height/2);
+    textSize (32);
+    text(`${dogs[randomIndex].name} likes ${dogs[randomIndex].habit}`, width/6, height - 150);
+    fill(dogs[randomIndex].color);
+
     //text(concat(" likes ", dogs[randomIndex].habit), 50 + 6 * dogs[randomIndex].name.length, 50);
 
 }
