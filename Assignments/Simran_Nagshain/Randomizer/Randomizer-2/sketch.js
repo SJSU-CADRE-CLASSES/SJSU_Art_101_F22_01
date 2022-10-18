@@ -1,4 +1,4 @@
-//dog's favorite colors
+//dog's habit and favorite colors
 
 let dogs = [{
     //red
@@ -14,7 +14,7 @@ let dogs = [{
     name: "simba", habit: "to eat", color: 'rgb(255,255,0)'
 }, {
     //green
-    name: "coco", habit: "to destroy things", color: 'rgb(0,255,0)'
+    name: "aero", habit: "to destroy things", color: 'rgb(0,255,0)'
 }];
 let randomIndex;
 let animating = false;
