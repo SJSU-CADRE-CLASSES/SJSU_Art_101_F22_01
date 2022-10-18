@@ -8,7 +8,7 @@ let animating = false;
 
 function preload() {
   // preload() runs once, it may make you wait
-    img = loadImage('Saintquartz.png');
+    img = loadImage('assets/Saintquartz.png');
   }
 
 function setup() {

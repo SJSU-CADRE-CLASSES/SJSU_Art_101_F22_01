@@ -17,45 +17,37 @@ let owls = [{
   
   let randomIndex;
   let animating = false;
-  
+  let hootys = [];
+
+  function preload(){
+    for (let i = 0; i <= 13; i++){
+      hootys[i] = loadImage(`image/hooty_${1}.JPG`)
+    }
+  }
+
   function setup(){
     createCanvas(displayWidth,displayHeight);
     background(186, 136, 240 );
     textSize(50);
+    imageMode(CENTER);
+    frameRate(12);
+   
 
     text("click to randomize, width/2, height/2");
+     console.log(hootys);
 
-    // setTimeout(changeBackground,1000);
-  }
-  
-  // function changeBackground(){
-  //   background(random(225),random(225),random(225));
-  //   setTimeout(changeBackground, 1000);
-  // }
- // function setup() {
-//     cearteCanvas(600,600);
-//     background(200);
-
-//     owls[0]= "one"
-//     owls[1]= "two"
-
-//     console.log("initial arry is");
-//     console.log(owls);
-
-//     owls.splice(4,1);
-//     console.log("array after splice")
-//     console.log(owls);
-
-//     owls.unshift("alive");
-//     console.log("array after push")
-//     console.log(owls);
-
-// }
 function draw(){
+ 
+
   if(animating == true){
-    noStroke();
-    fill(random(star));
-    ellipse(random(width),random(height),random(10,100));
+     clear();
+   Image(hootys[imageCounter],width/2, height/2);
+
+   if (imageCounter < hootys.length - 1)
+   imageCounter++;
+   console.log(imageCounter); 
+  }else{
+    imageCounter = 0;
   }
 }
    
@@ -64,35 +56,34 @@ function draw(){
   
     if (owls[0]){
     background(0);
+    clear();
     randomIndex = int(random(owls.length));
-   text(`${owls[randomIndex].name}'s favourite color is ${owls[randomIndex].color}.`,width*0.1,height*0.2);
-   // text(owls[randomIndex].name + "'s favourite color is " + owls[randomIndex].color + ".",width*0.1,height*0.2);
+   text(owls[randomIndex].name,50,50);
+   image(random(hootys), width/2,height /2);
    owls.splice(randomIndex,1);
   } else {
     background(0);
     text("nothing left!", width/2, height*0.2);
     }
   }
+  //  function randomizer(){
+  //   animating = false;
+  
+  //   if (owls[0]){
+  //   background(0);
+  //   clear();
+  //   randomIndex = int(random(owls.length));
+  //  text(`${owls[randomIndex].name}'s favourite color is ${owls[randomIndex].color}.`,width*0.1,height*0.2);
+  //  // text(owls[randomIndex].name + "'s favourite color is " + owls[randomIndex].color + ".",width*0.1,height*0.2);
+  //  owls.splice(randomIndex,1);
+  // } else {
+  //   background(0);
+  //   text("nothing left!", width/2, height*0.2);
+  //   }
+  // }
   
   function mousePressed(){
     animating = true;
     setTimeout(randomizer,2000);
   
   }
- 
-
-  
-  // function draw(){
-  
-  // }
-  
-  // function mousePressed(){
-  //   if(owls[0]){
-
-  //   }
-  //   background(random(star));
-  //   randomIndex = int(random(owls.length));
-  //  text(owls[randomIndex].name ,width/3,height*0.2);
-  //  owls.splice(randomIndex,1);
-  
-  // }
