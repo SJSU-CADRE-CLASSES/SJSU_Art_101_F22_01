@@ -14,15 +14,19 @@ title(){push();
       text("M", width*.07, height*.46)
 
       rotate(-10);
-      fill(random(myColors));
       noStroke();
-      rect(width*0.12, height*.43, width*.1, height*.10)
+      fill("#836953");
+      rect(width*0.12+3, height*.42+3, width*.1, height*.10)
+      fill(random(myColors));
+      rect(width*0.12, height*.42, width*.1, height*.10)
       fill('white')
-      text("E", width*.14, height*.51)
+      text("E", width*.14, height*.505)
 
       rotate(15);
-      fill(random(myColors));
       noStroke();
+      fill("#836953");
+      rect(width*0.37+2, height*.32+2, width*.1, height*.10)
+      fill(random(myColors));
       rect(width*0.37, height*.32, width*.1, height*.10)
       fill('white')
       text("S", width*.38, height*.4)
@@ -37,9 +41,9 @@ title(){push();
       rotate(15);
       fill(random(myColors));
       noStroke();
-      rect(width*0.65, height*.3, width*.1, height*.10)
+      rect(width*0.65, height*.27, width*.1, height*.10)
       fill('white')
-      text("A", width*.665, height*.38)
+      text("A", width*.665, height*.35)
 
       rotate(-15);
      
