@@ -1,4 +1,4 @@
-//dog's favorite colors
+//dog's habit and favorite colors
 
 let dogs = [{
     //red
@@ -24,7 +24,7 @@ let button;
 
 function preload(){
     for (let i = 0; i <=4; i++){
-       dog[i] = loadImage('images/reduced size/dog_{i}.jpg')
+       dog[i] = loadImage('images/dog_{i}.jpg')
     }
 }
 
