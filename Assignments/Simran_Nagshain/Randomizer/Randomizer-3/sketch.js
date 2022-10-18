@@ -24,8 +24,8 @@ let button;
 
 function preload(){
     for (let i = 0; i <=4; i++){
-       dog[i] = loadImage('images/dog_{i}.jpg')
-    }
+       dog[i] = loadImage('images/dog_'+i+'.jpg')
+   }
 }
 
 
@@ -34,7 +34,7 @@ function setup() {
 
   createCanvas (600, 600);
   background (200);
-  imageMode(center);
+  imageMode(CENTER);
   frameRate(5);
   text ("click to randomize", 50, 50);
   console.log (dog);
@@ -45,7 +45,7 @@ function setup() {
 
 function draw () {
 
-if (animating == true){
+if (animating = true){
     clear(); 
    image(dog[imageCounter],width/2, height/2);
 
@@ -57,8 +57,9 @@ if (animating == true){
    }
    
 }    
-
+    
 }
+
 function randomizer (){
     animating = false;
     clear();

@@ -27,14 +27,14 @@ let sanrio = [{
 
 function preload(){
 
-    for (let i = 1; i <= 5; i++){
+    for (let i = 0; i <= 5; i++){
         characters[i] = loadImage(`assets/character_${i}.jpg`);
     }
 
 }
 
 function setup() {
-    createCanvas(600, 600);
+    createCanvas(1000, 800);
     background(200);
     textSize(32);
     imageMode(CENTER);
@@ -70,7 +70,7 @@ function randomizer(){
     randomIndex = int(random(sanrio.length));
     text(sanrio[randomIndex].name, 50, 50);
     image(random(characters), width / 2, height / 2);
-    //text(sanrio[randomIndex].name + "'s color is " + sanrio[randomIndex].color, 50, 50);
+    // text(sanrio[randomIndex].name + "'s color is " + sanrio[randomIndex].color, 50, 50);
     sanrio.splice(randomIndex, 1);
     } else{
         background(random(200, 255));
