@@ -1,1 +1,0 @@
-# gamertag-generator
