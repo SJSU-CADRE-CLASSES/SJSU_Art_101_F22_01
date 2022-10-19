@@ -1,12 +1,13 @@
-class smileEmoji{constructor(x,y){this.x = x;
+class SmileEmoji{constructor(x,y){
+    this.x = x;
     this.y = y;
     this.col = random(myColors);}
 
 emoji(){push(); //face
-noStroke()
+noStroke();
 fill(this.col);
 translate(this.x,this.y);
-circle (width*0,height*0,width*.20);
+circle(width*0,height*0,width*.20);
 pop();
 
 push(); //mouth
@@ -26,6 +27,4 @@ fill('#836953');
 translate(this.x,this.y);
 ellipse(width*-.04,height*-.01,width*.02,height*.05);
 ellipse(width*.04,height*-.01,width*.02,height*.05);
-pop();}
-
-}
+pop();}}

@@ -1,15 +1,15 @@
 class beautyFlower{constructor(x,y){this.x = x; this.y = y;}
 
 pistil(){push();
-    scale(1);
+    scale(0.7);
     noStroke();
-    fill('#f8e7a7');
     translate(this.x,this.y);
+    fill('#f8e7a7');
     circle(width*0, height*.192,width*.06);
     pop();}
 
 petal(){push();  
-    scale(1);
+    scale(0.7);
     noStroke();
     translate(this.x,this.y);
     fill(random(myColors));

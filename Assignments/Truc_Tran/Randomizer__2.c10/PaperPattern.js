@@ -1,8 +1,6 @@
-class backgroundPattern{constructor(){
-    this.col = random(myColors);} 
+class PaperPattern{constructor(){} 
 
-hori(){
-    push();
+hori(){push();
     strokeWeight(1);       
     stroke(random(myColors));
     line(width*0.05, height*2, width*0.05, height*0);
@@ -42,31 +40,46 @@ hori(){
     line(width*0.9, height*2, width*0.9, height*0);
     stroke(random(myColors));
     line(width*0.95, height*2, width*0.95, height*0);
-    pop();
-}
+    pop();}
+
 verti(){push();
     strokeWeight(1);
-    stroke(random(myColors));
     stroke(random(myColors));
     line(width*1, height*0.05, width*0, height*.05);
     stroke(random(myColors));
     line(width*1, height*.1, width*0, height*.1);
+    stroke(random(myColors));
     line(width*1, height*.15, width*0, height*.15);
+    stroke(random(myColors));
     line(width*1, height*.2, width*0, height*.2);
+    stroke(random(myColors));
     line(width*1, height*.25, width*0, height*.25);
+    stroke(random(myColors));
     line(width*1, height*.3, width*0, height*.3);
+    stroke(random(myColors));
     line(width*1, height*.35, width*0, height*.35);
+    stroke(random(myColors));
     line(width*1, height*.4, width*0, height*.4);
-     line(width*1, height*.45, width*0, height*.45);
+    stroke(random(myColors));
+    line(width*1, height*.45, width*0, height*.45);
+    stroke(random(myColors));
     line(width*1, height*.5, width*0, height*.5);
+    stroke(random(myColors));
     line(width*1, height*.55, width*0, height*.55);
+    stroke(random(myColors));
     line(width*1, height*.6, width*0, height*.6);
+    stroke(random(myColors));
     line(width*1, height*.65, width*0, height*.65);
+    stroke(random(myColors));
     line(width*1, height*.7, width*0, height*.7);
+    stroke(random(myColors));
     line(width*1, height*.75, width*0, height*.75);
+    stroke(random(myColors));
     line(width*1, height*.8, width*0, height*.8);
+    stroke(random(myColors));
     line(width*1, height*.85, width*0, height*.85);
+    stroke(random(myColors));
     line(width*1, height*.9, width*0, height*.9);
+    stroke(random(myColors));
     line(width*1, height*.95, width*0, height*.95);
-    pop();}
-}
+    pop();}}
