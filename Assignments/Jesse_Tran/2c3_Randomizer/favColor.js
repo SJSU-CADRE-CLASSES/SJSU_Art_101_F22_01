@@ -19,6 +19,6 @@ class FavColor{
     }
     
     whoWhos(){
-      text(this.name+"'s"+" favorite color is "+ this.color+"!", width/3, height/1.5);
+      text(this.name+"'s"+" favorite color is "+ this.color+"!", width/2.5, height/1.65);
   }
   }
