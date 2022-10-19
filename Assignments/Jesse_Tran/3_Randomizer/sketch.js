@@ -1,8 +1,16 @@
+var img; 
+
 let colors = [];
 let num;
 let bgColor = 155;
 let txtSize = 20; 
 let animating = false; 
+let button; 
+
+function preload() {
+  // preload() runs once, it may make you wait
+    img = loadImage('assets/Saintquartz.png');
+  }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -15,11 +23,13 @@ function setup() {
   colors[5] = new FavColor("Brandon", 'gold');
   
   background(bgColor);
-  textSize(txtSize);
-  text("CLICK to randomize", width/2.3, height/2); 
+  //textSize(txtSize);
+  //text("CLICK to randomize", width/2.3, height/2); 
 
-  // Changes the background after 1 second. 1000 = 1 second. 1000ms
-  //setTimeout(changeBackGround, 1000); 
+  //button = createButton("Click to Randomize"); 
+  button = select("#randButton"); 
+  button.mousePressed(buttonPressed); 
+  button.class("randomizerButton"); 
 }
 
 function draw() {
@@ -28,19 +38,24 @@ function draw() {
   //colors[0].getName();
   //colors[0].getColor();
   
-  if(animating == true){
+  if(animating == true) {
     fill(random(255), random(255), random(255));
-    ellipse(random(width), random(height), random(20,300)); 
+    size = random(50, 500); 
+    image(img, random(width)-100, random(height)-100, size, size); 
   }
 }
 
-function mousePressed() {
+function buttonPressed() {
   animating = true; 
- 
+
+  // Changes the background after 1 second. 1000 = 1 second. 1000ms
+  //setTimeout(changeBackGround, 1000);
+
+  // 3 seconds
   setTimeout(Randomizer, 3000); 
 }
 
-function Randomizer(){
+function Randomizer() {
   animating = false; 
 
   background(random(bgColor), random(bgColor), random(bgColor));
@@ -49,6 +64,6 @@ function Randomizer(){
   colors[int(num)].whoWhos();
 }
 
-//function changeBackGround(){
+//function changeBackGround() {
 //   background(random(255), random(255), random(255)); 
 //}

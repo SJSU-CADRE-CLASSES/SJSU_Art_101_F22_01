@@ -20,6 +20,7 @@ let quotebox = [];
 let button = [];
 let areyouhappy= [];
 let pattern = [];
+let crown = [];
 
 function setup() {
   cnv = createCanvas(500, 500);
@@ -34,7 +35,8 @@ function setup() {
   areyouhappy[1] = new AreYouHappy(width*.27,0);
   areyouhappy[2] = new AreYouHappy(width*.55,0);
   areyouhappy[3] = new AreYouHappy(width*.82,0);
-  
+  crown[0] = new miniCrown(width*.815, height*1.435,);
+  crown[1] = new miniCrown(width*.815 +2, height*1.435+2);
   background('white');
   pattern[0].hori();
   pattern[0].verti();
@@ -47,7 +49,24 @@ function setup() {
   box[0].dashline();
   box[0].title();
 
-//button = createButton("OPEN THE BOX");
+  noStroke();
+  fill('#836953');
+  rect(width*.35+5, height*.72+5, width*.3, height*.2);
+  fill("#f8e7a7");
+  rect(width*.35, height*.72, width*.3, height*.2);
+
+
+  
+
+  fill("#f8e7a7");
+  triangle(width*.5, height*.82,width*.65, height*.92, width*.35, height*.92)
+  fill('#ccaecf');
+  triangle(width*.5, height*.84+4,width*.65, height*.713+4, width*.35, height*.713+4)
+ fill("#eeabac");
+  triangle(width*.5, height*.84,width*.65, height*.72, width*.35, height*.72)
+  crown[0].crown();
+  crown[1].crown(new miniCrown(fill('black')));
+  //button = createButton("OPEN THE BOX");
   button = select ("#openButton")
   button.mousePressed(buttonPressed)
   button.class("randomizerButton")}
