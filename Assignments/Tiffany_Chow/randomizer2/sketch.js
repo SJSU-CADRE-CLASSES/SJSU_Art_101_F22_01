@@ -16,20 +16,22 @@ let owls = [{
   let star = ["#E6E82D","#FF4F00","#C2FFCD", "#EEC2FF","#EEFFFF"];
   
   let randomIndex;
+  let animating = false;
   
   function setup(){
     createCanvas(displayWidth,displayHeight);
     background(186, 136, 240 );
+    textSize(50);
 
-    text("click to randomize,50,50");
+    text("click to randomize, width/2, height/2");
 
-    setTimeout(changeBackground,1000);
+    // setTimeout(changeBackground,1000);
   }
   
-  function changeBackground(){
-    background(random(225),random(225),random(225));
-    setTimeout(changeBackground, 1000);
-  }
+  // function changeBackground(){
+  //   background(random(225),random(225),random(225));
+  //   setTimeout(changeBackground, 1000);
+  // }
  // function setup() {
 //     cearteCanvas(600,600);
 //     background(200);
@@ -49,19 +51,48 @@ let owls = [{
 //     console.log(owls);
 
 // }
-
+function draw(){
+  if(animating == true){
+    noStroke();
+    fill(random(star));
+    ellipse(random(width),random(height),random(10,100));
+  }
+}
+   
+  function randomizer(){
+    animating = false;
   
-  function draw(){
-  
+    if (owls[0]){
+    background(0);
+    randomIndex = int(random(owls.length));
+   text(`${owls[randomIndex].name}'s favourite color is ${owls[randomIndex].color}.`,width*0.1,height*0.2);
+   // text(owls[randomIndex].name + "'s favourite color is " + owls[randomIndex].color + ".",width*0.1,height*0.2);
+   owls.splice(randomIndex,1);
+  } else {
+    background(0);
+    text("nothing left!", width/2, height*0.2);
+    }
   }
   
   function mousePressed(){
-    if(owls[0]){
-
-    }
-    background(random(star));
-    randomIndex = int(random(owls.length));
-   text(owls[randomIndex].name ,width/3,height*0.2);
-   owls.splice(randomIndex,1);
+    animating = true;
+    setTimeout(randomizer,2000);
   
   }
+ 
+
+  
+  // function draw(){
+  
+  // }
+  
+  // function mousePressed(){
+  //   if(owls[0]){
+
+  //   }
+  //   background(random(star));
+  //   randomIndex = int(random(owls.length));
+  //  text(owls[randomIndex].name ,width/3,height*0.2);
+  //  owls.splice(randomIndex,1);
+  
+  // }
