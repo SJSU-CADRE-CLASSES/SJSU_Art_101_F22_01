@@ -24,7 +24,7 @@ let button;
 
 function preload() {
   for (let i = 0; i <= 4; i++) {
-    memes[i] = loadImage(`assests/meme_${i}.JPG`)
+    memes[i] = loadImage(`https://sjsu-cadre-classes.github.io/SJSU_Art_101_F22_01/Assignments/Edric_Mendoza/randomizerdom/assests/meme_${i}.JPG`)
   }
 
 }
