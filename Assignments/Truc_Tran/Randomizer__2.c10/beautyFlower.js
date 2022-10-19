@@ -1,7 +1,7 @@
 class beautyFlower{constructor(x,y){this.x = x; this.y = y;}
 
 pistil(){push();
-    scale(2);
+    scale(1);
     noStroke();
     fill('#f8e7a7');
     translate(this.x,this.y);
@@ -9,7 +9,7 @@ pistil(){push();
     pop();}
 
 petal(){push();  
-    scale(2);
+    scale(1);
     noStroke();
     translate(this.x,this.y);
     fill(random(myColors));
