@@ -147,6 +147,47 @@ title(){push();
       fill('white')
       text("U", width*.895, height*.464)
 
+      rotate(-20);
+      noStroke();
+      fill('#836953');
+      rect(width*.05+3, height*.75+3, width*.15, height*.2);
+      fill(random(myColors));
+      rect(width*.05, height*.75, width*.15, height*.2);
+      rotate(-20);
+      textSize(100);
+      textFont('Comic Sans MS');
+      fill('#836953');
+      text("?", width*-.21+3, height*.905+3);
+      fill('white');
+      text("?", width*-.21, height*.905);
+
+      rotate(40);
+      noStroke();
+      fill('#836953');
+      rect(width*.55+3, height*.61+3, width*.15, height*.2);
+      fill(random(myColors));
+      rect(width*.55, height*.61, width*.15, height*.2);
+      rotate(5);
+      textSize(100);
+      textFont('Comic Sans MS');
+      fill('#836953');
+      text("?", width*.64+3, height*.72+3)
+      fill('white');
+      text("?", width*.64, height*.72)
+
+      rotate(-30);
+      noStroke();
+      fill('#836953');
+      rect(width*.4+3, height*.86+3, width*.15, height*.2);
+      fill(random(myColors));
+      rect(width*.4, height*.86, width*.15, height*.2);
+      rotate(-5);
+      textSize(100);
+      textFont('Comic Sans MS');
+      fill('#836953');
+      text("?", width*.35+3, height*1.07+3)
+      fill('white');
+      text("?", width*.35, height*1.07)
       pop();}
             
 dashline(){push();
