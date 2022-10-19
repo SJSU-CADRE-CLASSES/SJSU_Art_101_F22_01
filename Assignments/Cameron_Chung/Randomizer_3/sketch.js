@@ -26,8 +26,8 @@ let sanrio = [{
 
 function preload(){
 
-    for (let i = 1; i <= 5; i++){
-        characters[i] = loadImage(`assets/character_${i}.jpg`);
+    for (let i = 0; i <= 5; i++){
+        characters[i] = loadImage(`assets/character_`+i+`.jpg`);
     }
 
 }
@@ -44,10 +44,9 @@ function setup() {
 }
 
 function draw() {
-    
     if(animating == true){
         clear();
-        image(characters[imageCounter], width / 2, height / 2);
+        image(characters[imageCounter], width/2, height/2);
 
         if (imageCounter < characters.length - 1){
             imageCounter++;
