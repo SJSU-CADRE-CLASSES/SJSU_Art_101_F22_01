@@ -1,0 +1,26 @@
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  canvas {
+    display: block;
+  }
+  
+  .randomizerButton{
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #cce2bc;
+    border-style: dotted;
+    border-width: 10px;
+    border-color: white;
+    color:#836953;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size:15.3px;
+    border-radius: 12px;
+  }
+  
+  .randomizerButton:hover {
+    background-color: #f8e7a7;
+    cursor: pointer;
+  }
