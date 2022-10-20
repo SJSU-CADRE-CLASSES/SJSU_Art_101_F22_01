@@ -13,7 +13,7 @@ let button;
 
 function preload(){
   for (let i = 1; i <= 6; i++){
-    friends[i] = loadImage(`assets/friend_${i}.JPG`);
+    friends[i] = loadImage(`assets/friend_${i}.jpg`);
   }
 }
 
