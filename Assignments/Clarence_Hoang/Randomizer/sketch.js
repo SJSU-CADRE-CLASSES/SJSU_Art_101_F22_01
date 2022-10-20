@@ -12,7 +12,7 @@ let friends = [];
 let button;
 
 function preload(){
-  for (let i = i; i <= 6; i++){
+  for (let i = 1; i <= 6; i++){
     friends[i] = loadImage(`assets/friend_${i}.JPG`);
   }
 }
@@ -24,7 +24,7 @@ function setup() {
   text("My Best Friends",50,50);
   text("Click to randomize",50,200);
   y = 0;
-  ImageBitmapRenderingContext(CENTER);
+  image(CENTER);
   console.log(friends);
   button = createButton("Click to randomize");
   button.mousePressed(buttonPressed);
