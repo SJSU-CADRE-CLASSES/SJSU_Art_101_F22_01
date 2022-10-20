@@ -1,61 +1,59 @@
-// dnd character classes
-let dnd = [
-{name: "Bard", color: "green"},
-{name: "Paladin", color: "yellow"}, 
-{name: "Wizard", color: "red"}, 
-{name: "Sorcerer", color: "orange"}, 
-{name: "Rogue", color: "black"}, 
-{name: "Cleric", color: "grey"}, 
-{name: "Barbarian", color: "magenta"}, 
-{name: "Druid", color: "darkgreen"}, 
-{name: "Fighter", color: "purple"}, 
-{name: "Monk", color: "pink"}, 
-{name: "Ranger", color: "brown"}, 
-{name: "Warlock", color: "teal"}
-];
 
-let randomIndex
+//sources for images --> https://www.dndbeyond.com/classes
+//this is array 1
+  let dndRaces = [
+    "Dragonborn",
+    "Dwarf",
+    "Elf",
+    "Gnome",
+    "Halfling",
+    "Human",
+    "Tiefling",
+    "Half-Orc",
+    "Leonin",
+    "Satyr",
+    "Aasimar",
+    "Changling",
+  ];
+  let dnds = [];
+function preload (){
+    for (let i = 1; i <= 12; i++){
+        dnds[i] = loadImage(`Assets/dnd_${i}.png`)
+    }
+}
+let randomIndex;
+let animating = false;
 
-function setup() {
-  createCanvas(600, 600);
-  background (200);
+  function setup() {
+    console.log(dnds);
+    createCanvas(600, 600);
+    background(220);
+    strokeWeight(2);
+    textSize(32);
+    console.log("initial race array");
+    console.log(dndRaces);
+    
+  }
   
-  randomIndex = int(random(dnd.length));
-    console.log(dnd[randomIndex].name);
-    text(dnd[randomIndex].name, 50, 50);
-
-dnd.splice(randomIndex, 1);
-console.log(dnd);
-
-  console.log ("initial array is");
-  console.log (dnd);
-  
-  dnd.pop();
-  console.log ("array after pop");
-  console.log (dnd);
-  
-  dnd.push();
-  console.log ("array after push");
-  console.log (dnd);
+  function draw () {
+    if(animating == true){
+        clear();
+        image(random(dnds), 40, 40);
+    }
+}
+function randomizer() {
+    animating = false;
+    if (dndRaces) {
+        randomIndex = int(random(dndRaces.length));
+        console.log(dndRaces[randomIndex]);
+        image(random(dnds), 40, 40);
+        text(dndRaces[randomIndex], 50, 400);
+    }
 }
 
-function draw() {
-  background(220);
-}
+  function mousePressed() {
+    animating = true;
+    background(random(200, 255));
+    setTimeout(randomizer, 500);
 
-function mousePressed(){
-
-if (dnd[0]){
-
-
-
-    randomIndex = int(random(dnd.length));
-    console.log(dnd[randomIndex].name);
-    text(dnd[randomIndex].name, 50, 50);
-    dnd.splice(randomIndex, 1);
-    console.log(dnd);
-
-} else{
-    text("nothin' left!", 50, 50);
-}
-}
+  }
