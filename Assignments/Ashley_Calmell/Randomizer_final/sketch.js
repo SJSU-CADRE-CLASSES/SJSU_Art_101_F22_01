@@ -29,6 +29,7 @@ function setup() {
     textSize(20);
     frameRate(8); 
     button= createButton("click to get fortune");
+    button.class("myButton")
     button.mousePressed(buttonPressed);
     button.position(340, 470);
     background(bg);

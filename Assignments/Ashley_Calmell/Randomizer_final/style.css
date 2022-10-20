@@ -5,4 +5,12 @@ html, body {
   canvas {
     display: block;
   }
-  
+
+  #myButton {
+    background-color: blue;
+  }
+
+  .myButton {
+    background-color:red;
+    text-right;
+  }
