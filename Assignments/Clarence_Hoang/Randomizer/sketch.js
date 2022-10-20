@@ -9,6 +9,7 @@ let bestFriends = [
 let randomIndex;
 let animating = false;
 let friends = [];
+let button;
 
 function preload(){
   for (let i = i; i <= 6; i++){
@@ -25,6 +26,8 @@ function setup() {
   y = 0;
   ImageBitmapRenderingContext(CENTER);
   console.log(friends);
+  button = createButton("Click to randomize");
+  button.mousePressed(buttonPressed);
 }
 
 function draw() {
@@ -63,7 +66,7 @@ function randomizer(){
 }
 }
 
-function mousePressed(){
+function buttonPressed(){
   animating = true;
   setTimeout(randomizer,1000);
 }
