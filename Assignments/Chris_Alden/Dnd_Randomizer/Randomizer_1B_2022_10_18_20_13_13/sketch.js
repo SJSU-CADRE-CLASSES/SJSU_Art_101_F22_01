@@ -1,4 +1,4 @@
-// dnd character classes
+
 //sources for images --> https://www.dndbeyond.com/classes
 //this is array 1
   let dndRaces = [
@@ -21,7 +21,7 @@ function preload (){
         dnds[i] = loadImage(`Assets/dnd_${i}.png`)
     }
 }
-  let randomIndex;
+let randomIndex;
 let animating = false;
 
   function setup() {
@@ -38,7 +38,7 @@ let animating = false;
   function draw () {
     if(animating == true){
         clear();
-        image(random(dnds), 10, 10);
+        image(random(dnds), 40, 40);
     }
 }
 function randomizer() {
@@ -46,8 +46,8 @@ function randomizer() {
     if (dndRaces) {
         randomIndex = int(random(dndRaces.length));
         console.log(dndRaces[randomIndex]);
-        image(random(dnds), 10, 10);
-        text(dndRaces[randomIndex], 250, 75);
+        image(random(dnds), 40, 40);
+        text(dndRaces[randomIndex], 50, 400);
     }
 }
 
