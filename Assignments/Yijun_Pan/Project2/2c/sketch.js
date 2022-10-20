@@ -1,23 +1,21 @@
-let colors = [{
-  name: "rose",
-  color: "red"
+let shapes = [{
+  name: "circle"
 }, {
-  name: "pumpkin",
-  color: "orange"
+  name: "square"
 }, {
-  name: "banana",
-  color: "yellow"
+  name: "triangle"
 }, {
-  name: "grass",
-  color: "green"
+  name: "star"
 }, {
-  name: "sky",
-  color: "blue"
+  name: "ellipse"
 }, {
-  name: "lavender",
-  color: "purple"
-
-}];
+  name: "rhombic"
+}, {
+  name: "parallelogram"
+}, {
+  name: "pentagon"
+},
+];
 
 let randomIndex;
 let counter = 0;
@@ -40,12 +38,12 @@ function setup() {
   createCanvas(600, 600);
   background(200);
   textSize(32);
-  textFont('Courier new');
+  textFont('Georgia');
   textAlign(CENTER);
   textStyle(BOLD);
-  fill(100);
+  fill(10);
   imageMode(CENTER);
-  text("click to randomize", width/2, height/2);
+  text("Memory Test", width/2, height/2);
   //setTimeout(changeBackground,1000);
   button = createButton("click to randomize");
   button.mousePressed(buttonPressed);
@@ -82,16 +80,16 @@ function draw() {
 function randomize() {
   animating = false;
 
-  if (colors[0]) {
+  if (shapes[0]) {
     clear();
-    randomIndex = int(random(colors.length));
-    text(`${colors[randomIndex].name} is ${colors[randomIndex].color}`, width/2, height/2);
+    randomIndex = int(random(shapes.length));
+    text(`What color is the ${shapes[randomIndex].name} ?`, width/2, height/2);
     // text(colors[randomIndex].name + "is",width*0.5,height*0.5 +
     // colors[randomIndex].color,width*0.5,height*0.5);
     image(radom(trolls), width/2, height/2);
-    colors.splice(randomIndex, 1);
+    shapes.splice(randomIndex, 1);
   } else {
-    background(random(200, 240));
+    // background(random(200, 240));
     text("nothing left!", 50, 100);
   }
 
