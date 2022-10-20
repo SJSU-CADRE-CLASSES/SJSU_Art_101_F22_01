@@ -1,0 +1,17 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-image: url('assets/summonBg.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+
+}
+canvas {
+    display: block;
+}
+
+.randomizerButton {
+    padding: 10px; 
+    background-color: #59abea;
+}
