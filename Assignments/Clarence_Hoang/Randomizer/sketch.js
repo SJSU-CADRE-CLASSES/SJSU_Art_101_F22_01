@@ -24,7 +24,7 @@ function setup() {
   text("My Best Friends",50,50);
   text("Click to randomize",50,200);
   y = 0;
-  image(CENTER);
+  // image(CENTER);
   console.log(friends);
   button = createButton("Click to randomize");
   button.mousePressed(buttonPressed);
