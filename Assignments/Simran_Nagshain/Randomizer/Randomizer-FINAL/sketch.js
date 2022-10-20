@@ -4,11 +4,11 @@ let dogs = [{
     //red
     name: "mowgli", habit: "to run", color: 'red'
 }, {
-    //purple
-    name: "rico", habit: "to sleep", color: 'rgba(100%,0%,100%,0.5)'
+    //pink
+    name: "rico", habit: "to sleep", color: 'hsb(315,100%,100%)'
 }, {
-    //blue
-    name: "scooby", habit: "to play", color: 'rgb(0,0,255)'
+    //light purple
+    name: "scooby", habit: "to play", color: 'rgb(190,190,255)'
 }, {
     //yellow
     name: "simba", habit: "to eat", color: 'rgb(255,255,0)'
@@ -19,6 +19,7 @@ let dogs = [{
 let randomIndex;
 let animating = false;
 let dog = [];
+let t = "my favorite dogs and their habits";
 let imageCounter = 0;
 let button;
 
@@ -36,7 +37,8 @@ function setup() {
   background (200);
   imageMode(CENTER);
   frameRate(5);
-  text ("click to randomize", 50, 50);
+  textSize(30);
+  text (t, width/2 - 230, height/2);
   console.log (dog);
   button = createButton("click to randomize");
   button.mousePressed(buttonPressed);
@@ -45,33 +47,24 @@ function setup() {
 
 function draw () {
 
-if (animating == true){
-    clear(); 
-   image(dog[imageCounter],width/2, height/2);
+    if (animating == true){
+        ellipse (random(width), random (height), random(50,550));
+    } 
 
-   if (imageCounter < dog.length - 1){
-    imageCounter++;
-    console.log(imageCounter);
-   } else {
-    imageCounter = 0;
-   }
-   
-}    
-    
 }
 
 function randomizer (){
     animating = false;
     clear();
     randomIndex = int(random (dogs.length));
-//    background (random(200, 225));
+for (imageCounter = 0; imageCounter < dog.length - 1; imageCounter++){
+    image(dog[imageCounter],width/2, height/2);
+   }
+   image(dog[randomIndex],width/2, height/2);
+   textSize (32);
 
-    image(random(dog),width/2, height/2);
-    textSize (32);
-    text(`${dogs[randomIndex].name} likes ${dogs[randomIndex].habit}`, width/6, height - 150);
     fill(dogs[randomIndex].color);
-
-    //text(concat(" likes ", dogs[randomIndex].habit), 50 + 6 * dogs[randomIndex].name.length, 50);
+    text(`${dogs[randomIndex].name} likes ${dogs[randomIndex].habit}`, 20, 30);
 
 }
 
