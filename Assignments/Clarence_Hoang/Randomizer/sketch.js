@@ -9,10 +9,11 @@ let bestFriends = [
 let randomIndex;
 let animating = false;
 let friends = [];
+let button;
 
 function preload(){
-  for (let i = i; i <= 6; i++){
-    friends[i] = loadImage(`assets/friend_${i}.JPG`);
+  for (let i = 1; i <= 6; i++){
+    friends[i] = loadImage(`assets/friend_${i}.jpg`);
   }
 }
 
@@ -23,13 +24,13 @@ function setup() {
   text("My Best Friends",50,50);
   text("Click to randomize",50,200);
   y = 0;
-  ImageBitmapRenderingContext(CENTER);
+  //imageMode(CENTER);
   console.log(friends);
+  button = createButton("Click to randomize");
+  button.mousePressed(buttonPressed);
 }
 
 function draw() {
-  let rightWall = width;
-  let xc = constrain();
   resetBar();
   if(animating ==true){
     image(friends[0],width/2,height/2)
@@ -63,7 +64,7 @@ function randomizer(){
 }
 }
 
-function mousePressed(){
+function buttonPressed(){
   animating = true;
   setTimeout(randomizer,1000);
 }
