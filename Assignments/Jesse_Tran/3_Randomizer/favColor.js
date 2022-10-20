@@ -1,4 +1,4 @@
-class FavColor{
+class FavColor {
   
     constructor(nameParam, colorParam){
       this.name = nameParam;
@@ -6,19 +6,20 @@ class FavColor{
       
     }
     
-    display(){
+    display() {
       fill(this.color);
       ellipse(width/2, height/2, 100,100);
     }
     
-    getName(){
+    getName() {
       text(this.name, width/2, height/3.5);
     }
-    getColor(){
+    getColor() {
       text(this.color, width/2, height/3);
     }
     
-    whoWhos(){
+    whoWhos() {
+      textSize(25); 
       text(this.name+"'s"+" favorite color is "+ this.color+"!", width/2.5, height/1.65);
   }
   }
