@@ -10,9 +10,10 @@ let randomIndex;
 let animating = false;
 let friends = [];
 let button;
+let imageCounter= 0;
 
 function preload(){
-  for (let i = 1; i <= 6; i++){
+  for (let i = 0; i <= 5; i++){
     friends[i] = loadImage(`assets/friend_${i}.jpg`);
   }
 }
@@ -21,19 +22,26 @@ function setup() {
   createCanvas(400, 400);
   background(200);
   textSize(15);
+  imageMode(CENTER);
   text("My Best Friends",50,50);
   text("Click to randomize",50,200);
-  y = 0;
-  //imageMode(CENTER);
-  console.log(friends);
+  
+  
+ 
   button = createButton("Click to randomize");
   button.mousePressed(buttonPressed);
+  y = 0;
 }
 
 function draw() {
   resetBar();
   if(animating ==true){
-    image(friends[0],width/2,height/2)
+    image(friends[imageCounter],width/2,height/2)
+    if(imageCounter < friends.length - 1){
+      imageCounter++;
+    } else {
+      imageCounter = 0;
+    }
   }
 }
 
