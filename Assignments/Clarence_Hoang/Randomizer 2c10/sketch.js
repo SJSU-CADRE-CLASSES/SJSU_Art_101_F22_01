@@ -14,7 +14,6 @@ let button;
 
 function preload(){
   for (let i = 0; i <= 5; i++){
-    friends[i] = loadImage(`assets/friend_${i}.jpg`);
   }
 }
 
@@ -22,7 +21,6 @@ function setup() {
   createCanvas(400, 400);
   background(200);
   textSize(15);
-  imageMode(CENTER);
   text("My Best Friends",50,50);
   text("Click to randomize",50,200);
   button = createButton("Click to randomize");
@@ -33,7 +31,6 @@ function setup() {
 function draw() {
   resetBar();
   if(animating ==true){
-    image(friends[imageCounter],width/2,height/2)
     if(imageCounter < friends.length - 1){
       imageCounter++;
     } else {
@@ -60,9 +57,6 @@ function randomizer(){
   if(bestFriends[0]){
   background(random(200,255));
   randomIndex = int(random(bestFriends.length));
-  // text(bestFriends[randomIndex].name +"'s favorite color is " + bestFriends[randomIndex].color,50,50);
-  //bestFriends.splice(randomIndex,1);
-  image(random(friends),width/2,height/2)
   text(`${bestFriends[randomIndex].name}'s favorite color is ${bestFriends[randomIndex].color}`,50,50); 
 } else {
   background(random(200,255));
