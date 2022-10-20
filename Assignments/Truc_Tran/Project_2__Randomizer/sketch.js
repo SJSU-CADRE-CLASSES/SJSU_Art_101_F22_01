@@ -17,7 +17,7 @@ let words = [
   {name:"🍟 BE HAPPY. BE BRIGHT. BE YOU.😜"},
   {name:"🍕 YOU'RE NEVER TOO OLD TO CHASE YOUR DRAMS.😜"},
   {name:"🍜 WHAT GOES AROUND COMES AROUND.😉"},
-  {name:"🥧 A SMILE IS HAPPINESS YOU WILL FIND RIGHT UNDER YOUR NOSE.🤓"},]
+  {name:"🥧 A SMILE IS HAPPINESS YOU WILL FIND RIGHT UNDER YOUR NOSE.🤓"},];
 let cnv;  
 let angle = 0;         
 let smile = [];
