@@ -1,6 +1,10 @@
-var img; 
+var img;
+let servantImg = []; 
+var bgImg;
 
-let colors = [];
+let mySound; 
+
+let summons = [];
 let num;
 let bgColor = 155;
 let txtSize = 20; 
@@ -9,20 +13,29 @@ let button;
 
 function preload() {
   // preload() runs once, it may make you wait
-    img = loadImage('assets/Saintquartz.png');
+  img = loadImage('assets/Saintquartz.png');
+  bgImg = loadImage('assets/summonBg.jpeg'); 
+
+  for (let i = 0; i <= 6; i++){
+    servantImg[i] = loadImage("assets/s"+ i+".png"); 
+  }
+
+  soundFormats('ogg');
+  mySound = loadSound('assets/summmoning.ogg');
   }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   
-  colors[0] = new FavColor("Jesse", 'green');
-  colors[1] = new FavColor("Ella", 'blue');
-  colors[2] = new FavColor("Steven", 'red');
-  colors[3] = new FavColor("Jacob", 'purple');
-  colors[4] = new FavColor("Davis", 'black');
-  colors[5] = new FavColor("Brandon", 'gold');
+  summons[0] = new Servant("Senji Muramasa", "Saber", servantImg[0]);
+  summons[1] = new Servant("Aśvatthāman", "Archer", servantImg[1]);
+  summons[2] = new Servant("Scáthach", "Lancer", servantImg[2]);
+  summons[3] = new Servant("Odysseus", "Rider", servantImg[3]);
+  summons[4] = new Servant("Huyan Zhuo", "Assassin", servantImg[4]);
+  summons[5] = new Servant("Merlin", "Castor", servantImg[5]);
+  summons[6] = new Servant("Arjuna (Alter)", "Beserker", servantImg[6]);
   
-  background(bgColor);
+  background(bgImg);
   //textSize(txtSize);
   //text("CLICK to randomize", width/2.3, height/2); 
 
@@ -38,7 +51,7 @@ function draw() {
   //colors[0].getName();
   //colors[0].getColor();
   
-  if(animating == true) {
+  if(animating == true) { 
     fill(random(255), random(255), random(255));
     size = random(50, 500); 
     image(img, random(width)-100, random(height)-100, size, size); 
@@ -46,22 +59,23 @@ function draw() {
 }
 
 function buttonPressed() {
-  animating = true; 
-
+  animating = true;
+  mySound.play(); 
   // Changes the background after 1 second. 1000 = 1 second. 1000ms
   //setTimeout(changeBackGround, 1000);
 
   // 3 seconds
-  setTimeout(Randomizer, 3000); 
+  setTimeout(Randomizer, 5000); 
 }
 
 function Randomizer() {
   animating = false; 
-
-  background(random(bgColor), random(bgColor), random(bgColor));
-  num = random(colors.length);
-  colors[int(num)].display();
-  colors[int(num)].whoWhos();
+  mySound.stop();
+  
+  background(bgImg);
+  num = random(summons.length);
+  summons[int(num)].display();
+  summons[int(num)].whoWhos();
 }
 
 //function changeBackGround() {
