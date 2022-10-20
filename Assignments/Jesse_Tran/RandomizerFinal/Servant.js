@@ -1,13 +1,15 @@
 class Servant {
   
-    constructor(nameParam, classParam, imgParam){
+    constructor(nameParam, classParam, imgParam, soundParam){
       this.name = nameParam;
       this.class = classParam;
       this.img = imgParam; 
+      this.sound = soundParam; 
     }
     
     display() {
       image(this.img, width/2.45, height/8, 256, 362); 
+      this.sound.play();
     }
     
     getName() {
