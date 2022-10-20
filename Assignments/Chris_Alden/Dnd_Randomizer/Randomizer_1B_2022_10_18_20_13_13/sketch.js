@@ -1,61 +1,95 @@
 // dnd character classes
-let dnd = [
-{name: "Bard", color: "green"},
-{name: "Paladin", color: "yellow"}, 
-{name: "Wizard", color: "red"}, 
-{name: "Sorcerer", color: "orange"}, 
-{name: "Rogue", color: "black"}, 
-{name: "Cleric", color: "grey"}, 
-{name: "Barbarian", color: "magenta"}, 
-{name: "Druid", color: "darkgreen"}, 
-{name: "Fighter", color: "purple"}, 
-{name: "Monk", color: "pink"}, 
-{name: "Ranger", color: "brown"}, 
-{name: "Warlock", color: "teal"}
-];
+//sources for images --> https://www.dndbeyond.com/classes
+//this is array 1
+let dndClasses = [
+    {
+      name: "Bard",
+    },
+    {
+      name: "Paladin",
+    },
+    {
+      name: "Wizard",
+    },
+    {
+      name: "Sorcerer",
+    },
+    {
+      name: "Rogue",
+    },
+    {
+      name: "Cleric",
+    },
+    {
+      name: "Barbarian",
+    },
+    {
+      name: "Druid",
+    },
+    {
+      name: "Fighter",
+    },
+    {
+      name: "Monk",
+    },
+    {
+      name: "Ranger",
+    },
+    {
+      name: "Warlock",
+    },
+  ];
+//this is array 2
+  let dndRaces = [
+    "Dragonborn",
+    "Dwarf",
+    "Elf",
+    "Gnome",
+    "Halfling",
+    "Human",
+    "Tiefling",
+    "Half-Orc",
+    "Leonin",
+    "Satyr",
+    "Aasimar",
+    "Changling",
+  ];
 
-let randomIndex
-
-function setup() {
-  createCanvas(600, 600);
-  background (200);
+  let img
+  let loadImage
+  let randomIndex1;
+  let randomIndex2;
   
-  randomIndex = int(random(dnd.length));
-    console.log(dnd[randomIndex].name);
-    text(dnd[randomIndex].name, 50, 50);
+function preload(){
+}
 
-dnd.splice(randomIndex, 1);
-console.log(dnd);
-
-  console.log ("initial array is");
-  console.log (dnd);
+  function setup() {
+    console.log("setup running");
+    createCanvas(600, 600);
+    background(220);
+    strokeWeight(2);
+    textSize(32);
   
-  dnd.pop();
-  console.log ("array after pop");
-  console.log (dnd);
+    console.log("initial class array");
+    console.log(dndClasses);
   
-  dnd.push();
-  console.log ("array after push");
-  console.log (dnd);
-}
+    console.log("initial race array");
+    console.log(dndRaces);
+  }
+  
+  function draw() {}
+  
+  function mousePressed() {
+    background(random(200, 255));
 
-function draw() {
-  background(220);
-}
+  // random index 1 controls the classes properties
+    randomIndex1 = int(random(dndClasses.length));
+    console.log(dndClasses[randomIndex1].name);
 
-function mousePressed(){
-
-if (dnd[0]){
-
-
-
-    randomIndex = int(random(dnd.length));
-    console.log(dnd[randomIndex].name);
-    text(dnd[randomIndex].name, 50, 50);
-    dnd.splice(randomIndex, 1);
-    console.log(dnd);
-
-} else{
-    text("nothin' left!", 50, 50);
-}
-}
+  //random index 2 controls the races properties
+    randomIndex2 = int(random(dndRaces.length));
+    console.log(dndRaces[randomIndex2]);
+  
+    text(dndClasses[randomIndex1].name, 50, 50);
+    text(dndRaces[randomIndex2], 50, 100);
+  }

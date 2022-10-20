@@ -1,0 +1,21 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+
+.randomButton{
+
+  padding: 20px;
+  position: absolute;
+  background-color:bisque;
+  top: 80%;
+  left: 40%;
+  border: none;
+}
+body {
+  background-image: url("bowl.png");
+  background-size: 300px 300px;
+  }
