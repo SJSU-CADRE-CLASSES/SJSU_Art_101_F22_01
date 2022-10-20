@@ -47,9 +47,10 @@ function setup() {
   //setTimeout(changeBackground,1000);
   button = createButton("click to randomize");
   button.mousePressed(buttonPressed);
+  button.position(240, 610);
 
   console.log(trolls);
-  frameRate(8);
+  frameRate(5);
 
 
 }
