@@ -65,7 +65,7 @@ function randomizer(){
   randomIndex = int(random(bestFriends.length));
   // text(bestFriends[randomIndex].name +"'s favorite color is " + bestFriends[randomIndex].color,50,50);
   //bestFriends.splice(randomIndex,1);
-  image(random(friends),width/2,height/2)
+  image(random(randomIndex),width/2,height/2)
   text(`${bestFriends[randomIndex].name}'s favorite color is ${bestFriends[randomIndex].color}`,50,50); 
 } else {
   background(random(200,255));
