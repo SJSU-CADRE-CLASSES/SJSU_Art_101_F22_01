@@ -69,13 +69,14 @@ function buttonPressed() {
 }
 
 function Randomizer() {
-  animating = false; 
-  mySound.stop();
+  animating = false;
   
   background(bgImg);
   num = random(summons.length);
   summons[int(num)].display();
   summons[int(num)].whoWhos();
+
+  mySound.stop();
 }
 
 //function changeBackGround() {
