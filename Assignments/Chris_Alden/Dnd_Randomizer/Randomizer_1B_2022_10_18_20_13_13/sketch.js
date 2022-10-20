@@ -1,4 +1,6 @@
 // dnd character classes
+//sources for images --> https://www.dndbeyond.com/classes
+//this is array 1
 let dndClasses = [
     {
       name: "Bard",
@@ -37,7 +39,7 @@ let dndClasses = [
       name: "Warlock",
     },
   ];
-  
+//this is array 2
   let dndRaces = [
     "Dragonborn",
     "Dwarf",
@@ -52,10 +54,15 @@ let dndClasses = [
     "Aasimar",
     "Changling",
   ];
-  
+
+  let img
+  let loadImage
   let randomIndex1;
   let randomIndex2;
   
+function preload(){
+}
+
   function setup() {
     console.log("setup running");
     createCanvas(600, 600);
@@ -74,13 +81,15 @@ let dndClasses = [
   
   function mousePressed() {
     background(random(200, 255));
-  
+
+  // random index 1 controls the classes properties
     randomIndex1 = int(random(dndClasses.length));
     console.log(dndClasses[randomIndex1].name);
-  
+
+  //random index 2 controls the races properties
     randomIndex2 = int(random(dndRaces.length));
     console.log(dndRaces[randomIndex2]);
   
     text(dndClasses[randomIndex1].name, 50, 50);
-    text(dndRaces[randomIndex2], 200, 50);
+    text(dndRaces[randomIndex2], 50, 100);
   }
