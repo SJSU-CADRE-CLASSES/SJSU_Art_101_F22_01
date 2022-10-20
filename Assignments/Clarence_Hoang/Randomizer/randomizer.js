@@ -11,8 +11,8 @@ let animating = false;
 let friends = [];
 
 function preload(){
-  for (let i = 0; i <= 6; i++){
-    friends[i] = loadImage(`assets/IMG_${i}.JPG`);
+  for (let i = i; i <= 6; i++){
+    friends[i] = loadImage(`assets/friend_${i}.JPG`);
   }
 }
 
@@ -40,6 +40,7 @@ function resetBar(){
 
   fill(50,50,255)
   if(animating == true){
+    clear();
   rect(0,height-20,y,20);
   } else{
   y = 1;
