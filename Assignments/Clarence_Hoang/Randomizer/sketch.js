@@ -63,9 +63,10 @@ function randomizer(){
   if(bestFriends[0]){
   background(random(200,255));
   randomIndex = int(random(bestFriends.length));
-  text(`${bestFriends[randomIndex].name}'s favorite color is ${bestFriends[randomIndex].color}`,50,50);  
   // text(bestFriends[randomIndex].name +"'s favorite color is " + bestFriends[randomIndex].color,50,50);
-  bestFriends.splice(randomIndex,1);
+  //bestFriends.splice(randomIndex,1);
+  image(random(friends),width/2,height/2)
+  text(`${bestFriends[randomIndex].name}'s favorite color is ${bestFriends[randomIndex].color}`,50,50); 
 } else {
   background(random(200,255));
   text("Find more friends!",50,50);
