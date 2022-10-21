@@ -31,7 +31,7 @@ let owls = [{
   }
 
 function setup(){
-    createCanvas(200,200);
+    createCanvas(400,400);
     background(200);
 
     imageMode(CENTER);
@@ -48,7 +48,7 @@ function draw(){
   if(animating == true){
     clear();
   //here
-    image(hootys[imageCounter],windowWidth/2, windowHeight/2);
+    image(hootys[imageCounter],200,200);
 
     if (imageCounter < hootys.length - 1){
     imageCounter++;
