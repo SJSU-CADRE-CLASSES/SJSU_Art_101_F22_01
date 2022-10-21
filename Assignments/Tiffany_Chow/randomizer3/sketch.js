@@ -1,5 +1,6 @@
 //owls names is hooty 
 let owls = [{
+    name: "tiffany",
     do: "run" ,
     color: "red"
   }, {
@@ -19,16 +20,17 @@ let owls = [{
   let randomIndex;
   let animating = false;
   let hootys = [];
-  let imageCounter = 0;
+  let imageCounter = 1;
   let button;
 
   function preload(){
     for (let i = 1; i <= 13; i++){
-      hootys[i] = loadImage(`image/hooty_${i}.jpg`)
+      hootys[i] = loadImage('image/hooty_'+i+'.jpg');
+      
     }
   }
 
-  function setup(){
+function setup(){
     createCanvas(200,200);
     background(200);
 
@@ -41,34 +43,35 @@ let owls = [{
      button.mousePressed(buttonPressed);
   }
 
-function draw () {
+function draw(){
+  hootys[imageCounter]
   if(animating == true){
-     clear();
-   image(hootys[imageCounter],windowWidth/2, windowHeight/2);
+    clear();
+  //here
+    image(hootys[imageCounter],windowWidth/2, windowHeight/2);
 
-   if (imageCounter < hootys.length - 1){
-   imageCounter++;
-   console.log(imageCounter); 
-  }else{
-    imageCounter = 0;
+    if (imageCounter < hootys.length - 1){
+    imageCounter++;
+    console.log(imageCounter); 
+    }else{
+      imageCounter = 1;
+    }
   }
 }
-}
 
-function randomizer (){
+function randomizer(){
   animating = false;
  
-  clear();
+ clear();
   randomIndex = int(random (owls.length));
 
   image(random(hootys),windowWidth/2, windowHeight/2);
   textSize (32);
-  text(`${owls[randomIndex].name} will ${owls[randomIndex].do}`, windowWidth/6, windowHeight - 150);
+  text(owls[randomIndex].name+' will '+owls[randomIndex].do, windowWidth/6, windowHeight - 150);
   fill(owls[randomIndex].color);
 }
 
-    function buttonPressed () {
+function buttonPressed(){
     animating = true;
     setTimeout(randomizer,2000);
-  
-  }
+ }
