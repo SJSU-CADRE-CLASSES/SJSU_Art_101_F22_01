@@ -1,10 +1,10 @@
-//owls hooty being crazy 
+//owls names is hooty 
 let owls = [{
-    name: "the sad one",
+    name: "tiffany",
     do: "run" ,
     color: "red"
   }, {
-    name:"mull",
+    name:"lol",
     do: "play" ,
     color:"pink"
   }, {
@@ -17,26 +17,25 @@ let owls = [{
     color:"green"
   }];
   
-  // let star = ["#E6E82D","#FF4F00","#C2FFCD", "#EEC2FF","#EEFFFF"];
-  
   let randomIndex;
   let animating = false;
   let hootys = [];
-  letimageCounter = 0;
+  let imageCounter = 1;
   let button;
 
   function preload(){
-    for (let i = 0; i <= 13; i++){
-      hootys[i] = loadImage('image/hooty_'+i+'.jpg')
+    for (let i = 1; i <= 13; i++){
+      hootys[i] = loadImage('image/hooty_'+i+'.jpg');
+      
     }
   }
 
-  function setup(){
-    createCanvas(200,200);
+function setup(){
+    createCanvas(400,400);
     background(200);
 
     imageMode(CENTER);
-    frameRate(9);
+    //frameRate(9);
   
     text ("click to randomize",20, 20);
      console.log(hootys);
@@ -44,70 +43,35 @@ let owls = [{
      button.mousePressed(buttonPressed);
   }
 
-function draw () {
- 
-
+function draw(){
+  hootys[imageCounter]
   if(animating == true){
-     clear();
-   image(hootys[imageCounter],width/2, height/2);
+    clear();
+  //here
+    image(hootys[imageCounter],200,200);
 
-   if (imageCounter < hootys.length - 1){
-   imageCounter++;
-   console.log(imageCounter); 
-  }else{
-    imageCounter = 0;
+    if (imageCounter < hootys.length - 1){
+    imageCounter++;
+    console.log(imageCounter); 
+    }else{
+      imageCounter = 1;
+    }
   }
 }
-}
 
-function randomizer (){
+function randomizer(){
   animating = false;
  
-  clear();
+ clear();
   randomIndex = int(random (owls.length));
 
-  image(random(hootys),width/2, height/2);
+  image(random(hootys),windowWidth/2, windowHeight/2);
   textSize (32);
-  text(`${owls[randomIndex].name} will ${owls[randomIndex].do}`, width/6, height - 150);
+  text(owls[randomIndex].name+' will '+owls[randomIndex].do, windowWidth/6, windowHeight - 150);
   fill(owls[randomIndex].color);
 }
 
-
-  // function randomizer(){
-  //   animating = false;
-  
-  //   if (owls[0]){
-  //   background(0);
-  //   clear();
-  //   randomIndex = int(random(hootys.length));
-  //  text(owls[randomIndex].name,50,50);
-  //  image(random(hootys), width/2,height /2);
-  //  owls.splice(randomIndex,1);
-  // } else {
-  //   background(0);
-  //   text("nothing left!", width/2, height*0.2);
-  //   }
-  // }
-
-
-  
-  //  function randomizer(){
-  //   animating = false;
-  
-  //   if (owls[0]){
-  //   background(0);
-  //   clear();
-  //   randomIndex = int(random(owls.length));
-  //  text(`${owls[randomIndex].name}'s favourite color is ${owls[randomIndex].color}.`,width*0.1,height*0.2);
-  //  // text(owls[randomIndex].name + "'s favourite color is " + owls[randomIndex].color + ".",width*0.1,height*0.2);
-  //  owls.splice(randomIndex,1);
-  // } else {
-  //   background(0);
-  //   text("nothing left!", width/2, height*0.2);
-  //   }
-  // }
-    function buttonPressed () {
+function buttonPressed(){
     animating = true;
     setTimeout(randomizer,2000);
-  
-  }
+ }
