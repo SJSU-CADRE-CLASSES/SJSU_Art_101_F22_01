@@ -1,6 +1,6 @@
 //owls names is hooty 
 let owls = [{
-    name: "tiffany",
+    name:":3",
     do: "run" ,
     color: "red"
   }, {
@@ -66,8 +66,8 @@ function randomizer(){
   randomIndex = int(random (owls.length));
 
   image(random(hootys),windowWidth/2, windowHeight/2);
-  textSize (32);
-  text(owls[randomIndex].name+' will '+owls[randomIndex].do, windowWidth/6, windowHeight - 150);
+  textSize (30);
+  text(owls[randomIndex].name+' will '+owls[randomIndex].do, 60,200);
   fill(owls[randomIndex].color);
 }
 
