@@ -43,13 +43,18 @@ let cats =
 
 let randomIndex;
 let animating = false;
-
+let button;
 function setup() {
     createCanvas(600, 600);
     background(200);
     textSize(32);
-    
-    text("click to randomize", 50, 50 );
+    button = createButton("click to randomize");
+    button.mousePressed(buttonPressed);
+    button.style("padding", "20px");
+    button.style("background-color", "#AA00FF");
+
+
+    text("Happy Cat Cafe", 150, 50 );
     
     //console.log(cats.length)
     //console.log(cats[randomIndex].breed);
@@ -89,7 +94,7 @@ function randomizer(){
         
 }
   
-function mousePressed(){
+function buttonPressed(){
     animating = true;
     setTimeout (randomizer, 2000);  
 }
