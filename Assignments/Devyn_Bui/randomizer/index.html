@@ -7,4 +7,42 @@ yuh
  
 </body>
 
+let cats = [{
+  name: "water",
+  color: "blue",
+},{
+  name: "fire",
+  color: "red",
+},{
+  name: "earth",
+  color: "green",
+},{
+  name: "air",
+  color: "orange",
+}];
+
+
+function setup(){
+  createCanvas(400,400);
+  background(200);
+  textSize(32);
+
+text("click to randomize")
+
+}
+function draw(){
+}
+ function  mousePressed(){ 
+
+  if(dogs[0]){
+
+  background(random(200,225));
+  randomIndex = int(random(cats.length));
+  text(cats[randomIndex].name, 50, 50);
+  cats.splice(randomIndex,1);
+}
+else{
+  text("none",50,50);
+}
+
 </html>
