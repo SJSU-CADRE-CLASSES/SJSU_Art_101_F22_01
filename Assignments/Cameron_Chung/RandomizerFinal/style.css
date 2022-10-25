@@ -5,4 +5,8 @@ html, body {
   canvas {
     display: block;
   }
-  
+
+.randomizerButton {
+  padding: 15px;
+  background-color: #ffb5d8;
+}
