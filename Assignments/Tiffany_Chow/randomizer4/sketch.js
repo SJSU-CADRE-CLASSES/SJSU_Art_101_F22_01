@@ -2,23 +2,23 @@
 let owls = [{
     name:"Nala",
     do: " a great day!/ᐠ - ˕ -マ <333" ,
-    color: "random"
+    color: "red"
   }, {
     name:"Lucy",
     do: " a colorful and beautiful life.(=^･ω･^=) <33" ,
-    color:"random"
+    color:"green"
   }, {
     name: "Max",
     do: "no barrier comes in your way!!(˶˃ᆺ˂˶)" ,
-    color: "random"
+    color: "blue"
   }, {
     name: "Oliver",
     do: " lots of happiness,and good luck!!ฅ^•ﻌ•^ฅ" ,
-    color:"random"
+    color:"purple"
   }, {
     name:"Callie",
     do: " relax and calming day.(｡^•ㅅ•^｡) <3" ,
-    color:"random"
+    color:"pink"
   }];
   
   let randomIndex;
@@ -35,7 +35,7 @@ let owls = [{
   }
 
 function setup(){
-    createCanvas(400,400);
+    createCanvas(600,600);
     background(200);
 
     imageMode(CENTER);
@@ -71,7 +71,7 @@ function randomizer(){
 
   image(random(cats),windowWidth/2, windowHeight/2);
   textSize (30);
-  text(owls[randomIndex].name+' wish you '+owls[randomIndex].do, 60,200);
+  text(owls[randomIndex].name+' wish you '+owls[randomIndex].do, 100,200);
   fill(owls[randomIndex].color);
 }
 
