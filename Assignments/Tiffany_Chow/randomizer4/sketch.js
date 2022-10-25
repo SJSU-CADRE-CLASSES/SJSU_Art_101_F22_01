@@ -42,17 +42,17 @@ function setup(){
     //frameRate(9);
   
     text ("click to randomize",20, 20);
-     console.log(hootys);
+     //console.log(hootys);
      button = createButton("click to randomize");
      button.mousePressed(buttonPressed);
   }
 
 function draw(){
-  hootys[imageCounter]
+  cats[imageCounter]
   if(animating == true){
     clear();
   //here
-    image(cats[imageCounter],600,600);
+    image(cats[imageCounter],300,300);
 
     if (imageCounter < cats.length - 1){
     imageCounter++;
@@ -69,7 +69,7 @@ function randomizer(){
  clear();
   randomIndex = int(random (owls.length));
 
-  image(random(cats),windowWidth/2, windowHeight/2);
+  image(random(cats),300, 300);
   textSize (30);
   text(owls[randomIndex].name+' wish you '+owls[randomIndex].do, 100,200);
   fill(owls[randomIndex].color);
@@ -77,5 +77,5 @@ function randomizer(){
 
 function buttonPressed(){
     animating = true;
-    setTimeout(randomizer,2000);
+    setTimeout(randomizer,1000);
  }
