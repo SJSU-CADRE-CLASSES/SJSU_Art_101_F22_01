@@ -10,9 +10,10 @@ let randomIndex;
 let animating = false;
 let friends = [];
 let button;
+let imageCounter= 0;
 
 function preload(){
-  for (let i = 1; i <= 6; i++){
+  for (let i = 0; i <= 5; i++){
     friends[i] = loadImage(`assets/friend_${i}.jpg`);
   }
 }
@@ -21,21 +22,26 @@ function setup() {
   createCanvas(400, 400);
   background(200);
   textSize(15);
+  imageMode(CENTER);
   text("My Best Friends",50,50);
   text("Click to randomize",50,200);
-  y = 0;
-  image(CENTER);
-  console.log(friends);
+  
+  
+ 
   button = createButton("Click to randomize");
   button.mousePressed(buttonPressed);
+  y = 0;
 }
 
 function draw() {
-  let rightWall = width;
-  let xc = constrain();
   resetBar();
   if(animating ==true){
-    image(friends[0],width/2,height/2)
+    image(friends[imageCounter],width/2,height/2)
+    if(imageCounter < friends.length - 1){
+      imageCounter++;
+    } else {
+      imageCounter = 0;
+    }
   }
 }
 
@@ -57,9 +63,10 @@ function randomizer(){
   if(bestFriends[0]){
   background(random(200,255));
   randomIndex = int(random(bestFriends.length));
-  text(`${bestFriends[randomIndex].name}'s favorite color is ${bestFriends[randomIndex].color}`,50,50);  
   // text(bestFriends[randomIndex].name +"'s favorite color is " + bestFriends[randomIndex].color,50,50);
-  bestFriends.splice(randomIndex,1);
+  //bestFriends.splice(randomIndex,1);
+  image(random(friends),width/2,height/2)
+  text(`${bestFriends[randomIndex].name}'s favorite color is ${bestFriends[randomIndex].color}`,50,50); 
 } else {
   background(random(200,255));
   text("Find more friends!",50,50);
