@@ -1,37 +1,41 @@
-//owls names is hooty 
+//new flie
 let owls = [{
-    name:":3",
-    do: "run" ,
-    color: "red"
+    name:"Nala",
+    do: " a great day!/ᐠ - ˕ -マ <333" ,
+    color: "random"
   }, {
-    name:"lol",
-    do: "play" ,
-    color:"pink"
+    name:"Lucy",
+    do: " a colorful and beautiful life.(=^･ω･^=) <33" ,
+    color:"random"
   }, {
-    name: "the happy one",
-    do: "jump" ,
-    color: "blue"
+    name: "Max",
+    do: "no barrier comes in your way!!(˶˃ᆺ˂˶)" ,
+    color: "random"
   }, {
-    name: "joy",
-    do: "fly" ,
-    color:"green"
+    name: "Oliver",
+    do: " lots of happiness,and good luck!!ฅ^•ﻌ•^ฅ" ,
+    color:"random"
+  }, {
+    name:"Callie",
+    do: " relax and calming day.(｡^•ㅅ•^｡) <3" ,
+    color:"random"
   }];
   
   let randomIndex;
   let animating = false;
-  let hootys = [];
+  let cats = [];
   let imageCounter = 1;
   let button;
 
   function preload(){
-    for (let i = 1; i <= 13; i++){
-      hootys[i] = loadImage('image/hooty_'+i+'.jpg');
+    for (let i = 1; i <= 5; i++){
+      cats[i] = loadImage('image/cats_'+i+'.jpg');
       
     }
   }
 
 function setup(){
-    createCanvas(400,400);
+    createCanvas(600,600);
     background(200);
 
     imageMode(CENTER);
@@ -48,9 +52,9 @@ function draw(){
   if(animating == true){
     clear();
   //here
-    image(hootys[imageCounter],200,200);
+    image(cats[imageCounter],600,600);
 
-    if (imageCounter < hootys.length - 1){
+    if (imageCounter < cats.length - 1){
     imageCounter++;
     console.log(imageCounter); 
     }else{
@@ -65,9 +69,9 @@ function randomizer(){
  clear();
   randomIndex = int(random (owls.length));
 
-  image(random(hootys),windowWidth/2, windowHeight/2);
+  image(random(cats),windowWidth/2, windowHeight/2);
   textSize (30);
-  text(owls[randomIndex].name+' will '+owls[randomIndex].do, 60,200);
+  text(owls[randomIndex].name+' wish you '+owls[randomIndex].do, 100,200);
   fill(owls[randomIndex].color);
 }
 
