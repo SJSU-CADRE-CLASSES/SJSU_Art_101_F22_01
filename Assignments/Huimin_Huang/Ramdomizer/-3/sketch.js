@@ -2,22 +2,45 @@ let dogs =[{name:"dilion", color:"dog treat"},{name:"Ziggy",color:"chartrese"},{
 
 let randomIndex;
 let animating = false;
-let counter = 0;
+let memes = [];
+let imageCounter = 0;
+let button;
+
+function preload(){
+
+    for (let i = 0; i <= 5; i++){
+      memes[i] = loadImage(`assets/meme_${i}.jpg`)
+    }
+}
+
 function setup(){
     createCanvas(600, 600);
     background(200);
-    textSize(32);
+    textSize(24);
+    imageMode(CENTER);
+    frameRate(8);
 
     text("click to randomize",50,50);
-
-    setTimeout(changeBackground,1000);
-
+    console.log(memes);
+    // setTimeout(changeBackground,1000);
+    button = createButton("click to randomize");
+    button.mousePressed(buttonPressed);
 }
+
 function draw(){
 
     if(animating == true){
-      ellipse(random(width), random(height), random(50, 200));
+      clear();
+      image(memes[imageCounter], width/2, height/2);
+      imageCounter++;
     }
+      if (imageCounter < memes.length - 1){
+      imageCounter++;
+      console.log(imageCounter);
+    } else {
+      imageCounter = 0;
+    }
+
 }
 
 function changeBackground(){
@@ -35,18 +58,21 @@ function randomizer(){
   animating = false;
     if (dogs[0]){
 
-  background(random(200,255));
+  //background(random(200,255));
+  clear();
   randomIndex = int(random(dogs.length));
- text(`${dogs[randomIndex].name }'s favorite color is
-${dogs[randomIndex].color}`, 50, 50);
-dogs.splice(randomIndex, 1);
+
+  image(random(memes), width/2, height/2);
+  text(`${dogs[randomIndex].name, width/2, height - 100 }'s favorite color is
+ ${dogs[randomIndex].color}`, width / 2, 50);
+  dogs.splice(randomIndex, 1);
 } else {
   background(random(200,255));
   text("nothing left!",50,50);
 }
 }
 
-function mousePressed(){
+function buttonPressed(){
   animating = true;
   setTimeout(randomizer,2000);
 
