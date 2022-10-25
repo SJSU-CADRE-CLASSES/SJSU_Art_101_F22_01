@@ -11,33 +11,33 @@ let cats =
 
 [{
     
-    breed:"American Shorthair", 
-    age: "Kitten",
+    breed:"Louie", 
+    age: "Sunbathing",
     pic: catImg[1]
 }, 
 
 {
     
-    breed:"British Shorthair", 
-    age: "Adult",
+    breed:"Bamboo", 
+    age: "playing with their toys",
     pic: catImg[2]
 }, 
 {
     
-    breed:"Sphynx", 
-    age:"Senior",
+    breed:"Limon", 
+    age:"sleeping all day",
     pic: catImg[3]
 }, 
 {
     
-    breed:"Russian Blue", 
-    age: "Kitten",
+    breed:"Felix", 
+    age: "scratching up the furniture",
     pic: catImg[4]
 },
 {
     
-    breed:"Domestic Shorthair", 
-    age: "Senior",
+    breed:"Smudge", 
+    age: "yelling in the middle of the night",
     pic: catImg[0]
 }];
 
@@ -73,8 +73,8 @@ function randomizer(){
         
         randomIndex= int(random(cats.length));
         text(`${cats[randomIndex].breed} 's lucky day
-        Age: ${cats[randomIndex].age}`, 50, 50);
-        image(catImg[randomIndex], 300, 300, 100, 100);
+        Hobby: ${cats[randomIndex].age}`, 50, 50);
+        image(catImg[randomIndex], 100, 150, 400, 400);
         cats.splice(randomIndex, 1);
         //text(cats[randomIndex].breed + "'s lucky day Age: " + cats[randomIndex].age, 50, 50);
         //cats.splice(randomIndex, 1);
@@ -84,7 +84,7 @@ function randomizer(){
     {
 
         background (random(200, 255));
-        text("nothing here!", 50, 50);
+        text("nothing here!", 150, 150);
     }
         
 }
