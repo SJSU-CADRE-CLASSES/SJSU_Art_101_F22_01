@@ -9,8 +9,8 @@ let shapes = [];
 shapes = ['Draw a heart', 'Draw a circle', 'Draw a square', 'Draw a triangle']
 
 function preload() {
-  ready = loadImage("assets/sanrio_0.png");
-  draft = loadImage("assets/background.jpg");
+  ready = loadImage("Assets/sanrio_0.png");
+  draft = loadImage("Assets/background.jpg");
 }
 
 function setup() {
