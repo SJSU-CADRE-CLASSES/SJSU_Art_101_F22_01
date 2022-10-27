@@ -10,7 +10,6 @@ shapes = ['Draw a heart', 'Draw a circle', 'Draw a square', 'Draw a triangle']
 function preload() {
   ready = loadImage("assets/sanrio_0.png");
   draft = loadImage("assets/background.jpg");
-//this is a change
 }
 
 function setup() {
