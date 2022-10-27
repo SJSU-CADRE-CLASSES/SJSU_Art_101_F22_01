@@ -4,6 +4,7 @@ let randomIndex;
 let button;
 let shapes = [];
  
+// this is a change
 
 shapes = ['Draw a heart', 'Draw a circle', 'Draw a square', 'Draw a triangle']
 
