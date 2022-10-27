@@ -14,7 +14,6 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(1000, 800);
   textSize(15);
   image(ready, 0, 0);
   image(draft, 0, 0);
@@ -27,6 +26,7 @@ function setup() {
 
 function randomizer(){
     animating = false;
+    createCanvas(1000, 800);
     if(shapes[0]){
     clear();
     randomIndex = int(random(shapes.length)-1);
