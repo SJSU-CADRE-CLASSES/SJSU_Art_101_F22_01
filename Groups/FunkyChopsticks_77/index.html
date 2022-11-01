@@ -4,19 +4,13 @@
 </head>
     <body>
         <a-scene>
+
             <a-assets>
-                <a-asset-item id="env-obj" src="assets/env.obj"></a-asset-item>
-                <a-asset-item id="test-obj" src="assets/test2.obj"></a-asset-item>
-                <a-asset-item id="test-mtl" src="assets/test2.mtl"></a-asset-item>
-                <a-asset-item id="text-obj" src="assets/textured.obj"></a-asset-item>
-                <a-asset-item id="text-mtl" src="assets/textured.mtl"></a-asset-item>
+                <a-asset-item id="table" src="assets/table.gltf"></a-asset-item>
             </a-assets>
     
-            <a-entity obj-model="obj: #env-obj;"></a-entity> 
-            <a-entity obj-model="obj: #text-obj; mtl:#text-mtl"></a-entity> 
-            <a-entity obj-model="obj: #test-obj; mtl:#test-mtl"></a-entity> 
-            <a-entity position="5 1 -9" obj-model="obj: #test-obj; mtl: #text-mtl"></a-entity>
-            <a-entity position="5 1 -9" obj-model="obj: #test-obj; mtl: #test-mtl"></a-entity>
+            <a-entity gltf-model="#table"
+                        position="-2 2 7"></a-entity>
             
 
             <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
@@ -24,6 +18,7 @@
             <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
             <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
             <a-sky color="#ECECEC"></a-sky>
+
         </a-scene>
     </body>
 </html>
