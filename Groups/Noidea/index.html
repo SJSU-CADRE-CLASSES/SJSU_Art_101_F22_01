@@ -4,9 +4,7 @@
   </head>
   <body>
     <a-scene>
-      <a-assets>
 
-      </a-assets>
       <a-camera position="6 4 9"></a-camera>
 
       <!-- Defining the URL inline. Not recommended but may be more comfortable. -->
@@ -15,6 +13,16 @@
     <a-text value="Welcome To Our Study Room" position="0 8 -3.7" color="#7ebcf2" width="10"
     ></a-text>
 
+
+      <a-assets>
+        <a-asset-item id="shoe" src="bao.gltf"></a-asset-item>
+      </a-assets>
+
+      <!-- Using the asset management system. -->
+      <a-gltf-model src="#shoe"></a-gltf-model>
+
+      <!-- Defining the URL inline. Not recommended but more comfortable for web developers. -->
+      <a-gltf-model src="bao.gltf"></a-gltf-model>
 
 
     </a-scene>
