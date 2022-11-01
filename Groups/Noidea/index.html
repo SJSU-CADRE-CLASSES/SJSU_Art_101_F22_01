@@ -4,23 +4,15 @@
   </head>
   <body>
     <a-scene>
-
       <a-assets>
-        <a-mixin id="text"
-          text="align: center; width: 6;
-          value: Welcome to Study Room"
-          ></a-mixin>
-      </a-assets>
 
-      <!-- Using the asset management system. -->
-      <a-obj-model src="#101-obj" mtl="#101-mtl"></a-obj-model>
+      </a-assets>
+      <a-camera position="6 4 9"></a-camera>
 
       <!-- Defining the URL inline. Not recommended but may be more comfortable. -->
       <a-obj-model src="101.obj" mtl="101.mtl"></a-obj-model>
 
-      <a-camera position="6 4 9"></a-camera>
-
-      <a-text value="Welcome To Study Room" font="Arial Black" scale="5 5 5" position="5 5 5" color="red">
+    <a-text value="Welcome To Our Study Room" position="0 8 -3.8" color="#7ebcf2" width="10">
       </a-text>
 
 
