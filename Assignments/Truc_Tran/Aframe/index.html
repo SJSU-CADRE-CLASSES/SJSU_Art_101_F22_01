@@ -12,7 +12,6 @@
         <a-asset-item id="green-cake" src="assets/green-cake.gltf"></a-asset-item>
         <a-asset-item id="orange-cake" src="assets/orange-cake.gltf"></a-asset-item>
         <a-asset-item id="blue-cake" src="assets/blue-cake.gltf"></a-asset-item>
-
         <a-asset-item id="bridge-1" src="assets/bridge-1.gltf"></a-asset-item>
         <a-asset-item id="bridge-2" src="assets/bridge-2.gltf"></a-asset-item>
         <a-asset-item id="bridge-3" src="assets/bridge-3.gltf"></a-asset-item>
@@ -38,7 +37,7 @@
       <a-entity gltf-model="#orange-cake"></a-entity>
       <a-entity gltf-model="#blue-cake"></a-entity>
 
-        <a-entity gltf-model="#bridge-1"></a-entity>
+      <a-entity gltf-model="#bridge-1"></a-entity>
         <a-entity gltf-model="#bridge-2"></a-entity>
         <a-entity gltf-model="#bridge-3"></a-entity>
         <a-entity gltf-model="#bridge-4"></a-entity>
@@ -55,6 +54,13 @@
 
         <a-entity gltf-model="#gate-rainbow"></a-entity>
         <a-entity gltf-model="#cloud"></a-entity>
+
+        <a-entity vive-controls="hand: left"></a-entity>
+        <a-entity vive-controls="hand: right"></a-entity>
+        <a-entity camera look-controls wasd-controls="acceleration:100" position="0 0.6 40"></a-entity>
+        <a-entity id="rig" position="0 0.6 40">
+        <a-entity id="camera" camera look-controls></a-entity>
+        </a-entity>
       <a-sky color="#F8C8DC"></a-sky>
       
     </a-scene>
