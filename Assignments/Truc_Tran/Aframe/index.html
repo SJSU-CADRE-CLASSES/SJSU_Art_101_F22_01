@@ -3,22 +3,60 @@
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
   </head>
   <body>
- 
-    <a-scene>
-      <a-box position="-1 0 -3" rotation="0 45 0" color="#836953"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-sky color="#ECECEC"></a-sky>
-
+    <a-scene light="defaultLightsEnabled: true"  renderer="colorManagement: true">
       <a-assets>
+        <a-asset-item id="purple-cake" src="assets/purple-cake.gltf"></a-asset-item>
+        <a-asset-item id="red-cake" src="assets/red-cake.gltf"></a-asset-item>
+        <a-asset-item id="turquoise-cake" src="assets/turquoise-cake.gltf"></a-asset-item>
+        <a-asset-item id="pink-cake" src="assets/pink-cake.gltf"></a-asset-item>
+        <a-asset-item id="green-cake" src="assets/green-cake.gltf"></a-asset-item>
+        <a-asset-item id="orange-cake" src="assets/orange-cake.gltf"></a-asset-item>
+        <a-asset-item id="blue-cake" src="assets/blue-cake.gltf"></a-asset-item>
 
-        <a-asset-item id="fence" src="assets/fence.gltf"></a-asset-item>
-        
-        </a-assets>
-        <a-entity light="type: ambient; color: #fff"></a-entity>
+        <a-asset-item id="bridge-1" src="assets/bridge-1.gltf"></a-asset-item>
+        <a-asset-item id="bridge-2" src="assets/bridge-2.gltf"></a-asset-item>
+        <a-asset-item id="bridge-3" src="assets/bridge-3.gltf"></a-asset-item>
+        <a-asset-item id="bridge-4" src="assets/bridge-4.gltf"></a-asset-item>
+        <a-asset-item id="bridge-5" src="assets/bridge-5.gltf"></a-asset-item>
+        <a-asset-item id="bridge-6" src="assets/bridge-6.gltf"></a-asset-item>
+        <a-asset-item id="fence-pink" src="assets/fence-pink.gltf"></a-asset-item>
+        <a-asset-item id="fence-green" src="assets/fence-green.gltf"></a-asset-item>
+        <a-asset-item id="fence-purple" src="assets/fence-purple.gltf"></a-asset-item>
+        <a-asset-item id="fence-blue" src="assets/fence-blue.gltf"></a-asset-item>
+        <a-asset-item id="fence-orange" src="assets/fence-orange.gltf"></a-asset-item>
+        <a-asset-item id="fence-turquoise" src="assets/fence-turquoise.gltf"></a-asset-item>
+        <a-asset-item id="fence-mutiple-colors" src="assets/fence-mutiple-colors.gltf"></a-asset-item>
+        <a-asset-item id="cloud" src="assets/cloud.gltf"></a-asset-item>
+        <a-asset-item id="gate-rainbow" src="assets/gate-rainbow.gltf"></a-asset-item>
+      </a-assets>
       
-      <a-entity gltf-model="#fence"</a-entity></a-entity>
-     
+      <a-entity gltf-model="#purple-cake"></a-entity>
+      <a-entity gltf-model="#red-cake"></a-entity>
+      <a-entity gltf-model="#turquoise-cake"></a-entity>
+      <a-entity gltf-model="#pink-cake"></a-entity>
+      <a-entity gltf-model="#green-cake"></a-entity>
+      <a-entity gltf-model="#orange-cake"></a-entity>
+      <a-entity gltf-model="#blue-cake"></a-entity>
+
+        <a-entity gltf-model="#bridge-1"></a-entity>
+        <a-entity gltf-model="#bridge-2"></a-entity>
+        <a-entity gltf-model="#bridge-3"></a-entity>
+        <a-entity gltf-model="#bridge-4"></a-entity>
+        <a-entity gltf-model="#bridge-5"></a-entity>
+        <a-entity gltf-model="#bridge-6"></a-entity>
+
+        <a-entity gltf-model="#fence-pink"></a-entity>
+        <a-entity gltf-model="#fence-green"></a-entity>
+        <a-entity gltf-model="#fence-purple"></a-entity>
+        <a-entity gltf-model="#fence-blue"></a-entity>
+        <a-entity gltf-model="#fence-orange"></a-entity>
+        <a-entity gltf-model="#fence-turquoise"></a-entity>
+        <a-entity gltf-model="#fence-mutiple-colors"></a-entity>
+
+        <a-entity gltf-model="#gate-rainbow"></a-entity>
+        <a-entity gltf-model="#cloud"></a-entity>
+      <a-sky color="#F8C8DC"></a-sky>
+      
     </a-scene>
   </body>
   </html>
