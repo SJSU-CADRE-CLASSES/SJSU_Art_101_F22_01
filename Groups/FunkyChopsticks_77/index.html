@@ -4,6 +4,7 @@
 </head>
     <body>
         <a-scene>
+            
 
             <a-assets>
                 <a-asset-item id="table" src="assets/table.gltf"></a-asset-item>
@@ -12,6 +13,7 @@
                 <a-asset-item id="light" src="assets/light.gltf"></a-asset-item>
                 <audio id="birdsound" src="assets/birdsound.mp3" preload="auto"></audio>
                   </a-assets>
+                  <a-entity scale="2 2 2">
         
             <a-entity gltf-model="#table"
                         position="-1 0 -2"></a-entity>  
@@ -24,7 +26,7 @@
             <a-sky color="#ECECEC"></a-sky>
 
 
-            
+        </a-entity>
         </a-scene>
     </body>
 </html>
