@@ -11,8 +11,9 @@
                 <a-asset-item id="projector" src="assets/projectorscreen.gltf"></a-asset-item>
                 <a-asset-item id="room" src="assets/allroom.gltf"></a-asset-item>
                 <a-asset-item id="screen" src="assets/projectorscreen2.gltf"></a-asset-item>
-                <a-sound src="src: url(click.mp3)" autoplay="true" position="0 2 5"></a-sound>
-                  </a-assets>
+                <audio id="background" src="assets/birdsound.mp3" > </audio>
+            </a-assets>
+            
                   <a-entity scale="2 2 2">
         
             <a-entity gltf-model="#table"
@@ -22,7 +23,7 @@
                          easing: linear; loop: true"></a-entity>
              <a-entity gltf-model="#room"></a-entity> 
              <a-entity gltf-model="#screen"></a-entity>  
-             
+             <a-sound src="#background" autoplay="true"></a-sound>
             
             <a-sky color="#ECECEC"></a-sky>
 
