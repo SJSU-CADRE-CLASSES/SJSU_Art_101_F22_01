@@ -7,10 +7,14 @@
 
             <a-assets>
                 <a-asset-item id="table" src="assets/table.gltf"></a-asset-item>
+                <a-asset-item id="projector" src="assets/projectorscreen.gltf"></a-asset-item>
             </a-assets>
         
             <a-entity gltf-model="#table"
                         position="-1 0 -2"></a-entity>
+             <a-entity gltf-model="#projector"
+                  animation="property: position; to: 0 1 3; dur: 20000;
+                   easing: linear; loop: true"></a-entity>
             
 
             <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
