@@ -16,7 +16,12 @@
       <a-obj-model src="101.obj" mtl="101.mtl"></a-obj-model>
       <a-text value="Welcome to our studyroom"></a-text>
       <a-camera position="6 4 9"></a-camera>
-     
+        <a-assets>
+          <img id="floor" src="floor.jpg">
+        </a-assets>
+      
+        <!-- Using the asset management system. -->
+        <a-image src="#floor"></a-image>
     </a-scene>
   </body>
 </html>
