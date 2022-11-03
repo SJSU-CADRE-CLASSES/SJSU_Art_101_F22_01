@@ -37,7 +37,8 @@
       <a-assets>
         <a-asset-item id="shoe" src="bao.gltf"></a-asset-item>
       </a-assets>
-      <a-gltf-model src="#shoe" position="3 1 -19" rotation="0 65 0"></a-gltf-model>
+      <a-gltf-model src="#shoe" rotation="0 80 0"
+      position="5 1 -19" animation="property: position; to: -22 1 -19; dur: 2500; easing: linear; loop: true"></a-gltf-model>
 
 
       <a-assets>
@@ -48,10 +49,10 @@
     <a-entity id="my_song" sound="src: url(my_song.m4a); autoplay: true"></a-entity>
 
       
-
-    <a-text value="Welcome To Our Study Room" position="-22.5 8 -36" color="#7ebcf2" width="10"
+\
+    <a-text value="Welcome To Our Study Room" position="-22.5 8 -40" color="#7ebcf2" width="10"
     ></a-text>
-    <a-entity rotation="0 0 0" animation="property: rotation; to: 10 360 10; loop: true; dur: 10000">
+    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
     <a-sphere position="6 16 -12" radius="2.45" src ="texture.jpg"  ></a-sphere>
     </a-entity>
 
