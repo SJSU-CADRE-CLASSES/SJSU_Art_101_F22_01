@@ -9,14 +9,13 @@
 
       <!-- Defining the URL inline. Not recommended but may be more comfortable. -->
       <a-assets>
-            <a-asset-item id="room-obj" src="101.obj"></a-asset-item>
-            <a-asset-item id="room-mtl" src="101.mtl"></a-asset-item>
+        <a-asset-item id="room-obj" src="101.obj"></a-asset-item>
+        <a-asset-item id="room-mtl" src="101.mtl"></a-asset-item>
       </a-assets>
-            <a-obj-model src="#room-obj" mtl="#room-mtl"></a-obj-model>
-
+        <a-obj-model src="#room-obj" mtl="#room-mtl" ></a-obj-model>
       <a-assets>
-            <a-asset-item id="chair-obj" src="chair.obj"></a-asset-item>
-            <a-asset-item id="chair-mtl" src="chair.mtl"></a-asset-item>
+            <a-asset-item id="flower-obj" src="flower.obj"></a-asset-item>
+            <a-asset-item id="flower-mtl" src="flower.mtl"></a-asset-item>
       </a-assets>
             <a-obj-model src="#flower-obj" mtl="#flower-mtl"></a-obj-model>
         <!-- <a-assets>
@@ -36,6 +35,7 @@
       </a-assets>
         <a-gltf-model src="#cactus" position="7.5 -3.7 -2" rotation="0 20 0"></a-gltf-model>
 
+    <a-entity id="my_song" sound="src: url(my_song.m4a); autoplay: true"></a-entity>
 
 
 
