@@ -1,15 +1,5 @@
 # Blender MTL File: 'playgroud.blend'
-# Material Count: 18
-
-newmtl Material
-Ns 250.000000
-Ka 1.000000 1.000000 1.000000
-Kd 0.000000 0.000000 0.000000
-Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 1.000000
-illum 2
+# Material Count: 10
 
 newmtl Material.001
 Ns 250.000000
@@ -40,16 +30,6 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-
-newmtl Material.004
-Ns 250.000000
-Ka 0.453659 0.453659 0.453659
-Kd 0.007048 0.119276 0.000000
-Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 1.000000
-illum 3
 
 newmtl Material.005
 Ns 250.000000
@@ -91,114 +71,30 @@ Ni 1.450000
 d 1.000000
 illum 2
 
+newmtl Material.010
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.304987 0.130136 0.001518
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.011
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.217132 0.066534 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
 newmtl None
 Ns 500
 Ka 0.8 0.8 0.8
 Kd 0.8 0.8 0.8
 Ks 0.8 0.8 0.8
 d 1
-illum 2
-
-newmtl eyes
-Ns 250.000000
-Ka 1.000000 1.000000 1.000000
-Kd 0.012806 0.012806 0.012806
-Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 1.000000
-illum 2
-map_Bump /Users/joyjobobo/Desktop/SJSU/102/Proj 3/pt/Proj 3-1_eyes_Normal.png
-map_Kd /Users/joyjobobo/Desktop/SJSU/102/Proj 3/pt/Proj 3-1_eyes_BaseColor.png
-map_Ns /Users/joyjobobo/Desktop/SJSU/102/Proj 3/pt/Proj 3-1_eyes_Roughness.png
-refl /Users/joyjobobo/Desktop/SJSU/102/Proj 3/pt/Proj 3-1_eyes_Metallic.png
-
-newmtl face
-Ns 250.000000
-Ka 1.000000 1.000000 1.000000
-Kd 0.800000 0.695146 0.609971
-Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 1.000000
-illum 2
-map_Bump /Users/joyjobobo/Desktop/SJSU/102/Proj 3/pt/Proj 3-1_face_Normal.png
-map_Kd /Users/joyjobobo/Desktop/SJSU/102/Proj 3/pt/Proj 3-1_face_BaseColor.png
-map_Ns /Users/joyjobobo/Desktop/SJSU/102/Proj 3/pt/Proj 3-1_face_Roughness.png
-refl /Users/joyjobobo/Desktop/SJSU/102/Proj 3/pt/Proj 3-1_face_Metallic.png
-
-newmtl hair
-Ns 250.000000
-Ka 1.000000 1.000000 1.000000
-Kd 0.021201 0.020440 0.021980
-Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 1.000000
-illum 2
-map_Bump /Users/joyjobobo/Desktop/SJSU/102/Proj 3/pt/Proj 3-1_hair_Normal.png
-map_Kd /Users/joyjobobo/Desktop/SJSU/102/Proj 3/pt/Proj 3-1_hair_BaseColor.png
-map_Ns /Users/joyjobobo/Desktop/SJSU/102/Proj 3/pt/Proj 3-1_hair_Roughness.png
-refl /Users/joyjobobo/Desktop/SJSU/102/Proj 3/pt/Proj 3-1_hair_Metallic.png
-
-newmtl tee
-Ns 250.000000
-Ka 1.000000 1.000000 1.000000
-Kd 1.000000 0.295936 0.804458
-Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 1.000000
-illum 2
-map_Bump /Users/joyjobobo/Desktop/SJSU/102/Proj 3/pt/Proj 3-1_tee_Normal.png
-map_Kd /Users/joyjobobo/Desktop/SJSU/102/Proj 3/pt/Proj 3-1_tee_BaseColor.png
-map_Ns /Users/joyjobobo/Desktop/SJSU/102/Proj 3/pt/Proj 3-1_tee_Roughness.png
-refl /Users/joyjobobo/Desktop/SJSU/102/Proj 3/pt/Proj 3-1_tee_Metallic.png
-
-newmtl teeth
-Ns 250.000000
-Ka 1.000000 1.000000 1.000000
-Kd 0.800000 0.800000 0.800000
-Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 1.000000
-illum 2
-map_Bump /Users/joyjobobo/Desktop/SJSU/102/Proj 3/pt/Proj 3-1_teeth_Normal.png
-map_Kd /Users/joyjobobo/Desktop/SJSU/102/Proj 3/pt/Proj 3-1_teeth_BaseColor.png
-map_Ns /Users/joyjobobo/Desktop/SJSU/102/Proj 3/pt/Proj 3-1_teeth_Roughness.png
-refl /Users/joyjobobo/Desktop/SJSU/102/Proj 3/pt/Proj 3-1_teeth_Metallic.png
-
-newmtl ton
-Ns 250.000000
-Ka 1.000000 1.000000 1.000000
-Kd 0.800000 0.153755 0.246183
-Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 1.000000
-illum 2
-
-newmtl trousers
-Ns 250.000000
-Ka 1.000000 1.000000 1.000000
-Kd 0.198814 0.187424 0.204898
-Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 1.000000
-illum 2
-map_Bump /Users/joyjobobo/Desktop/SJSU/102/Proj 3/pt/Proj 3-1_trousers_Normal.png
-map_Kd /Users/joyjobobo/Desktop/SJSU/102/Proj 3/pt/Proj 3-1_trousers_BaseColor.png
-map_Ns /Users/joyjobobo/Desktop/SJSU/102/Proj 3/pt/Proj 3-1_trousers_Roughness.png
-refl /Users/joyjobobo/Desktop/SJSU/102/Proj 3/pt/Proj 3-1_trousers_Metallic.png
-
-newmtl wood
-Ns 250.000000
-Ka 1.000000 1.000000 1.000000
-Kd 0.110691 0.047912 0.001193
-Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 1.000000
 illum 2
