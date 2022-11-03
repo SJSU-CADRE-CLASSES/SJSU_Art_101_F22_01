@@ -56,7 +56,11 @@
         <a-entity gltf-model="#cloud"></a-entity>
 
         <a-entity vive-controls="hand: left"></a-entity>
-<a-entity vive-controls="hand: right"></a-entity>
+        <a-entity vive-controls="hand: right"></a-entity>
+        <a-entity camera look-controls wasd-controls="acceleration:100" position="0 0.6 40"></a-entity>
+        <a-entity id="rig" position="0 0.6 40">
+        <a-entity id="camera" camera look-controls></a-entity>
+        </a-entity>
       <a-sky color="#F8C8DC"></a-sky>
       
     </a-scene>
