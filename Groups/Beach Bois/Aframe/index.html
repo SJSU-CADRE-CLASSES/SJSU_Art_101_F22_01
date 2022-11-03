@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+      <img id="sky" src="sky.jpg">
+      <a-asset-item id="tree-obj" src="tree.obj"></a-asset-item>
+      <a-asset-item id="tree-mtl" src="tree.mtl"></a-asset-item>
+      </a-assets> 
+
+
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="50" height="4" color="#C2B280"></a-plane>
+      <a-sky src="#sky"></a-sky>
+      <a-obj-model scale ="3 3 3" position="1 2 -6" src="#tree-obj" mtl="#tree-mtl"></a-obj-model>
+    </a-scene>
+  </body>
+</html>
