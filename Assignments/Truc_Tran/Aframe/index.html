@@ -27,7 +27,7 @@
         <a-asset-item id="fence-mutiple-colors" src="assets/fence-mutiple-colors.gltf"></a-asset-item>
         <a-asset-item id="cloud" src="assets/cloud.gltf"></a-asset-item>
         <a-asset-item id="gate-rainbow" src="assets/gate-rainbow.gltf"></a-asset-item>
-        <audio id="gate" src="sounds/background-music-02.mp3"></audio>
+        <audio id="gate" src="sounds/background-music-02.mp3" preload="auto"></audio>
 
       </a-assets>
       
@@ -62,7 +62,7 @@
         <a-entity camera look-controls wasd-controls="acceleration:100" position="0 0.6 40"></a-entity>
         <a-entity id="rig" position="0 0.6 40"></a-entity>
         <a-entity id="camera" camera look-controls></a-entity>
-        <a-entity sound="src: #gate; autoplay: true; volume:1 ; refDistance: 30; rolloffFactor: 30"></a-entity>
+        <a-entity sound="src: #gate; autoplay: true; volume:1 ; refDistance: 1; rolloffFactor: 1"></a-entity>
       <a-sky color="#F8C8DC"></a-sky>
       
   
