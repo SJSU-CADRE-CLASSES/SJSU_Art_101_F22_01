@@ -12,7 +12,7 @@
     <a-camera position="6 4 9"></a-camera>
 
 <!-- music geting louder to position -->
-<a-sound src="My_Song.m4a" autoplay="true" loop="true" position="-22.5 0.5 -36.2"></a-sound>
+<!-- <a-sound src="scarysound.mp3" autoplay="true" loop="true" position="-22.5 0.5 -36.2"></a-sound> -->
 
 
 
@@ -52,7 +52,7 @@
     <a-assets>
       <a-asset-item id="shoe" src="bao.gltf"></a-asset-item>
     </a-assets>
-    <a-gltf-model src="#shoe" position="5 4 -12" rotation="30 30 340"></a-gltf-model>
+    <a-gltf-model src="#shoe" position="1 4 -20" rotation="30 30 340"></a-gltf-model>
 
 
     <a-assets>
@@ -61,21 +61,21 @@
     <a-gltf-model src="#cactus" position="7.5 -3.7 -2" rotation="0 20 0"></a-gltf-model>
 
     <!-- wall face -->
-    <a-cone color="#d81c2f" position="10 9 -17" rotation="0 0 90" radius-bottom="2" radius-top="0" scale="1 0.5 0.5"></a-cone>
-    <a-cone color="#d81c2f" position="4 9 -24" rotation="90 0 0" radius-bottom="1" radius-top="0" scale="2 1 1"></a-cone>
+    <a-cone color="#d81c2f" position="10 9 -20" rotation="0 0 90" radius-bottom="2" radius-top="0" scale="2 3 1"></a-cone>
+    <a-cone color="#d81c2f" position="6 3 -12" rotation="0 45 0" radius-bottom="3" radius-top="0" scale="2 9 1"></a-cone>
 
-    <a-entity  animation="property:rotation; to: 00 360 100 ;dir: alternate; loop: true; dur: 10000">
-      <a-sphere position="-12 20 -10" radius="2" color="black" ></a-sphere>
-      <a-sphere position="25 20 -5" radius="1" color="purple" ></a-sphere>
-    </a-entity>
 
     <a-text value="Welcome To Our Study Room" position="-22.5 8 -36" color="#7ebcf2" width="10"></a-text>
 
     <!-- planets -->
     <a-entity rotation="0 0 0" animation="property: rotation; to: 00 360 00; loop: true; dur: 10000">
-      <a-sphere position="6 16 -12" radius="2.45" src="texture.jpg"></a-sphere>
+      <a-sphere position="6 17 -12" radius="2.45" src="texture.jpg"></a-sphere>
     </a-entity>
 
+        <a-entity  animation="property:rotation; to: 00 360 100 ;dir: alternate; loop: true; dur: 10000">
+          <a-sphere position="-12 20 -10" radius="2" color="black" ></a-sphere>
+          <a-sphere position="25 20 -5" radius="1" color="purple" ></a-sphere>
+        </a-entity>
 
   </a-scene>
 </body>
