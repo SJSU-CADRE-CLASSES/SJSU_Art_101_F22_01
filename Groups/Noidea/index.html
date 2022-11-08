@@ -12,8 +12,7 @@
     <a-camera position="6 4 9"></a-camera>
 
 <!-- music geting louder to position -->
-<a-sound src="scarysound.mp3" autoplay="true" loop="true" position="-22.5 0.5 -36.2"></a-sound>
-
+<!-- <a-sound src="scarysound.mp3" autoplay="true" loop="true" position="-22.5 0.5 -36.2"></a-sound> -->
 
 
 
@@ -36,11 +35,17 @@
     </a-assets>
     <a-obj-model src="#flower-obj" mtl="#flower-mtl"></a-obj-model>
 
+
     <a-assets>
       <a-asset-item id="swing-obj" src="swing.obj"></a-asset-item>
       <a-asset-item id="swing-mtl" src="swing.mtl"></a-asset-item>
     </a-assets>
     <a-obj-model src="#swing-obj" mtl="#swing-mtl" position="-16 0 -3"></a-obj-model>
+
+<!-- bouncing ball -->
+    <a-entity  animation="property:rotation; to: 00 360 100 ;dir: alternate; loop: true; dur: 10000">
+      <a-sphere position="-16 2 -3" radius="1" color="purple" ></a-sphere>
+    </a-entity>
 
     <!-- <a-assets>
           <a-asset-item id="playground-obj" src="playground.obj"></a-asset-item>
@@ -76,6 +81,7 @@
           <a-sphere position="-12 20 -10" radius="2" color="black" ></a-sphere>
           <a-sphere position="25 20 -5" radius="1" color="purple" ></a-sphere>
         </a-entity>
+
 
   </a-scene>
 </body>
