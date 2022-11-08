@@ -13,11 +13,19 @@
                 <a-asset-item id="screen" src="assets/projectorscreen2.gltf"></a-asset-item>
                 <audio id="background" src="assets/birdsound.mp3" > </audio>
             </a-assets>
-            
                   <a-entity scale="2 2 2">
         
-            <a-entity gltf-model="#table"
-                        position="-1 0 -2"></a-entity>  
+                    <a-entity light="type: point; color: #FD0106; intensity: 0.75; distance: 50; decay: 2"
+          position="-3 2 -5"></a-entity>
+                    <a-entity light="type: point; color: #FD0106; intensity: 0.75; distance: 50; decay: 2"
+          position="-3 2 -4"></a-entity>
+                    <a-entity light="type: point; color: #FD0106; intensity: 0.75; distance: 50; decay: 2"
+          position="-3 2 -3"></a-entity>
+                    <a-entity light="type: point; color: #FEEF72; intensity: 0.75; distance: 50; decay: 2"
+          position="-3 2 -2"></a-entity>
+
+                        <a-entity gltf-model="#table" position="-3 2 -3"></a-entity>  
+
             <a-entity gltf-model="#projector"
                         animation="property: position; to: 0 2 0; dur: 10000;
                          easing: linear; loop: true"></a-entity>
