@@ -12,7 +12,17 @@
     <a-camera position="6 4 9"></a-camera>
 
 <!-- music geting louder to position -->
-<!-- <a-sound src="scarysound.mp3" autoplay="true" loop="true" position="-22.5 0.5 -36.2"></a-sound> -->
+<a-sound src="scarysound.mp3" autoplay="true" loop="true" position="-22.5 0.5 -36.2"></a-sound>
+
+    <a-assets>
+      <img id="oceanposter" src="oceanposter.jpg">
+    </a-assets>
+      <a-image src="#oceanposter" position="5.4 8 -7.6" width="10" height="10"></a-image>
+
+    <a-assets>
+        <img id="poster1" src="poster1.jpg">
+    </a-assets>
+        <a-image src="#poster1" position="-18 7 -21" width="10" height="13"></a-image>
 
 
 
@@ -35,7 +45,6 @@
     </a-assets>
     <a-obj-model src="#flower-obj" mtl="#flower-mtl"></a-obj-model>
 
-
     <a-assets>
       <a-asset-item id="swing-obj" src="swing.obj"></a-asset-item>
       <a-asset-item id="swing-mtl" src="swing.mtl"></a-asset-item>
@@ -43,8 +52,8 @@
     <a-obj-model src="#swing-obj" mtl="#swing-mtl" position="-16 0 -3"></a-obj-model>
 
 <!-- bouncing ball -->
-    <a-entity  animation="property:rotation; to: 00 360 100 ;dir: alternate; loop: true; dur: 10000">
-      <a-sphere position="-16 2 -3" radius="1" color="purple" ></a-sphere>
+    <a-entity  animation="property: position; to: -11 3 -5; dir: alternate; loop: true; dur: 1000">
+      <a-sphere position="-16 3 -5" radius="0.2" color="purple" ></a-sphere>
     </a-entity>
 
     <!-- <a-assets>
@@ -60,16 +69,10 @@
     <a-gltf-model src="#shoe" position="1 4 -20" rotation="30 30 340"></a-gltf-model>
 
 
-    <!-- catus -->
     <a-assets>
       <a-asset-item id="cactus" src="cactus.gltf"></a-asset-item>
     </a-assets>
     <a-gltf-model src="#cactus" position="-3 -3.7 -38" rotation="0 20 0"></a-gltf-model>
-    <a-gltf-model src="#cactus" position="-4.5 -3.7 -38" rotation="0 110 0"></a-gltf-model>
-    <a-gltf-model src="#cactus" position="-12 -3.7 -38" rotation="0 25 0"></a-gltf-model>
-     <!-- on wall -->
-    <a-gltf-model src="#cactus" position="-14 4 -43" rotation="0 115 87"></a-gltf-model>
-    
 
     <!-- wall face -->
     <a-cone color="#d81c2f" position="10 9 -20" rotation="0 0 90" radius-bottom="2" radius-top="0" scale="2 3 1"></a-cone>
@@ -88,8 +91,9 @@
           <a-sphere position="25 20 -5" radius="1" color="purple" ></a-sphere>
         </a-entity>
 
-
   </a-scene>
+
+
 </body>
 
 </html>
