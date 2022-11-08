@@ -8,32 +8,40 @@
   <a-scene>
 
     <a-assets>
-      <img src="frida.jpg" id="frida-background">
+      <img src="sunset.jpg" id="sunset-background">
       <a-asset-item id="palmtree-obj" src="palmtree.obj"></a-asset-item>
       <a-asset-item id="palmtree-mtl" src="palmtree.mtl"></a-asset-item>
     </a-assets>
 
     <!-- Using the asset management system. -->
 
+    <!-- Tree 1-->
+    <a-obj-model position="-1 1 -2.5" src="#palmtree-obj" mtl="#palmtree-mtl"></a-obj-model>
 
-    <!-- Tree in the front -->
-    <a-obj-model position="0 1 1" src="#palmtree-obj" mtl="#palmtree-mtl"></a-obj-model>
+    <!-- Tree 2 -->
+    <a-obj-model position="0 1 -3.5" src="#palmtree-obj" mtl="#palmtree-mtl"></a-obj-model>
+
+    <!-- Tree 3 -->
+    <a-obj-model position="1 1 -2.5" src="#palmtree-obj" mtl="#palmtree-mtl"></a-obj-model>
+
+    <!-- (left/right, up/down, forward/backward) -->
 
 
-    <!-- Tree in the back -->
-    <a-obj-model position="4 0 -1" src="#palmtree-obj" mtl="#palmtree-mtl"></a-obj-model>
 
     <!-- Boxes object-->
-    <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-    <a-sphere position="1 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-    <a-cylinder position="2 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+    <!-- <a-box position="-2 1 -3" rotation="0 20 0" color="#BB8FCE"></a-box> -->
+    <!-- <a-cylinder position="2 1 -3" radius="0.4" height="1.1" color="#BB8FCE"></a-cylinder> -->
+    <a-sphere position="-2 1 -6" radius="1" color="#3498DB"></a-sphere>
+    <a-sphere position="0 1 -5" radius="1.1" color="#3498DB"></a-sphere>
+    <a-sphere position="2 1 -6" radius="1" color="#3498DB"></a-sphere>
 
-    <!-- Runway -->
-    <a-plane position="0 0 -4" rotation="-90 0 0" width="50" height="4" color="#ABEBC6"></a-plane>
+    <!-- Runway original -->
+    <a-plane position="2 0 -4" rotation="-90 0 0" width="250" height="250" color="#D2B4DE"></a-plane>
+
 
 
     <!-- Background image-->
-    <a-sky src="frida.jpg" width="100"></a-sky>
+    <a-sky src="sunset.jpg" width="150"></a-sky>
 
     <a-entity environment="preset: forest; groundColor: #445; grid: cross"></a-entity>
 
