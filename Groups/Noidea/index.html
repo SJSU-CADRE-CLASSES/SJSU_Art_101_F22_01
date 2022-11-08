@@ -51,6 +51,11 @@
     </a-assets>
     <a-obj-model src="#swing-obj" mtl="#swing-mtl" position="-16 0 -3"></a-obj-model>
 
+<!-- bouncing ball -->
+    <a-entity  animation="property: position; to: -11 3 -5; dir: alternate; loop: true; dur: 1000">
+      <a-sphere position="-16 3 -5" radius="0.2" color="purple" ></a-sphere>
+    </a-entity>
+
     <!-- <a-assets>
           <a-asset-item id="playground-obj" src="playground.obj"></a-asset-item>
           <a-asset-item id="playground-mtl" src="playground.mtl"></a-asset-item>
