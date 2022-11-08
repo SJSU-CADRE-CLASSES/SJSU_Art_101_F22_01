@@ -13,11 +13,14 @@
                 <a-asset-item id="screen" src="assets/projectorscreen2.gltf"></a-asset-item>
                 <audio id="background" src="assets/birdsound.mp3" > </audio>
             </a-assets>
-            
                   <a-entity scale="2 2 2">
         
-            <a-entity gltf-model="#table"
-                        position="-1 0 -2"></a-entity>  
+                    <a-light type="directional" color="#FFF" position="0 0 0" rotation="-90 0 0" target="#directionaltarget">
+                        <a-entity id="directionaltarget" position="-3 2 -5"></a-entity>
+                      </a-light>
+           
+                        <a-entity gltf-model="#table" position="-3 2 -5"></a-entity>  
+
             <a-entity gltf-model="#projector"
                         animation="property: position; to: 0 2 0; dur: 10000;
                          easing: linear; loop: true"></a-entity>
