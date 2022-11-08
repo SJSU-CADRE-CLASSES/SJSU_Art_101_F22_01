@@ -15,11 +15,16 @@
             </a-assets>
                   <a-entity scale="2 2 2">
         
-                    <a-light type="directional" color="#FFF" position="0 0 0" rotation="-90 0 0" target="#directionaltarget">
-                        <a-entity id="directionaltarget" position="-3 2 -5"></a-entity>
-                      </a-light>
-           
-                        <a-entity gltf-model="#table" position="-3 2 -5"></a-entity>  
+                    <a-entity light="type: point; color: #FD0106; intensity: 0.75; distance: 50; decay: 2"
+          position="-3 2 -5"></a-entity>
+                    <a-entity light="type: point; color: #FD0106; intensity: 0.75; distance: 50; decay: 2"
+          position="-3 2 -4"></a-entity>
+                    <a-entity light="type: point; color: #FD0106; intensity: 0.75; distance: 50; decay: 2"
+          position="-3 2 -3"></a-entity>
+                    <a-entity light="type: point; color: #FEEF72; intensity: 0.75; distance: 50; decay: 2"
+          position="-3 2 -2"></a-entity>
+
+                        <a-entity gltf-model="#table" position="-3 2 -3"></a-entity>  
 
             <a-entity gltf-model="#projector"
                         animation="property: position; to: 0 2 0; dur: 10000;
