@@ -13,11 +13,12 @@
             </a-assets>
 
             <a-entity scale="2 2 2">
-                <a-entity light="type: point; color: #FD0106; intensity: 0.75; distance: 50; decay: 2" position="-3 2 -5"></a-entity>
-                <a-entity light="type: point; color: #FD0106; intensity: 0.75; distance: 50; decay: 2" position="-3 2 -4"></a-entity>
-                <a-entity light="type: point; color: #FD0106; intensity: 0.75; distance: 50; decay: 2" position="-3 2 -3"></a-entity>
-                <a-entity light="type: point; color: #FEEF72; intensity: 0.75; distance: 50; decay: 2" position="-3 2 -2"></a-entity>
-                <a-entity light="type: ambient; color: #ece2e0"></a-entity> 
+                <a-entity light="type: spot; color: daa750; angle: 45" position="0 0 10"></a-entity>
+                <!--<a-entity light="type: point; color: #FD0106; intensity: 1; distance: 0; decay: 2" position="-3 2 -3"></a-entity>-->
+                <a-entity light="type: point; color: #8f5d06; intensity: 1; distance: 50; decay: 1" position="-5 -5 -0"></a-entity>
+                <!--<a-entity light="type: point; color: #FD0106; intensity: 0.75; distance: 50; decay: 2" position="-3 2 -3"></a-entity>-->
+                <!--<a-entity light="type: point; color: #FEEF72; intensity: 0.75; distance: 50; decay: 2" position="-3 2 -2"></a-entity>-->
+                <a-entity light="type: ambient; color: #daa750"></a-entity>
 
                 <a-entity gltf-model="#table" position="-3 2 -3"></a-entity>  
                 <a-entity gltf-model="#projector" animation="property: position; to: 0 2 0; dur: 10000; easing: linear; loop: true"></a-entity>
