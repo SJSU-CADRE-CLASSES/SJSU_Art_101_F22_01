@@ -9,6 +9,9 @@
                 <a-asset-item id="projector" src="assets/projectorscreen.gltf"></a-asset-item>
                 <a-asset-item id="room" src="assets/allroom.gltf"></a-asset-item>
                 <a-asset-item id="screen" src="assets/projectorscreen2.gltf"></a-asset-item>
+                <a-assets>
+                    <video id="fishvid" src="Funkytownfish.mp4"></video>
+                  </a-assets>
                 <audio id="background" src="assets/birdsound.mp3" > </audio>
             </a-assets>
 
@@ -18,7 +21,7 @@
                 <a-entity light="type: point; color: #FD0106; intensity: 0.75; distance: 50; decay: 2" position="-3 2 -3"></a-entity>
                 <a-entity light="type: point; color: #FEEF72; intensity: 0.75; distance: 50; decay: 2" position="-3 2 -2"></a-entity>
                 <a-entity light="type: ambient; color: #ece2e0"></a-entity> 
-
+                <a-video src="#fishvid" autoplay= "true" width="16" height="9" position="0 0 -20"></a-video>
                 <a-entity gltf-model="#table" position="-3 2 -3"></a-entity>  
                 <a-entity gltf-model="#projector" animation="property: position; to: 0 2 0; dur: 10000; easing: linear; loop: true"></a-entity>
                 <a-entity gltf-model="#room"></a-entity> 
