@@ -1,0 +1,188 @@
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <a-assets>
+      <img src="sunset.jpg" id="sunset-background">
+      <a-asset-item id="tree-obj" src="tree.obj"></a-asset-item>
+      <a-asset-item id="tree-mtl" src="tree.mtl"></a-asset-item>
+
+      <a-asset-item id="ball-obj" src="ball.obj"></a-asset-item>
+      <a-asset-item id="ball-mtl" src="ball.mtl"></a-asset-item>
+
+      <a-asset-item id="birdFloaty-obj" src="birdFloaty.obj"></a-asset-item>
+      <a-asset-item id="birdFloaty-mtl" src="birdFloaty.mtl"></a-asset-item>
+
+      <a-asset-item id="castle-obj" src="castle.obj"></a-asset-item>
+      <a-asset-item id="castle-mtl" src="castle.mtl"></a-asset-item>
+
+      <a-asset-item id="castle-obj" src="castle.obj"></a-asset-item>
+      <a-asset-item id="castle-mtl" src="castle.mtl"></a-asset-item>
+
+      <a-asset-item id="chair-obj" src="chair.obj"></a-asset-item>
+      <a-asset-item id="chair-mtl" src="chair.mtl"></a-asset-item>
+
+      <a-asset-item id="tower-obj" src="tower.obj"></a-asset-item>
+      <a-asset-item id="tower-mtl" src="tower.mtl"></a-asset-item>
+
+      <a-asset-item id="seaweed-obj" src="seaweed.obj"></a-asset-item>
+      <a-asset-item id="seaweed-mtl" src="seaweed.mtl"></a-asset-item>
+
+      <a-asset-item id="seagull-obj" src="seagull.obj"></a-asset-item>
+      <a-asset-item id="seagull-mtl" src="seagull.mtl"></a-asset-item>
+
+      <a-asset-item id="rock-obj" src="rock.obj"></a-asset-item>
+      <a-asset-item id="rock-mtl" src="rock.mtl"></a-asset-item>
+
+      <a-asset-item id="fish-obj" src="fish.obj"></a-asset-item>
+      <a-asset-item id="fish-mtl" src="fish.mtl"></a-asset-item>
+
+      <a-asset-item id="crab-obj" src="crab.obj"></a-asset-item>
+      <a-asset-item id="crab-mtl" src="crab.mtl"></a-asset-item>
+
+      <a-asset-item id="circleFloaty-obj" src="circleFloaty.obj"></a-asset-item>
+      <a-asset-item id="circleFloaty-mtl" src="circleFloaty.mtl"></a-asset-item>
+
+      <a-asset-item id="edric-obj" src="edric.obj"></a-asset-item>
+      <a-asset-item id="edric-mtl" src="edric.mtl"></a-asset-item>
+
+      <a-asset-item id="devyn-obj" src="devyn.obj"></a-asset-item>
+      <a-asset-item id="devyn-mtl" src="devyn.mtl"></a-asset-item>
+
+      <a-asset-item id="clarence-obj" src="clarence.obj"></a-asset-item>
+      <a-asset-item id="clarence-mtl" src="clarence.mtl"></a-asset-item>
+
+    </a-assets>
+
+    <!-- (left/right, up/down, forward/backward) -->
+
+    <!-- moving water -->
+    <a-plane position="0 .1 -20" animation="property: position; to: 0 .1 -15; dur: 8000; easing: linear; loop: true" rotation="-90 0 0" width="50" height="25" color="#1ca3ec"></a-plane>
+    <a-plane position="0 .1 -15" animation="property: position; to: 0 .1 -20; dur: 8000; easing: linear; loop: true" rotation="-90 0 0" width="50" height="25" color="#1ca3ec"></a-plane>
+
+    <!-- sand -->
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="50" height="50" color="#C2B281"></a-plane>
+
+    <!-- SKY -->
+    <a-sky src="sunset.jpg" width="150"></a-sky>
+
+    <!-- palm tree 1 on mountain -->
+    <a-obj-model scale="2 2 2" position="-6 5 -37" src="#tree-obj" mtl="#tree-mtl"></a-obj-model>
+    <!-- palm tree 2 on mountain -->
+    <a-obj-model scale="-3 3 -3" position="-7 5 -38" src="#tree-obj" mtl="#tree-mtl"></a-obj-model>
+    <!-- palm tree 3 on mountain -->
+    <a-obj-model scale="-2 2 2" position="-3.5 3 -36" src="#tree-obj" mtl="#tree-mtl"></a-obj-model>
+
+    <!-- palm tree on beach-->
+    <a-obj-model scale="5 5 5" position="-5 5 1" src="#tree-obj" mtl="#tree-mtl"></a-obj-model>
+    <a-obj-model scale="5 5 5" position="5 5 1" src="#tree-obj" mtl="#tree-mtl"></a-obj-model>
+    <a-obj-model scale ="5 5 5" rotation="0 90 0" position="-3 5 15" src="#tree-obj" mtl="#tree-mtl"></a-obj-model>
+    <a-obj-model scale ="5 5 5" rotation="0 159 0" position="11 5 16" src="#tree-obj" mtl="#tree-mtl"></a-obj-model>
+    <a-obj-model scale ="5 5 5" rotation="0 56 0" position="24 5 10" src="#tree-obj" mtl="#tree-mtl"></a-obj-model>
+    <a-obj-model scale ="5 5 5" rotation="0 45 0" position="-20 5 18" src="#tree-obj" mtl="#tree-mtl"></a-obj-model>
+    <a-obj-model scale ="5 5 5" rotation="0 127 0" position="-14 5 9" src="#tree-obj" mtl="#tree-mtl"></a-obj-model>
+
+    <!-- beach ball -->
+
+    <a-obj-model position="3 .2 -6"
+    animation="property: rotation;
+    to: 0 360 0;
+    loop: true;
+    easing: linear;
+    dur: 3000;"
+    animation__2="property: position;
+    to: 3 .3 -6;
+    from: 3 .1 -6;
+    dur: 1000;
+    dir: alternate;
+    loop: true;"
+    src="#ball-obj" mtl="#ball-mtl"></a-obj-model>
+
+    <!-- bird floaty -->
+    <a-obj-model scale="5 5 5" position="-3 1 -6" src="#birdFloaty-obj" mtl="#birdFloaty-mtl"></a-obj-model>
+
+    <!-- castle -->
+    <a-obj-model position="-.5 .5 -2" src="#castle-obj" mtl="#castle-mtl"></a-obj-model>
+
+    <!-- circle floaty -->
+    <a-obj-model scale="4 4 4" position="-.7 .1 -6"
+    animation__2="property: position;
+    to: -.7 .3 -6;
+    from: -.7 .2 -6;
+    dur: 1500;
+    dir: alternate;
+    loop: true;"
+    src="#circleFloaty-obj" mtl="#circleFloaty-mtl"></a-obj-model>
+
+    <!-- edric -->
+    <a-obj-model scale="-1 1 -1" position="-2.7 .55 -6.3"
+    animation="property: rotation;
+    to: 0 360 0;
+    loop: true;
+    easing: linear;
+    dur: 2000;"
+    src="#edric-obj" mtl="#edric-mtl"></a-obj-model>
+
+    <!-- devyn -->
+    <a-obj-model position="1.5 1.5 -2" src="#devyn-obj" mtl="#devyn-mtl"></a-obj-model>
+
+    <!-- clarence -->
+    <a-obj-model scale="-1 1 1" position="-.5 .5 -6"
+    animation__2="property: rotation;
+    to: 0 0 -10;
+    from: 0 0 10;
+    dur: 1000;
+    dir: alternate;
+    loop: true;"
+    src="#clarence-obj" mtl="#clarence-mtl"></a-obj-model>
+
+    <!-- crab -->
+    <a-obj-model scale=".5 .5 .5" position="-0.1 .5 -2" rotation="0 20 0"
+    animation="property: position;
+      to: .5 .5 -2;
+      from: -0.1 .5 -2;
+      dur: 3000;
+      dir:alternate;
+      easing: linear;
+      loop: true" src="#crab-obj" mtl="#crab-mtl"></a-obj-model>
+
+    <!-- fish -->
+    <a-obj-model scale="-2 2 2" position="-21 0 -25"
+      animation="property: rotation; to: 0 0 -360; dur: 2000; easing: linear; loop: true"
+      animation__2="property: position; to: 50 0 0; dur: 100000; easing: linear; loop: true"
+      src="#fish-obj" mtl="#fish-mtl"></a-obj-model>
+    <a-obj-model scale="-2 2 2" position="-20 0 -26"
+      animation="property: rotation; to: 0 0 -360; dur: 2000; easing: linear; loop: true"
+      animation__2="property: position; to: 50 0 0; dur: 100000; easing: linear; loop: true"
+      src="#fish-obj" mtl="#fish-mtl"></a-obj-model>
+    <a-obj-model scale="-2 2 2" position="-19 0 -27"
+      animation="property: rotation; to: 0 0 -360; dur: 2000; easing: linear; loop: true"
+      animation__2="property: position; to: 50 0 0; dur: 100000; easing: linear; loop: true"
+      src="#fish-obj" mtl="#fish-mtl"></a-obj-model>
+
+    <!-- rock -->
+    <a-obj-model scale="50 50 50" position="-6 .5 -40" src="#rock-obj" mtl="#rock-mtl"></a-obj-model>
+    <!-- rock 2-->
+    <a-obj-model scale="70 -50 80" position="15 .5 -40" src="#rock-obj" mtl="#rock-mtl"></a-obj-model>
+
+    <!-- seagull -->
+    <a-obj-model scale=".5 .5 .5" position="1.7 2.04 -2.2" src="#seagull-obj" mtl="#seagull-mtl"></a-obj-model>
+    <a-obj-model scale=".5 .5 .5" position="-0.2 .4 -3" animation="property: position; to: 1 8 10; dur: 3000; easing: linear; loop: true"  src="#seagull-obj" mtl="#seagull-mtl"></a-obj-model>
+
+    <!-- seaweed -->
+    <a-obj-model scale=".5 .5 .5" position="1 .5 -2" src="#seaweed-obj" mtl="#seaweed-mtl"></a-obj-model>
+    <a-obj-model scale="-1 .55 .55" position="-1.5 .5 -2" src="#seaweed-obj" mtl="#seaweed-mtl"></a-obj-model>
+
+    <!-- tower -->
+    <a-obj-model scale="2 2 -2" position="-3 1 .2" src="#tower-obj" mtl="#tower-mtl"></a-obj-model>
+
+    <!-- ball -->
+
+  </a-scene>
+</body>
+
+</html>
