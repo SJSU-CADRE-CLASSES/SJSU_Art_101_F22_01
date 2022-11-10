@@ -61,8 +61,8 @@
     <!-- (left/right, up/down, forward/backward) -->
 
     <!-- moving water -->
-    <a-plane position="0 .1 -20" animation="property: position; to: 0 .1 -15; dur: 4000; easing: linear; loop: true" rotation="-90 0 0" width="50" height="25" color="#1ca3ec"></a-plane>
-    <a-plane position="0 .1 -15" animation="property: position; to: 0 .1 -20; dur: 4000; easing: linear; loop: true" rotation="-90 0 0" width="50" height="25" color="#1ca3ec"></a-plane>
+    <a-plane position="0 .1 -20" animation="property: position; to: 0 .1 -15; dur: 8000; easing: linear; loop: true" rotation="-90 0 0" width="50" height="25" color="#1ca3ec"></a-plane>
+    <a-plane position="0 .1 -15" animation="property: position; to: 0 .1 -20; dur: 8000; easing: linear; loop: true" rotation="-90 0 0" width="50" height="25" color="#1ca3ec"></a-plane>
 
     <!-- sand -->
     <a-plane position="0 0 -4" rotation="-90 0 0" width="50" height="50" color="#C2B281"></a-plane>
@@ -88,7 +88,19 @@
 
     <!-- beach ball -->
 
-    <a-obj-model position="3 .2 -6" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000" src="#ball-obj" mtl="#ball-mtl"></a-obj-model>
+    <a-obj-model position="3 .2 -6"
+    animation="property: rotation;
+    to: 0 360 0;
+    loop: true;
+    easing: linear;
+    dur: 3000;"
+    animation__2="property: position;
+    to: 3 .3 -6;
+    from: 3 .1 -6;
+    dur: 1000;
+    dir: alternate;
+    loop: true;"
+    src="#ball-obj" mtl="#ball-mtl"></a-obj-model>
 
     <!-- bird floaty -->
     <a-obj-model scale="5 5 5" position="-3 1 -6" src="#birdFloaty-obj" mtl="#birdFloaty-mtl"></a-obj-model>
@@ -97,19 +109,46 @@
     <a-obj-model position="-.5 .5 -2" src="#castle-obj" mtl="#castle-mtl"></a-obj-model>
 
     <!-- circle floaty -->
-    <a-obj-model scale="4 4 4" position="-.7 .3 -6" src="#circleFloaty-obj" mtl="#circleFloaty-mtl"></a-obj-model>
+    <a-obj-model scale="4 4 4" position="-.7 .1 -6"
+    animation__2="property: position;
+    to: -.7 .3 -6;
+    from: -.7 .2 -6;
+    dur: 1500;
+    dir: alternate;
+    loop: true;"
+    src="#circleFloaty-obj" mtl="#circleFloaty-mtl"></a-obj-model>
 
     <!-- edric -->
-    <a-obj-model scale="-1 1 -1" position="-2.5 .55 -6" src="#edric-obj" mtl="#edric-mtl"></a-obj-model>
+    <a-obj-model scale="-1 1 -1" position="-2.7 .55 -6.3"
+    animation="property: rotation;
+    to: 0 360 0;
+    loop: true;
+    easing: linear;
+    dur: 2000;"
+    src="#edric-obj" mtl="#edric-mtl"></a-obj-model>
 
     <!-- devyn -->
     <a-obj-model position="1.5 1.5 -2" src="#devyn-obj" mtl="#devyn-mtl"></a-obj-model>
 
     <!-- clarence -->
-    <a-obj-model scale="-1 1 1" position="-.5 .5 -6" src="#clarence-obj" mtl="#clarence-mtl"></a-obj-model>
+    <a-obj-model scale="-1 1 1" position="-.5 .5 -6"
+    animation__2="property: rotation;
+    to: 0 0 -10;
+    from: 0 0 10;
+    dur: 1000;
+    dir: alternate;
+    loop: true;"
+    src="#clarence-obj" mtl="#clarence-mtl"></a-obj-model>
 
     <!-- crab -->
-    <a-obj-model scale=".5 .5 .5" position="-0.1 .5 -2" animation="property: position; to: 1 8 10; dur: 2000; easing: linear; loop: true" src="#crab-obj" mtl="#crab-mtl"></a-obj-model>
+    <a-obj-model scale=".5 .5 .5" position="-0.1 .5 -2" rotation="0 20 0"
+    animation="property: position;
+      to: .5 .5 -2;
+      from: -0.1 .5 -2;
+      dur: 3000;
+      dir:alternate;
+      easing: linear;
+      loop: true" src="#crab-obj" mtl="#crab-mtl"></a-obj-model>
 
     <!-- fish -->
     <a-obj-model scale="-2 2 2" position="-21 0 -25"
@@ -142,18 +181,6 @@
     <a-obj-model scale="2 2 -2" position="-3 1 .2" src="#tower-obj" mtl="#tower-mtl"></a-obj-model>
 
     <!-- ball -->
-    <!-- <a-obj-model scale="0 0 0" position=" 0 0 0" -->
-
-    <a-obj-model rotation="6 3 2" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
-        <a-obj-model  position="5 0 0" color="blue"></a-obj-model >
-        src="#ball-obj" mtl="#ball-mtl"></a-obj-model>
-
-</a-obj-model>
-
-
-
-
-
 
   </a-scene>
 </body>
