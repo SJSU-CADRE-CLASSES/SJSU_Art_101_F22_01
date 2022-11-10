@@ -61,11 +61,11 @@
     <!-- (left/right, up/down, forward/backward) -->
 
     <!-- moving water -->
-    <a-plane position="0 .1 -20" animation="property: position; to: 0 .1 -15; dur: 4000; easing: linear; loop: true" rotation="-90 0 0" width="250" height="25" color="#1ca3ec"></a-plane>
-    <a-plane position="0 .1 -15" animation="property: position; to: 0 .1 -20; dur: 4000; easing: linear; loop: true" rotation="-90 0 0" width="250" height="25" color="#1ca3ec"></a-plane>
+    <a-plane position="0 .1 -20" animation="property: position; to: 0 .1 -15; dur: 4000; easing: linear; loop: true" rotation="-90 0 0" width="50" height="25" color="#1ca3ec"></a-plane>
+    <a-plane position="0 .1 -15" animation="property: position; to: 0 .1 -20; dur: 4000; easing: linear; loop: true" rotation="-90 0 0" width="50" height="25" color="#1ca3ec"></a-plane>
 
     <!-- sand -->
-    <a-plane position="0 0 -4" rotation="-90 0 0" width="250" height="50" color="#C2B281"></a-plane>
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="50" height="50" color="#C2B281"></a-plane>
 
     <!-- SKY -->
     <a-sky src="sunset.jpg" width="150"></a-sky>
@@ -77,10 +77,14 @@
     <!-- palm tree 3 on mountain -->
     <a-obj-model scale="-2 2 2" position="-3.5 3 -36" src="#tree-obj" mtl="#tree-mtl"></a-obj-model>
 
-    <!-- palm tree 1 on beach-->
+    <!-- palm tree on beach-->
     <a-obj-model scale="5 5 5" position="-5 5 1" src="#tree-obj" mtl="#tree-mtl"></a-obj-model>
-    <!-- palm tree 2 on beach-->
     <a-obj-model scale="5 5 5" position="5 5 1" src="#tree-obj" mtl="#tree-mtl"></a-obj-model>
+    <a-obj-model scale ="5 5 5" rotation="0 90 0" position="-3 5 15" src="#tree-obj" mtl="#tree-mtl"></a-obj-model>
+    <a-obj-model scale ="5 5 5" rotation="0 159 0" position="11 5 16" src="#tree-obj" mtl="#tree-mtl"></a-obj-model>
+    <a-obj-model scale ="5 5 5" rotation="0 56 0" position="24 5 10" src="#tree-obj" mtl="#tree-mtl"></a-obj-model>
+    <a-obj-model scale ="5 5 5" rotation="0 45 0" position="-20 5 18" src="#tree-obj" mtl="#tree-mtl"></a-obj-model>
+    <a-obj-model scale ="5 5 5" rotation="0 127 0" position="-14 5 9" src="#tree-obj" mtl="#tree-mtl"></a-obj-model>
 
     <!-- beach ball -->
     <a-obj-model position="3 .2 -6" src="#ball-obj" mtl="#ball-mtl"></a-obj-model>
@@ -107,7 +111,18 @@
     <a-obj-model scale=".5 .5 .5" position="-0.1 .5 -2" src="#crab-obj" mtl="#crab-mtl"></a-obj-model>
 
     <!-- fish -->
-    <a-obj-model scale="-2 2 2" position="2 .5 -6" src="#fish-obj" mtl="#fish-mtl"></a-obj-model>
+    <a-obj-model scale="-2 2 2" position="-21 0 -25"
+      animation="property: rotation; to: 0 0 -360; dur: 2000; easing: linear; loop: true"
+      animation__2="property: position; to: 50 0 0; dur: 100000; easing: linear; loop: true"
+      src="#fish-obj" mtl="#fish-mtl"></a-obj-model>
+    <a-obj-model scale="-2 2 2" position="-20 0 -26"
+      animation="property: rotation; to: 0 0 -360; dur: 2000; easing: linear; loop: true"
+      animation__2="property: position; to: 50 0 0; dur: 100000; easing: linear; loop: true"
+      src="#fish-obj" mtl="#fish-mtl"></a-obj-model>
+    <a-obj-model scale="-2 2 2" position="-19 0 -27"
+      animation="property: rotation; to: 0 0 -360; dur: 2000; easing: linear; loop: true"
+      animation__2="property: position; to: 50 0 0; dur: 100000; easing: linear; loop: true"
+      src="#fish-obj" mtl="#fish-mtl"></a-obj-model>
 
     <!-- rock -->
     <a-obj-model scale="50 50 50" position="-6 .5 -40" src="#rock-obj" mtl="#rock-mtl"></a-obj-model>
