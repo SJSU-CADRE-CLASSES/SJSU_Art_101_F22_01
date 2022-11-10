@@ -19,11 +19,11 @@
                 <a-entity light="type: point; color: #cdcdcd; intensity: 1; distance: 50; decay: 1" position="-1 -1 -3"></a-entity>
                 <a-entity light="type: point; color: #cdcdcd; intensity: 1; distance: 50; decay: 1" position="-1 3 -3"></a-entity>
                 <a-entity light="type: ambient; color: #daa750"></a-entity>
-
-                <a-video src="#fish" width="16" height="9" position="0 0 -20"></a-video>
                 
                 <a-entity gltf-model="#table" position="-1 2 -3"></a-entity>  
-                <a-entity gltf-model="#projector" animation="property: position; to: 0 2 0; dur: 10000; easing: linear; loop: true"></a-entity>
+                <a-entity gltf-model="#projector" animation="property: position; to: 0 2 0; dur: 10000; easing: linear; loop: true">
+                <a-video src="#fish"  rotation="0 90 0" position="-6.9 3 0" width="6.2" height="4" ></a-video>
+                </a-entity>
                 <a-entity gltf-model="#room"></a-entity> 
                 <a-entity gltf-model="#jesse"></a-entity> 
                 <a-entity gltf-model="#screen"></a-entity>  
@@ -31,6 +31,7 @@
                     
                 <a-sky color="#ECECEC"></a-sky>
             </a-entity>
+            
         </a-scene>
     </body>
 </html>
