@@ -8,6 +8,7 @@
     
     <a-scene light="defaultLightsEnabled: true"  renderer="colorManagement: true">
       <a-assets>
+        <img id="welcome-sign" src="assets/welcome-sign.png">
         <a-asset-item id="purple-cake" src="assets/purple-cake.gltf"></a-asset-item>
         <a-asset-item id="red-cake" src="assets/red-cake.gltf"></a-asset-item>
         <a-asset-item id="turquoise-cake" src="assets/turquoise-cake.gltf"></a-asset-item>
@@ -50,7 +51,7 @@
         <audio id="hello" src="sounds/hello-sound.mp3" preload="auto"></audio>
         <audio id="clown-sound" src="sounds/clown-sound.mp3" preload="auto"></audio>
       </a-assets>
-      
+      <a-image src="#welcome-sign" position="0 5 27" scale="15 15 15"></a-image>
       <a-entity gltf-model="#purple-cake"></a-entity>
       <a-entity gltf-model="#red-cake"></a-entity>
       <a-entity gltf-model="#turquoise-cake"></a-entity>
@@ -75,7 +76,7 @@
         <a-entity gltf-model="#fence-mutiple-colors"></a-entity>
 
         <a-entity gltf-model="#avatar" rotation="0 -50 0" position="-3 -1.5 23" sound__mouseenter="src: #hello; on: mouseenter; volume:10"></a-entity>
-        <a-entity gltf-model="#clown" rotation="0 50 0" position="-3 -1.5 23" sound__mouseenter="src: #clown-sound; on: mouseenter; volume:10"></a-entity>
+        <a-entity gltf-model="#clown" rotation="0 50 0" position="15 -1.6 8" sound__mouseenter="src: #clown-sound; on: mouseenter; volume:10"></a-entity>
         <a-entity gltf-model="#ground"
           animation="property: position; to: 1 9 0; from: 0 0 0; dur: 10000; loop:true; dir:alternate"
           animation__2="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-entity>
@@ -86,8 +87,10 @@
           animation="property: position; to: -50 15 10; from: 50 20 -10; dur: 20000; loop:true; dir:alternate"></a-entity>
         <a-entity gltf-model="#cloud-3" rotation="0 0 0"
           animation="property: position; to: 45 20 20; from: -45 25 -20; dur: 20000; loop:true; dir:alternate"></a-entity>
-          <a-entity gltf-model="#cloud-4" rotation="0 0 0"
+        <a-entity gltf-model="#cloud-4" rotation="0 0 0"
           animation="property: position; to: -45 20 30; from: 45 25 -30; dur: 20000; loop:true; dir:alternate"></a-entity>
+          <a-entity gltf-model="#cloud-5" rotation="0 0 0"
+          animation="property: position; to: -40 30 40; from: 40 30 -40; dur: 20000; loop:true; dir:alternate"></a-entity>
           
         <a-entity sound="src: #welcome; autoplay: true; volume:1 ; refDistance: .3; rolloffFactor: 3" position="0 0.6 25"></a-entity>
         <a-entity gltf-model="#gate-rainbow"></a-entity>
