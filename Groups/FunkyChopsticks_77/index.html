@@ -6,7 +6,7 @@
         <a-scene>
             <a-assets>
                 <a-asset-item id="projector" src="assets/projectorscreen.gltf"></a-asset-item>
-                <a-asset-item id="room" src="assets/allroom.gltf"></a-asset-item>
+                <a-asset-item id="room" src="assets/allroom.gltf"  kinematic-body></a-asset-item>
                 <a-asset-item id="jesse" src="assets/poly.glb"></a-asset-item>
                 <a-asset-item id="screen" src="assets/projectorscreen2.gltf"></a-asset-item>
                 <video id="fish" autoplay loop="true" src="assets/Funkytownfish.mp4"></video>
@@ -24,7 +24,7 @@
                 <a-entity gltf-model="#projector" animation="property: position; to: 0 2 0; dur: 10000; easing: linear; loop: true">
                     <a-video src="#fish"  rotation="0 90 0" position="-3.45 1.4 -.08" width="2.99" height="1.8" ></a-video>
                     </a-entity>
-                <a-entity gltf-model="#room"></a-entity> 
+                <a-entity gltf-model="#room" static-body></a-entity> 
                 <a-entity gltf-model="#jesse"></a-entity> 
                 <a-entity gltf-model="#screen"></a-entity>  
                 <a-sound src="#background" autoplay="true"></a-sound>
