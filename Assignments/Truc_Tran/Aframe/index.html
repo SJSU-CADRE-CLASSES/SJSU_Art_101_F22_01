@@ -43,10 +43,12 @@
         <a-asset-item id="cloud-10" src="assets/cloud-10.gltf"></a-asset-item>
         
         <a-asset-item id="avatar" src="assets/avatar.gltf"></a-asset-item>
+        <a-asset-item id="clown" src="assets/clown.gltf"></a-asset-item>
 
-        <audio id="song" src="sounds/background-music-02.mp3" preload="auto"></audio>
+        <audio id="welcome" src="sounds/welcome-music.mp3" preload="auto"></audio>
         <audio id="ambient" src="sounds/ambient-park-sounds.mp3" preload="auto"></audio>
         <audio id="hello" src="sounds/hello-sound.mp3" preload="auto"></audio>
+        <audio id="clown" src="sounds/clown-sound.mp3" preload="auto"></audio>
       </a-assets>
       
       <a-entity gltf-model="#purple-cake"></a-entity>
@@ -72,9 +74,8 @@
         <a-entity gltf-model="#fence-turquoise"></a-entity>
         <a-entity gltf-model="#fence-mutiple-colors"></a-entity>
 
-        <a-entity gltf-model="#avatar" rotation="0 -50 0" position="-3 -1.5 23" sound__mouseenter="src: #hello; on: mouseenter; volume:10"
-        sound__mouseleave="src: #hello; on: mouseleave; volume:0"></a-entity>
-
+        <a-entity gltf-model="#avatar" rotation="0 -50 0" position="-3 -1.5 23" sound__mouseenter="src: #hello; on: mouseenter; volume:10"></a-entity>
+        <a-entity gltf-model="#clown" rotation="0 -50 0" position="-3 -1.5 23" sound__mouseenter="src: #clown; on: mouseenter; volume:10"></a-entity>
         <a-entity gltf-model="#ground"
           animation="property: position; to: 1 9 0; from: 0 0 0; dur: 10000; loop:true; dir:alternate"
           animation__2="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-entity>
@@ -88,7 +89,7 @@
           <a-entity gltf-model="#cloud-4" rotation="0 0 0"
           animation="property: position; to: -45 20 30; from: 45 25 -30; dur: 20000; loop:true; dir:alternate"></a-entity>
           
-        <a-entity sound="src: #song; autoplay: true; volume:1 ; refDistance: 2; rolloffFactor: 3" position="0 0.6 35"></a-entity>
+        <a-entity sound="src: #welcome; autoplay: true; volume:1 ; refDistance: .3; rolloffFactor: 3" position="0 0.6 25"></a-entity>
         <a-entity gltf-model="#gate-rainbow"></a-entity>
         
 
@@ -102,7 +103,7 @@
             material="color: white; shader: flat; side: double; transparent: true; opacity: 0.5"></a-entity>
         </a-entity>
         
-        <a-entity sound="src: #ambient; autoplay: true; loop: true; volume:1 ; refDistance: 3; rolloffFactor: 3" position="0 0.6 15"></a-entity> 
+        <a-entity sound="src: #ambient; autoplay: true; loop: true; volume:5 ; refDistance: 10; rolloffFactor: 1" position="0 0.6 15"></a-entity> 
         <a-sky color="#F8C8DC"></a-sky>
   </a-entity>
     </a-scene>
