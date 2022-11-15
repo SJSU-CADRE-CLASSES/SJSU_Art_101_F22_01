@@ -57,12 +57,22 @@
         <a-asset-item id="avatar" src="assets/avatar.gltf"></a-asset-item>
         <a-asset-item id="clown" src="assets/clown.gltf"></a-asset-item>
         <a-asset-item id="jackinthebox" src="assets/jackinthebox.gltf"></a-asset-item>
-        
+
+        <!-- Cameron -->
+        <a-asset-item id="cloud-chair" src="assets/clouds.gltf"></a-asset-item>
+        <a-asset-item id="decoratedBench" src="assets/decoratedBench.gltf"></a-asset-item>
+        <a-asset-item id="rock" src="assets/rock.gltf"></a-asset-item>
+        <audio id="orangeCloud" src="sounds/swoosh.mp3" preload="auto"></audio>
+        <audio id="rockSound" src="sounds/rock.mp3" preload="auto"></audio>
+        <audio id="chairSound" src="sounds/baby.mp3" preload="auto"></audio>
+<!-- Cameron -->
+
         <audio id="welcome" src="sounds/welcome-music.mp3" preload="auto"></audio>
         <audio id="ambient" src="sounds/ambient-sound.mp3" preload="auto"></audio>
         <audio id="hello" src="sounds/hello-sound.mp3" preload="auto"></audio>
         <audio id="clown-sound" src="sounds/clown-sound.mp3" preload="auto"></audio>
         <audio id="jack-in-the-box-sound" src="sounds/jack-in-the-box-sound.mp3" preload="auto"></audio>
+
       </a-assets>
       <a-image src="#welcome-sign" position="0 6.7 25.5" scale="20 6 15"></a-image>
       <a-entity gltf-model="#purple-cake"></a-entity>
@@ -88,9 +98,15 @@
         <a-entity gltf-model="#fence-turquoise"></a-entity>
         <a-entity gltf-model="#fence-mutiple-colors"></a-entity>
 
-        <a-entity gltf-model="#avatar" rotation="0 -50 0" position="-3 -1.5 23" sound__mouseenter="src: #hello; on: mouseenter; volume:5; refDistance: 0.5; rolloffFactor: 0.5"></a-entity>
-        <a-entity gltf-model="#clown" rotation="0 50 0" position="15 -1.6 8" sound__mouseenter="src: #clown-sound; on: mouseenter; volume:1; refDistance: 0.5; rolloffFactor: 0.5"></a-entity>
-        <a-entity gltf-model="#jackinthebox" rotation="0 180 0" position="-25 -1.6 8" scale=".5 .5 .5" sound__mouseenter="src: #jack-in-the-box-sound; on: mouseenter; volume:5; refDistance: 0.5; rolloffFactor: 0.5"></a-entity>
+<!-- Cameron -->
+<a-entity gltf-model="#cloud-chair" scale="6 6 6" position="22 -3.2 9" sound__mouseenter="src: #orangeCloud; on: mouseenter; volume:5; refDistance: 0.5; rolloffFactor: 0.1"></a-entity>
+<a-entity gltf-model="#decoratedBench" scale="1 1 1" position="-21 -1 -10" sound__mouseenter="src: #chairSound; on: mouseenter; volume:5; refDistance: 0.5; rolloffFactor: 0.1"></a-entity>
+<a-entity gltf-model="#rock" scale="1 1 1" position="-20 -1.6 -14" rotation="0 35 0" sound__mouseenter="src: #rockSound; on: mouseenter; volume:5; refDistance: 0.5; rolloffFactor: 0.1"></a-entity>
+<!-- Cameron -->  
+
+        <a-entity gltf-model="#avatar" rotation="0 -50 0" position="-3 -1.5 23" sound__mouseenter="src: #hello; on: mouseenter; volume:5; refDistance: 0.5; rolloffFactor: 0.1"></a-entity>
+        <a-entity gltf-model="#clown" rotation="0 50 0" position="15 -1.6 8" sound__mouseenter="src: #clown-sound; on: mouseenter; volume:1; refDistance: 0.5; rolloffFactor: 0.1"></a-entity>
+        <a-entity gltf-model="#jackinthebox" rotation="0 180 0" position="-25 -1.6 8" scale=".5 .5 .5" sound__mouseenter="src: #jack-in-the-box-sound; on: mouseenter; volume:5; refDistance: 0.5; rolloffFactor: 0.1"></a-entity>
         <a-entity gltf-model="#ground"
           animation="property: position; to: 1 9 0; from: 0 0 0; dur: 10000; loop:true; dir:alternate"
           animation__2="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-entity>
@@ -152,7 +168,7 @@
         </a-entity>
         
         <a-entity></a-entity> 
-        <a-sky src="#sky"  sound="src: #ambient; autoplay: true; loop: true; rolloffFactor: 0; volume: .05;"></a-sky>
+        <a-sky src="#sky"  sound="src: #ambient; autoplay: true; loop: true; rolloffFactor: 0; volume: 1;"></a-sky>
   </a-entity>
     </a-scene>
   </body>
