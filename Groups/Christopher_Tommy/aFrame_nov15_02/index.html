@@ -1,0 +1,185 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+
+    //environment 
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+  
+  </head>
+  <body>
+
+    <a-scene>
+
+     
+  
+        <a-assets>
+          <a-asset-item id="terrain-obj" src="assets/terrain.obj"></a-asset-item>
+          <a-asset-item id="terrain-mtl" src="assets/terrain.mtl"></a-asset-item>
+          <a-asset-item id="water-obj" src="assets/water.obj"></a-asset-item>
+          <a-asset-item id="water-mtl" src="assets/water.mtl"></a-asset-item>
+          <a-asset-item id="gorilla-obj" src="assets/gorilla.obj"></a-asset-item>
+          <a-asset-item id="gorilla-mtl" src="assets/gorilla.mtl"></a-asset-item>
+          <a-asset-item id="turtle-obj" src="assets/turtle.obj"></a-asset-item>
+          <a-asset-item id="turtle-mtl" src="assets/turtle.mtl"></a-asset-item>
+          <img id="six" src="assets/six.png">
+          <img id="four" src="assets/four.png">
+          <!-- <audio src="assets/empty.mp3" autoplay preload></audio> -->
+        </a-assets>
+    
+
+
+<!-- empty room sound -->
+<a-sound src="assets/empty.mp3" autoplay="true" position="0 0 0"></a-sound> 
+<a-sound src="assets/empty.mp3" autoplay="true" position="0 0 -20"></a-sound> 
+<a-sound src="assets/empty.mp3" autoplay="true" position="0 0 -40"></a-sound> 
+<a-sound src="assets/empty.mp3" autoplay="true" position="0 0 -60"></a-sound> 
+<a-sound src="assets/empty.mp3" autoplay="true" position="0 0 -80"></a-sound>
+<a-sound src="assets/empty.mp3" autoplay="true" position="0 0 -100"></a-sound> 
+
+
+<!-- domes -->
+      <a-entity rotation="0 90 0" position="-20 1 -10" scale="30 30 30" obj-model="obj: #terrain-obj; mtl: #terrain-mtl"
+      animation="property: object3D.position.y; to: -5; dir: alternate; dur: 4000; loop: true"
+      ></a-entity>
+
+         <!-- dome -->
+         <a-entity rotation="0 90 0" position="-20 1 -20" scale="30 30 30" obj-model="obj: #terrain-obj; mtl: #terrain-mtl"
+         animation="property: object3D.position.y; to: -5; dir: alternate; dur: 3950; loop: true"
+         ></a-entity>
+
+            <!-- dome -->
+            <a-entity rotation="0 90 0" position="-20 1 -30" scale="30 30 30" obj-model="obj: #terrain-obj; mtl: #terrain-mtl"
+            animation="property: object3D.position.y; to: -5; dir: alternate; dur: 3900; loop: true">   
+            </a-entity>
+
+              <!-- dome -->
+              <a-entity rotation="0 90 0" position="-20 1 -40" scale="30 30 30" obj-model="obj: #terrain-obj; mtl: #terrain-mtl"
+              animation="property: object3D.position.y; to: -5; dir: alternate; dur: 3850; loop: true">   
+              </a-entity>
+
+                <!-- dome -->
+            <a-entity rotation="0 90 0" position="-20 1 -50" scale="30 30 30" obj-model="obj: #terrain-obj; mtl: #terrain-mtl"
+            animation="property: object3D.position.y; to: -5; dir: alternate; dur: 3800; loop: true">   
+            </a-entity>
+
+              <!-- dome -->
+              <a-entity rotation="0 90 0" position="-20 1 -60" scale="30 30 30" obj-model="obj: #terrain-obj; mtl: #terrain-mtl"
+              animation="property: object3D.position.y; to: -5; dir: alternate; dur: 3750; loop: true">   
+              </a-entity>
+
+                <!-- dome -->
+            <a-entity rotation="0 90 0" position="-20 1 -70" scale="30 30 30" obj-model="obj: #terrain-obj; mtl: #terrain-mtl">
+           
+            </a-entity>
+
+
+<!-- jungle sound -->
+<a-sound src="assets/jungle.mp3" autoplay="true" position="-20 1 -70" volume="-1"></a-sound> 
+
+
+<!-- ocean sound -->
+<a-sound src="assets/ocean.mp3" autoplay="true" position="20 1 -30"></a-sound> 
+
+
+<!-- waterDomes -->
+      <a-entity position="20 1 -20" scale="5 5 5" obj-model="obj: #water-obj; mtl: #water-mtl" 
+      animation="property: object3D.position.y; to: -5; dir: alternate; dur: 4000; loop: true"
+      ></a-entity>
+
+        <!-- waterDome -->
+        <a-entity position="20 1 -30" scale="5 5 5" obj-model="obj: #water-obj; mtl: #water-mtl" 
+      
+        ></a-entity>
+
+          <!-- waterDome -->
+          <a-entity position="20 1 -40" scale="5 5 5" obj-model="obj: #water-obj; mtl: #water-mtl" 
+          animation="property: object3D.position.y; to: -5; dir: alternate; dur: 3900; loop: true"
+          ></a-entity>
+
+          <!-- waterDome -->
+          <a-entity position="20 1 -50" scale="5 5 5" obj-model="obj: #water-obj; mtl: #water-mtl" 
+          animation="property: object3D.position.y; to: -5; dir: alternate; dur: 3850; loop: true"
+          ></a-entity>
+
+          <!-- waterDome -->
+          <a-entity position="20 1 -60" scale="5 5 5" obj-model="obj: #water-obj; mtl: #water-mtl" 
+          animation="property: object3D.position.y; to: -5; dir: alternate; dur: 3800; loop: true"
+          ></a-entity>
+
+          <!-- waterDome -->
+          <a-entity position="20 1 -70" scale="5 5 5" obj-model="obj: #water-obj; mtl: #water-mtl" 
+          animation="property: object3D.position.y; to: -5; dir: alternate; dur: 3750; loop: true"
+          ></a-entity>
+      
+     
+      
+<!-- text -->
+      <!-- <a-entity
+      text="value: Hello, A-Frame!; color: #BBB"
+      position="-0.9 0.2 -3"
+      scale="5 5 5"></a-entity> -->
+
+
+<!-- image6 -->
+      <a-image src="assets/six.png" scale="10 10 10" rotation="0 90 0" position="-100 0 0"    animation="property: object3D.position.y; to: -5; dir: alternate; dur: 3000; loop: true">   ></a-image>
+      <a-image src="assets/six.png" scale="10 10 10" rotation="0 90 0" position="-100 0 -20"  animation="property: object3D.position.y; to: -5; dir: alternate; dur: 4000; loop: true">   ></a-image>
+      <a-image src="assets/six.png" scale="10 10 10" rotation="0 90 0" position="-100 0 -40"  animation="property: object3D.position.y; to: -5; dir: alternate; dur: 3000; loop: true">   ></a-image>
+      <a-image src="assets/six.png" scale="10 10 10" rotation="0 90 0" position="-100 0 -60"  animation="property: object3D.position.y; to: -5; dir: alternate; dur: 4000; loop: true">   ></a-image>
+
+      <a-image src="assets/six.png" scale="10 10 10" rotation="0 90 0" position="-150 0 0"    animation="property: object3D.position.y; to: -5; dir: alternate; dur: 4000; loop: true">   ></a-image>
+      <a-image src="assets/six.png" scale="10 10 10" rotation="0 90 0" position="-150 0 -10"  animation="property: object3D.position.y; to: -5; dir: alternate; dur: 3000; loop: true">   ></a-image>
+      <a-image src="assets/six.png" scale="10 10 10" rotation="0 90 0" position="-150 0 -30"  animation="property: object3D.position.y; to: -5; dir: alternate; dur: 4000; loop: true">   ></a-image>
+      <a-image src="assets/six.png" scale="10 10 10" rotation="0 90 0" position="-150 0 -50"  animation="property: object3D.position.y; to: -5; dir: alternate; dur: 3000; loop: true">   ></a-image>
+
+      <a-image src="assets/six.png" scale="10 10 10" rotation="0 90 0" position="-200 0 0"    animation="property: object3D.position.y; to: -5; dir: alternate; dur: 4000; loop: true">   ></a-image>
+      <a-image src="assets/six.png" scale="10 10 10" rotation="0 90 0" position="-200 0 -10"  animation="property: object3D.position.y; to: -5; dir: alternate; dur: 3000; loop: true">   ></a-image>
+      <a-image src="assets/six.png" scale="10 10 10" rotation="0 90 0" position="-200 0 -30"  animation="property: object3D.position.y; to: -5; dir: alternate; dur: 4000; loop: true">   ></a-image>
+      <a-image src="assets/six.png" scale="10 10 10" rotation="0 90 0" position="-200 0 -50"  animation="property: object3D.position.y; to: -5; dir: alternate; dur: 3000; loop: true">   ></a-image>
+
+
+<!-- image4 -->
+<a-image src="assets/four.png" scale="10 10 10" rotation="0 90 0" position="100 0 0"    animation="property: object3D.position.y; to: -5; dir: alternate; dur: 3000; loop: true">   ></a-image>
+<a-image src="assets/four.png" scale="10 10 10" rotation="0 90 0" position="100 0 20"  animation="property: object3D.position.y; to: -5; dir: alternate; dur: 4000; loop: true">   ></a-image>
+<a-image src="assets/four.png" scale="10 10 10" rotation="0 90 0" position="100 0 40"  animation="property: object3D.position.y; to: -5; dir: alternate; dur: 3000; loop: true">   ></a-image>
+<a-image src="assets/four.png" scale="10 10 10" rotation="0 90 0" position="100 0 60"  animation="property: object3D.position.y; to: -5; dir: alternate; dur: 4000; loop: true">   ></a-image>
+
+<a-image src="assets/four.png" scale="10 10 10" rotation="0 90 0" position="150 0 0"    animation="property: object3D.position.y; to: -5; dir: alternate; dur: 4000; loop: true">   ></a-image>
+<a-image src="assets/four.png" scale="10 10 10" rotation="0 90 0" position="150 0 10"  animation="property: object3D.position.y; to: -5; dir: alternate; dur: 3000; loop: true">   ></a-image>
+<a-image src="assets/four.png" scale="10 10 10" rotation="0 90 0" position="150 0 30"  animation="property: object3D.position.y; to: -5; dir: alternate; dur: 4000; loop: true">   ></a-image>
+<a-image src="assets/four.png" scale="10 10 10" rotation="0 90 0" position="150 0 50"  animation="property: object3D.position.y; to: -5; dir: alternate; dur: 3000; loop: true">   ></a-image>
+
+<a-image src="assets/four.png" scale="10 10 10" rotation="0 90 0" position="200 0 0"    animation="property: object3D.position.y; to: -5; dir: alternate; dur: 4000; loop: true">   ></a-image>
+<a-image src="assets/four.png" scale="10 10 10" rotation="0 90 0" position="200 0 10"  animation="property: object3D.position.y; to: -5; dir: alternate; dur: 3000; loop: true">   ></a-image>
+<a-image src="assets/four.png" scale="10 10 10" rotation="0 90 0" position="200 0 30"  animation="property: object3D.position.y; to: -5; dir: alternate; dur: 4000; loop: true">   ></a-image>
+<a-image src="assets/four.png" scale="10 10 10" rotation="0 90 0" position="200 0 50"  animation="property: object3D.position.y; to: -5; dir: alternate; dur: 3000; loop: true">   ></a-image>
+
+
+<!-- gorilla -->
+ <a-entity position="-21 3.5 -71" scale="1.5 1.5 1.5" rotation="0 60 0" obj-model="obj: #gorilla-obj; mtl: #gorilla-mtl"
+
+ ></a-entity>
+
+
+<!-- turtle -->
+  <a-entity position="20.5  3 -32" scale="0.5 0.5 0.5" rotation="75 180 -50" obj-model="obj: #turtle-obj; mtl: #turtle-mtl"
+
+  ></a-entity>
+
+
+  <!-- lights -->
+      <a-light type="ambient" color="#ac3fcc"></a-light>
+
+      <a-light type="point" intensity="2" position="-21 3.5 -71"></a-light>
+
+      <a-light type="point" intensity="2" position="20.5  3 -32"></a-light>
+
+
+<!-- sky -->
+      <a-sky color="#212738"></a-sky>
+
+      
+
+    </a-scene>
+
+  </body>
+</html>
