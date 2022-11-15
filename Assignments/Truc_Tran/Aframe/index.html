@@ -9,6 +9,7 @@
     <a-scene light="defaultLightsEnabled: true"  renderer="colorManagement: true">
       <a-assets>
         <img id="welcome-sign" src="assets/welcome-sign.png">
+        <img id="sky" src="assets/sky.jpg">
         <a-asset-item id="purple-cake" src="assets/purple-cake.gltf"></a-asset-item>
         <a-asset-item id="red-cake" src="assets/red-cake.gltf"></a-asset-item>
         <a-asset-item id="turquoise-cake" src="assets/turquoise-cake.gltf"></a-asset-item>
@@ -151,7 +152,7 @@
         </a-entity>
         
         <a-entity sound="src: #ambient; autoplay: true; loop: true; volume:5 ; refDistance: 10; rolloffFactor: 1" position="0 0.6 15"></a-entity> 
-        <a-sky color="#F8C8DC"></a-sky>
+        <a-sky src="#sky"></a-sky>
   </a-entity>
     </a-scene>
   </body>
