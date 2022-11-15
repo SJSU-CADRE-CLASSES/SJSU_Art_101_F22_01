@@ -1,0 +1,125 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+
+    //environment 
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+  
+  </head>
+  <body>
+
+    <a-scene>
+
+     
+  
+        <a-assets>
+          <a-asset-item id="terrain-obj" src="assets/terrain.obj"></a-asset-item>
+          <a-asset-item id="terrain-mtl" src="assets/terrain.mtl"></a-asset-item>
+          <a-asset-item id="water-obj" src="assets/water.obj"></a-asset-item>
+          <a-asset-item id="water-mtl" src="assets/water.mtl"></a-asset-item>
+          <a-asset-item id="gorilla-obj" src="assets/gorilla.obj"></a-asset-item>
+          <a-asset-item id="gorilla-mtl" src="assets/gorilla.mtl"></a-asset-item>
+          <a-asset-item id="turtle-obj" src="assets/turtle.obj"></a-asset-item>
+          <a-asset-item id="turtle-mtl" src="assets/turtle.mtl"></a-asset-item>
+          <img id="skyStars" src="skyStars.jpg">
+        </a-assets>
+    
+<a-sky color="#424242"></a-sky> -->
+
+
+<a-sound src="assets/jungle.mp3" autoplay="true" position="-10 1 -70"></a-sound> 
+
+
+<!-- dome -->
+      <a-entity rotation="0 90 0" position="-10 1 -10" scale="30 30 30" obj-model="obj: #terrain-obj; mtl: #terrain-mtl"
+      animation="property: object3D.position.y; to: -5; dir: alternate; dur: 4000; loop: true"
+      ></a-entity>
+
+         <!-- dome -->
+         <a-entity rotation="0 90 0" position="-10 1 -20" scale="30 30 30" obj-model="obj: #terrain-obj; mtl: #terrain-mtl"
+         animation="property: object3D.position.y; to: -5; dir: alternate; dur: 4000; loop: true"
+         ></a-entity>
+
+            <!-- dome -->
+            <a-entity rotation="0 90 0" position="-10 1 -30" scale="30 30 30" obj-model="obj: #terrain-obj; mtl: #terrain-mtl"
+            animation="property: object3D.position.y; to: -5; dir: alternate; dur: 4000; loop: true">   
+            </a-entity>
+
+              <!-- dome -->
+              <a-entity rotation="0 90 0" position="-10 1 -40" scale="30 30 30" obj-model="obj: #terrain-obj; mtl: #terrain-mtl"
+              animation="property: object3D.position.y; to: -5; dir: alternate; dur: 4000; loop: true">   
+              </a-entity>
+
+                <!-- dome -->
+            <a-entity rotation="0 90 0" position="-10 1 -50" scale="30 30 30" obj-model="obj: #terrain-obj; mtl: #terrain-mtl"
+            animation="property: object3D.position.y; to: -5; dir: alternate; dur: 4000; loop: true">   
+            </a-entity>
+
+              <!-- dome -->
+              <a-entity rotation="0 90 0" position="-10 1 -60" scale="30 30 30" obj-model="obj: #terrain-obj; mtl: #terrain-mtl"
+              animation="property: object3D.position.y; to: -5; dir: alternate; dur: 4000; loop: true">   
+              </a-entity>
+
+                <!-- dome -->
+            <a-entity rotation="0 90 0" position="-10 1 -70" scale="30 30 30" obj-model="obj: #terrain-obj; mtl: #terrain-mtl"
+            animation="property: object3D.position.y; to: -5; dir: alternate; dur: 4000; loop: true">   
+            </a-entity>
+
+
+<a-sound src="assets/ocean.mp3" autoplay="true" position="20 1 -50"></a-sound> 
+
+<!-- waterDome -->
+      <a-entity position="20 1 -20" scale="5 5 5" obj-model="obj: #water-obj; mtl: #water-mtl" 
+      animation="property: object3D.position.y; to: -5; dir: alternate; dur: 3000; loop: true"
+      ></a-entity>
+
+        <!-- waterDome -->
+        <a-entity position="20 1 -30" scale="5 5 5" obj-model="obj: #water-obj; mtl: #water-mtl" 
+        animation="property: object3D.position.y; to: -5; dir: alternate; dur: 3000; loop: true"
+        ></a-entity>
+
+          <!-- waterDome -->
+          <a-entity position="20 1 -40" scale="5 5 5" obj-model="obj: #water-obj; mtl: #water-mtl" 
+          animation="property: object3D.position.y; to: -5; dir: alternate; dur: 3000; loop: true"
+          ></a-entity>
+
+          <!-- waterDome -->
+          <a-entity position="20 1 -50" scale="5 5 5" obj-model="obj: #water-obj; mtl: #water-mtl" 
+          animation="property: object3D.position.y; to: -5; dir: alternate; dur: 3000; loop: true"
+          ></a-entity>
+      
+     
+
+      
+
+<!-- text -->
+      <a-entity
+      text="value: Hello, A-Frame!; color: #BBB"
+      position="-0.9 0.2 -3"
+      scale="5 5 5"></a-entity>
+
+
+ <!-- gorilla -->
+ <a-entity position="-11 1 -71" scale="1.5 1.5 1.5" rotation="0 90 0" obj-model="obj: #gorilla-obj; mtl: #gorilla-mtl"
+ animation="property: object3D.position.y; to: 0; dir: alternate; dur: 4000; loop: true"
+ ></a-entity>
+
+  <!-- turtle -->
+  <a-entity position="5 5 -10" scale="1.5 1.5 1.5" rotation="0 90 0" obj-model="obj: #turtle-obj; mtl: #turtle-mtl"
+
+  ></a-entity>
+
+      <a-light type="ambient" color="#445451"></a-light>
+      <a-light type="point" intensity="2" position="8 5 4"></a-light>
+
+      
+
+      <a-sky color="#212738"></a-sky>
+      
+
+
+
+    </a-scene>
+
+  </body>
+</html>
