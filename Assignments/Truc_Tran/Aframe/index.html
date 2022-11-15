@@ -48,7 +48,7 @@
         <audio id="welcome" src="sounds/welcome-music.mp3" preload="auto"></audio>
         <audio id="ambient" src="sounds/ambient-park-sounds.mp3" preload="auto"></audio>
         <audio id="hello" src="sounds/hello-sound.mp3" preload="auto"></audio>
-        <audio id="clown" src="sounds/clown-sound.mp3" preload="auto"></audio>
+        <audio id="clown-sound" src="sounds/clown-sound.mp3" preload="auto"></audio>
       </a-assets>
       
       <a-entity gltf-model="#purple-cake"></a-entity>
@@ -75,7 +75,7 @@
         <a-entity gltf-model="#fence-mutiple-colors"></a-entity>
 
         <a-entity gltf-model="#avatar" rotation="0 -50 0" position="-3 -1.5 23" sound__mouseenter="src: #hello; on: mouseenter; volume:10"></a-entity>
-        <a-entity gltf-model="#clown" rotation="0 -50 0" position="-3 -1.5 23" sound__mouseenter="src: #clown; on: mouseenter; volume:10"></a-entity>
+        <a-entity gltf-model="#clown" rotation="0 50 0" position="-3 -1.5 23" sound__mouseenter="src: #clown-sound; on: mouseenter; volume:10"></a-entity>
         <a-entity gltf-model="#ground"
           animation="property: position; to: 1 9 0; from: 0 0 0; dur: 10000; loop:true; dir:alternate"
           animation__2="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-entity>
