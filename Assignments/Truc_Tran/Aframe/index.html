@@ -87,9 +87,9 @@
         <a-entity gltf-model="#fence-turquoise"></a-entity>
         <a-entity gltf-model="#fence-mutiple-colors"></a-entity>
 
-        <a-entity gltf-model="#avatar" rotation="0 -50 0" position="-3 -1.5 23" sound__mouseenter="src: #hello; on: mouseenter; volume:5"></a-entity>
-        <a-entity gltf-model="#clown" rotation="0 50 0" position="15 -1.6 8" sound__mouseenter="src: #clown-sound; on: mouseenter; volume:2"></a-entity>
-        <a-entity gltf-model="#jackinthebox" rotation="0 180 0" position="-25 -1.6 8" scale=".5 .5 .5" sound__mouseenter="src: #jack-in-the-box-sound; on: mouseenter; volume:4"></a-entity>
+        <a-entity gltf-model="#avatar" rotation="0 -50 0" position="-3 -1.5 23" sound__mouseenter="src: #hello; on: mouseenter; volume:5; refDistance: 1; rolloffFactor: 6"></a-entity>
+        <a-entity gltf-model="#clown" rotation="0 50 0" position="15 -1.6 8" sound__mouseenter="src: #clown-sound; on: mouseenter; volume:3; refDistance: 1; rolloffFactor: 6"></a-entity>
+        <a-entity gltf-model="#jackinthebox" rotation="0 180 0" position="-25 -1.6 8" scale=".5 .5 .5" sound__mouseenter="src: #jack-in-the-box-sound; on: mouseenter; volume:5; refDistance: 1; rolloffFactor: 6"></a-entity>
         <a-entity gltf-model="#ground"
           animation="property: position; to: 1 9 0; from: 0 0 0; dur: 10000; loop:true; dir:alternate"
           animation__2="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-entity>
