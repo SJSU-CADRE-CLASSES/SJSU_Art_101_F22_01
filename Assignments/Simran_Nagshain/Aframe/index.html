@@ -88,10 +88,18 @@
         <a-entity gltf-model="#fence-turquoise"></a-entity>
         <a-entity gltf-model="#fence-mutiple-colors"></a-entity>
 
-        <a-asset-item id="tree" src="assets/tree.obj"></a-asset-item>
-        <a-asset-item id="tree" src="assets/tree.mtl"></a-asset-item>
-        <a-asset-item id="bush" src="assets/bush.obj"></a-asset-item>
-        <a-asset-item id="bush" src="assets/bush.mtl"></a-asset-item>
+        <a-scene>
+          <a-assets>
+            <a-asset-item id="tree-obj" src="tree.obj"></a-asset-item>
+            <a-asset-item id="tree-mtl" src="tree.mtl"></a-asset-item>
+          </a-assets>
+        
+          <!-- Using the asset management system. -->
+          <a-obj-model src="#tree-obj" mtl="#tree-mtl"></a-obj-model>
+        
+          <!-- Defining the URL inline. Not recommended but may be more comfortable. -->
+          <a-obj-model src="tree.obj" mtl="tree.mtl"></a-obj-model>
+        </a-scene>
 
         <a-entity gltf-model="#avatar" rotation="0 -50 0" position="-3 -1.5 23" sound__mouseenter="src: #hello; on: mouseenter; volume:5; refDistance: 0.5; rolloffFactor: 0.5"></a-entity>
         <a-entity gltf-model="#clown" rotation="0 50 0" position="15 -1.6 8" sound__mouseenter="src: #clown-sound; on: mouseenter; volume:1; refDistance: 0.5; rolloffFactor: 0.5"></a-entity>
