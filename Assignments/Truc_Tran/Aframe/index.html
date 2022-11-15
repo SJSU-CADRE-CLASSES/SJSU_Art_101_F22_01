@@ -43,23 +43,25 @@
         <a-asset-item id="cloud-9" src="assets/cloud-9.gltf"></a-asset-item>
         <a-asset-item id="cloud-10" src="assets/cloud-10.gltf"></a-asset-item>
         <a-asset-item id="cloud-11" src="assets/cloud-11.gltf"></a-asset-item>        
-<a-asset-item id="cloud-12" src="assets/cloud-12.gltf"></a-asset-item>
-<a-asset-item id="cloud-13" src="assets/cloud-13.gltf"></a-asset-item>
-<a-asset-item id="cloud-14" src="assets/cloud-14.gltf"></a-asset-item>
-<a-asset-item id="cloud-15" src="assets/cloud-15.gltf"></a-asset-item>
-<a-asset-item id="cloud-16" src="assets/cloud-16.gltf"></a-asset-item>
-<a-asset-item id="cloud-17" src="assets/cloud-17.gltf"></a-asset-item>
-<a-asset-item id="cloud-18" src="assets/cloud-18.gltf"></a-asset-item>
-<a-asset-item id="cloud-19" src="assets/cloud-19.gltf"></a-asset-item>
-<a-asset-item id="cloud-20" src="assets/cloud-20.gltf"></a-asset-item>
+        <a-asset-item id="cloud-12" src="assets/cloud-12.gltf"></a-asset-item>
+        <a-asset-item id="cloud-13" src="assets/cloud-13.gltf"></a-asset-item>
+        <a-asset-item id="cloud-14" src="assets/cloud-14.gltf"></a-asset-item>
+        <a-asset-item id="cloud-15" src="assets/cloud-15.gltf"></a-asset-item>
+        <a-asset-item id="cloud-16" src="assets/cloud-16.gltf"></a-asset-item>
+        <a-asset-item id="cloud-17" src="assets/cloud-17.gltf"></a-asset-item>
+        <a-asset-item id="cloud-18" src="assets/cloud-18.gltf"></a-asset-item>
+        <a-asset-item id="cloud-19" src="assets/cloud-19.gltf"></a-asset-item>
+        <a-asset-item id="cloud-20" src="assets/cloud-20.gltf"></a-asset-item>
         
         <a-asset-item id="avatar" src="assets/avatar.gltf"></a-asset-item>
         <a-asset-item id="clown" src="assets/clown.gltf"></a-asset-item>
-
+        <a-asset-item id="jackinthebox" src="assets/jackinthebox.gltf"></a-asset-item>
+        
         <audio id="welcome" src="sounds/welcome-music.mp3" preload="auto"></audio>
         <audio id="ambient" src="sounds/ambient-park-sounds.mp3" preload="auto"></audio>
         <audio id="hello" src="sounds/hello-sound.mp3" preload="auto"></audio>
         <audio id="clown-sound" src="sounds/clown-sound.mp3" preload="auto"></audio>
+        <audio id="jack-in-the-box-sound" src="sounds/jack-in-the-box-sound.mp3" preload="auto"></audio>
       </a-assets>
       <a-image src="#welcome-sign" position="0 6.7 25.5" scale="20 6 15"></a-image>
       <a-entity gltf-model="#purple-cake"></a-entity>
@@ -85,8 +87,9 @@
         <a-entity gltf-model="#fence-turquoise"></a-entity>
         <a-entity gltf-model="#fence-mutiple-colors"></a-entity>
 
-        <a-entity gltf-model="#avatar" rotation="0 -50 0" position="-3 -1.5 23" sound__mouseenter="src: #hello; on: mouseenter; volume:10"></a-entity>
-        <a-entity gltf-model="#clown" rotation="0 50 0" position="15 -1.6 8" sound__mouseenter="src: #clown-sound; on: mouseenter; volume:10"></a-entity>
+        <a-entity gltf-model="#avatar" rotation="0 -50 0" position="-3 -1.5 23" sound__mouseenter="src: #hello; on: mouseenter; volume:5"></a-entity>
+        <a-entity gltf-model="#clown" rotation="0 50 0" position="15 -1.6 8" sound__mouseenter="src: #clown-sound; on: mouseenter; volume:2"></a-entity>
+        <a-entity gltf-model="#jackinthebox" position="15 -1.6 8" scale=".5 .5 .5" sound__mouseenter="src: #jack-in-the-box; on: mouseenter; volume:4"></a-entity>
         <a-entity gltf-model="#ground"
           animation="property: position; to: 1 9 0; from: 0 0 0; dur: 10000; loop:true; dir:alternate"
           animation__2="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-entity>
@@ -131,9 +134,11 @@
           animation="property: position; to: 20 15 40; from: -10 15 -30; dur: 20000; loop:true; dir:alternate"></a-entity>
           <a-entity gltf-model="#cloud-20" rotation="0 0 0"
           animation="property: position; to: -5 20 -10; from: 30 20 30; dur: 20000; loop:true; dir:alternate"></a-entity>
-        <a-entity sound="src: #welcome; autoplay: true; volume:1 ; refDistance: 1; rolloffFactor: 3" position="0 0.6 25"></a-entity>
+        <a-entity sound="src: #welcome; autoplay: true; volume:.2 ; refDistance: 1; rolloffFactor: 3" position="0 0.6 25"></a-entity>
         <a-entity gltf-model="#gate-rainbow"></a-entity>
         
+       
+
 
         
         <a-entity vive-controls="hand: left"></a-entity>
