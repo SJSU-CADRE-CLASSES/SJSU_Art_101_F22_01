@@ -2,6 +2,7 @@
 <head>
 <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
 <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v3.3.0/dist/aframe-physics-system.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 </head>
     <body>
         <a-scene>
@@ -20,11 +21,9 @@
                 <a-entity light="type: point; color: #cdcdcd; intensity: 1; distance: 50; decay: 1" position="-1 -1 -3"></a-entity>
                 <a-entity light="type: point; color: #cdcdcd; intensity: 1; distance: 50; decay: 1" position="-1 3 -3"></a-entity>
                 
-                
-                <a-entity id="rig" position="10 1 0">
-                    <a-entity id="camera" camera look-controls wasd-controls="acceleration:50"
-                       kinematic-body ></a-entity>
-                  </a-entity>
+                <a-plane static-body position="0 0 -4" rotation="-90 0 0" width="100" height="100" color="#7BC8A4"></a-plane>
+                <a-entity camera="userHeight:0" universal-controls kinematic-body position="10 10 0" rotation="0 90 0">
+                </a-entity>
                 <a-entity gltf-model="#projector" animation="property: position; to: 0 2 0; dur: 10000; easing: linear; loop: true">
                     <a-video src="#fish"  rotation="0 90 0" position="-3.45 1.4 -.08" width="2.99" height="1.8" ></a-video>
                     </a-entity>
