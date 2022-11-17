@@ -82,6 +82,8 @@
        <a-asset-item id="tree6a" src="assets/tree6.gltf"></a-asset-item>
        <a-asset-item id="tree6b" src="assets/tree6.gltf"></a-asset-item>
        <a-asset-item id="frog" src="assets/Frog.gltf"></a-asset-item>
+       <audio id="frog-sound" src="sounds/wiz.mp3" preload="auto"></audio>
+       <audio id="wind-sound" src="sounds/wind-sound.mp3" preload="auto"></audio>
        <!-- -- Niyana. S -- -->
         
         <!-- sounds -->
@@ -115,18 +117,18 @@
         <!-- Cameron's objects -->  
          
         <!-- -- Niyana. S -- -->
-        <a-entity gltf-model="#tree1" rotation="-6 -160 0" position="-34 -1.9 -12"></a-entity>
-        <a-entity gltf-model="#tree2" rotation="-6 -160 0" position="-16 -1.9 -14"></a-entity>
-        <a-entity gltf-model="#tree3" rotation="-6 -210 0" position="10 -1.9 -22"></a-entity>
-        <a-entity gltf-model="#tree4a" rotation="-6 -210 0" position="-4 -1.9 30"></a-entity>
-        <a-entity gltf-model="#tree4b" rotation="-6 -210 0" position="-10 -1.9 30"></a-entity>
-        <a-entity gltf-model="#tree5a" rotation="-6 -210 0" position="-10 -1.9 16"></a-entity>
-        <a-entity gltf-model="#tree5b" rotation="-6 -210 0" position="-4 -1.9 17"></a-entity>
-        <a-entity gltf-model="#tree6a" rotation="-6 -210 0" position="-2.9 -1.9 8"></a-entity>
-        <a-entity gltf-model="#tree6b" rotation="-6 -210 0" position="-9.1 -1.9 8"></a-entity>
-        <a-entity gltf-model="#frog" rotation="-0 -50 0" position="3 1 21"></a-entity>
+        <a-entity gltf-model="#tree1" rotation="-6 -160 0" position="-34 -1.9 -12" sound__mouseenter="src: #wind-sound; on: mouseenter; volume:5; refDistance: 0.5; rolloffFactor: 0.1"></a-entity>
+        <a-entity gltf-model="#tree2" rotation="-6 -160 0" position="-16 -1.9 -14" sound__mouseenter="src: #wind-sound; on: mouseenter; volume:5; refDistance: 0.5; rolloffFactor: 0.1"></a-entity>
+        <a-entity gltf-model="#tree3" rotation="-6 -210 0" position="10 -1.9 -22" sound__mouseenter="src: #wind-sound; on: mouseenter; volume:5; refDistance: 0.5; rolloffFactor: 0.1"></a-entity>
+        <a-entity gltf-model="#tree4a" rotation="-6 -210 0" position="-4 -1.9 30" sound__mouseenter="src: #wind-sound; on: mouseenter; volume:5; refDistance: 0.5; rolloffFactor: 0.1"></a-entity>
+        <a-entity gltf-model="#tree4b" rotation="-6 -210 0" position="-10 -1.9 30" sound__mouseenter="src: #wind-sound; on: mouseenter; volume:5; refDistance: 0.5; rolloffFactor: 0.1"></a-entity>
+        <a-entity gltf-model="#tree5a" rotation="-6 -210 0" position="-10 -1.9 16" sound__mouseenter="src: #wind-sound; on: mouseenter; volume:5; refDistance: 0.5; rolloffFactor: 0.1"></a-entity>
+        <a-entity gltf-model="#tree5b" rotation="-6 -210 0" position="-4 -1.9 17" sound__mouseenter="src: #wind-sound; on: mouseenter; volume:5; refDistance: 0.5; rolloffFactor: 0.1"></a-entity>
+        <a-entity gltf-model="#tree6a" rotation="-6 -210 0" position="-2.9 -1.9 8" sound__mouseenter="src: #wind-sound; on: mouseenter; volume:5; refDistance: 0.5; rolloffFactor: 0.1"></a-entity>
+        <a-entity gltf-model="#tree6b" rotation="-6 -210 0" position="-9.1 -1.9 8" sound__mouseenter="src: #wind-sound; on: mouseenter; volume:5; refDistance: 0.5; rolloffFactor: 0.1"></a-entity>
+        <a-entity gltf-model="#frog" rotation="-0 -50 0" position="3 1 21" sound__mouseenter="src: #frog-sound; on: mouseenter; volume:5; refDistance: 0.5; rolloffFactor: 0.1"></a-entity>
         <!-- -- Niyana. S -- -->
-
+        
         <!-- lands -->  
         <a-entity gltf-model="#purple-cake"></a-entity>
         <a-entity gltf-model="#red-cake"></a-entity>
