@@ -11,8 +11,8 @@
                 <a-asset-item id="room" static-body src="assets/allroom.gltf"></a-asset-item>
                 <a-asset-item id="jesse" src="assets/poly.glb"></a-asset-item>
                 <a-asset-item id="screen" src="assets/projectorscreen2.gltf"></a-asset-item>
-                <!--<video id="fish" autoplay loop="true" src="assets/Funkytownfish.mp4"></video>-->
-                <audio id="background" src="assets/birdsound.mp3"></audio>
+                <video id="fish" autoplay loop="true" src="assets/Funkytownfish.mp4"></video>
+                <!--<audio id="background" src="assets/birdsound.mp3"></audio>-->
                 <audio id="backgroundLight" src="assets/Lightnoise.mp3" > </audio>
             </a-assets>
 
@@ -34,13 +34,13 @@
                 </a-entity>
 
                 <a-entity gltf-model="#screen"></a-entity>  
-                <a-sound src="#background" autoplay="true"></a-sound>
+                <!--<a-sound src="#background" autoplay="true"></a-sound>-->
                 <a-sound src="#backgroundLight" autoplay="true"></a-sound>
                 <a-sky color="#ECECEC"></a-sky>
             </a-entity>
 
-            <a-sound src="assets/birdsound.mp3" autoplay="true" volume="100"></a-sound>
-            <a-sound src="assets/Lightnoise.mp3" autoplay="true"></a-sound> 
+            <!--<a-sound src="assets/birdsound.mp3" autoplay="true" volume="0"></a-sound>--> 
+            <a-sound src="assets/Lightnoise.mp3" autoplay="true" volume="25"></a-sound> 
         </a-scene>
     </body>
 </html>
