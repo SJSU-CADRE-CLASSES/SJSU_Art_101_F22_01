@@ -3,6 +3,7 @@
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="foo-component.js"></script>
   </head>
+
   <body>
     <!--Light & Color Management-->
     <a-scene light="defaultLightsEnabled: true"  renderer="colorManagement: true">
@@ -53,6 +54,8 @@
         <a-asset-item id="cloud-18" src="assets/cloud-18.gltf"></a-asset-item>
         <a-asset-item id="cloud-19" src="assets/cloud-19.gltf"></a-asset-item>
         <a-asset-item id="cloud-20" src="assets/cloud-20.gltf"></a-asset-item>
+
+        <a-asset-item id="room" src="assets/room.glb"></a-asset-item>
         
         <a-asset-item id="avatar" src="assets/avatar.gltf"></a-asset-item>
         <a-asset-item id="boy" src="assets/boy.gltf"></a-asset-item>
@@ -75,6 +78,7 @@
         <audio id="clown-sound" src="sounds/clown-sound.mp3" preload="auto"></audio>
         <audio id="jack-in-the-box-sound" src="sounds/jack-in-the-box-sound.mp3" preload="auto"></audio>
         <audio id="boy-sound" src="sounds/little-boy-gibberish-talk-sound.wav" preload="auto"></audio>
+        <audio id="door-bell" src="sounds/doorbell-sound.mp3" preload="auto"></audio>
         <audio id="piano-g-G-major" src="sounds/piano-g-G-major.wav" preload="auto"></audio>
         <audio id="piano-g-G-hash-major" src="sounds/piano-g-G-hash-major.wav" preload="auto"></audio>
         <audio id="piano-f-F-major" src="sounds/piano-f-F-major.wav" preload="auto"></audio>
@@ -116,6 +120,7 @@
         <a-entity gltf-model="#bridge-6"></a-entity>
         <!-- bridge -->  
 
+        
         <!-- fence --> 
         <a-entity gltf-model="#fence-pink"></a-entity>
         <a-entity gltf-model="#fence-green"></a-entity>
@@ -130,7 +135,8 @@
         <a-entity gltf-model="#avatar" rotation="0 -50 0" position="-3 -1.5 23" sound__mouseenter="src: #hello; on: mouseenter; volume:5; refDistance: 0.5; rolloffFactor: 0.1"></a-entity>
         <a-entity gltf-model="#boy" rotation="0 -50 0" position="20 -1.6 12" sound__mouseenter="src: #boy-sound; on: mouseenter; volume:5; refDistance: 0.5; rolloffFactor: 0.1"></a-entity>
         <a-entity gltf-model="#clown" rotation="0 50 0" position="18 -1.7 8" sound__mouseenter="src: #clown-sound; on: mouseenter; volume:1; refDistance: 0.5; rolloffFactor: 0.1"></a-entity>
-        <a-entity gltf-model="#jackinthebox" rotation="0 180 0" position="-25 -1.6 8" scale=".5 .5 .5" sound__mouseenter="src: #jack-in-the-box-sound; on: mouseenter; volume:5; refDistance: 0.5; rolloffFactor: 0.1"></a-entity>
+        <a-entity gltf-model="#jackinthebox" rotation="0 180 0" position="-25 -1.6 10" scale=".5 .5 .5" sound__mouseenter="src: #jack-in-the-box-sound; on: mouseenter; volume:5; refDistance: 0.5; rolloffFactor: 0.1"></a-entity>
+        <a-entity gltf-model="#room" scale=".01 .01 .01" position="-21 -1.6 7" rotation="0 -35 0" sound__mouseenter="src: #door-bell; on: mouseenter; volume:5; refDistance: 0.5; rolloffFactor: 0.1"></a-entity>
         <!-- character --> 
 
         <!-- ground --> 
