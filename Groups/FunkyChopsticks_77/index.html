@@ -15,19 +15,18 @@
                 <audio id="background" src="assets/birdsound.mp3" > </audio>
                 <audio id="background" src="assets/Lightnoise.mp3" > </audio>
             </a-assets>
-
+ 
             <a-entity scale="2 2 2">
                 <a-entity light="type: spot; color: daa750; angle: 45" position="0 0 10"></a-entity>
                 <a-entity light="type: point; color: #cdcdcd; intensity: 1; distance: 50; decay: 1" position="-1 -1 -3"></a-entity>
                 <a-entity light="type: point; color: #cdcdcd; intensity: 1; distance: 50; decay: 1" position="-1 3 -3"></a-entity>
                 
-                <a-plane static-body position="0 0 -4" rotation="-90 0 0" width="100" height="100" color="#7BC8A4"></a-plane>
-                <a-entity camera="userHeight:0" universal-controls kinematic-body position="10 10 0" rotation="0 90 0">
-                </a-entity>
+                
+                
                 <a-entity gltf-model="#projector" animation="property: position; to: 0 2 0; dur: 10000; easing: linear; loop: true">
                     <a-video src="#fish"  rotation="0 90 0" position="-3.45 1.4 -.08" width="2.99" height="1.8" ></a-video>
-                    </a-entity>
-                <a-entity gltf-model="#room"static-body></a-entity> 
+                 </a-entity>
+                <a-entity gltf-model="#room"></a-entity> 
                 <a-entity gltf-model="#jesse" ></a-entity> 
                 <a-entity gltf-model="#screen"></a-entity>  
                 <a-sound src="#background" autoplay="true"></a-sound>
