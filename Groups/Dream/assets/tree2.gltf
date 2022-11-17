@@ -61,12 +61,12 @@
     "materials" : [
         {
             "doubleSided" : true,
-            "name" : "Green.001",
+            "name" : "Green.002",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
-                    0.550845742225647,
                     1,
-                    0.4732726514339447,
+                    0.6233965158462524,
+                    0.8960951566696167,
                     1
                 ],
                 "metallicFactor" : 0,
@@ -75,12 +75,12 @@
         },
         {
             "doubleSided" : true,
-            "name" : "Fruit.001",
+            "name" : "Fruit.002",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
+                    0.5267443060874939,
                     0.9403867721557617,
-                    0.5009164214134216,
-                    0.7964143753051758,
+                    0.9403867721557617,
                     1
                 ],
                 "metallicFactor" : 0,
@@ -89,7 +89,7 @@
         },
         {
             "doubleSided" : true,
-            "name" : "Wood.001",
+            "name" : "Wood.002",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
                     1,
@@ -104,7 +104,7 @@
     ],
     "meshes" : [
         {
-            "name" : "Icosphere.001",
+            "name" : "Icosphere.004",
             "primitives" : [
                 {
                     "attributes" : {
@@ -118,7 +118,7 @@
             ]
         },
         {
-            "name" : "Icosphere.002",
+            "name" : "Icosphere.005",
             "primitives" : [
                 {
                     "attributes" : {
@@ -132,7 +132,7 @@
             ]
         },
         {
-            "name" : "Icosphere.003",
+            "name" : "Icosphere.006",
             "primitives" : [
                 {
                     "attributes" : {
