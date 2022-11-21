@@ -17,6 +17,7 @@
                 <video id="fish" autoplay loop="true" src="assets/Funkytownfish.mp4"></video>
                 <!--<audio id="background" src="assets/birdsound.mp3"></audio>-->
                 <audio id="backgroundLight" src="assets/Lightnoise.mp3" > </audio>
+                <img id="window" src="assets/window.jpg"">
             </a-assets>
 
             <a-entity camera look-controls wasd-controls position="0 2 0"></a-entity>
@@ -38,7 +39,7 @@
                     <a-entity gltf-model="#ant" rotation="0 180 0" position="-5 .85 -1"></a-entity>
                     <a-entity gltf-model="#nate" rotation="0 180 0" position="-5 .85 2"></a-entity>
                 </a-entity>
-
+                <a-image src="#window"rotation="0 -90 0" position="-5 .85 0" height="5" width="5"></a-image>
                 <a-entity gltf-model="#screen"></a-entity>  
                 <!--<a-sound src="#background" autoplay="true"></a-sound>-->
                 <a-sound src="#backgroundLight" autoplay="true"></a-sound>
