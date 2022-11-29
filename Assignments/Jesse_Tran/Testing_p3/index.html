@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; }
+		</style>
+	</head>
+	<body>
+		<script src="three/build/three.js"></script>
+		<script>
+			// Our Javascript will go here.
+            // We need THREE things to start the program!
+
+            // FIRST we need a scene!
+            const scene = new THREE.Scene();
+
+            // SECOND we need a camera!
+            // Param (FOV, Aspect Ratio, Near, Far)
+            const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+            // THIRD we need a renderer!
+            const renderer = new THREE.WebGLRenderer();
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            document.body.appendChild( renderer.domElement );
+
+
+            // Code/create the cube here!
+            const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+            const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+            const cube = new THREE.Mesh( geometry, material );
+            scene.add( cube );
+
+            camera.position.z = 5;
+
+
+            // Render/animate the scene here!
+            function animate() {
+	            requestAnimationFrame( animate );
+
+                // Animation code for the cube!
+                cube.rotation.x += 0.01;
+                cube.rotation.y += 0.01;
+
+	            renderer.render( scene, camera );
+            }
+            animate();
+		</script>
+	</body>
+</html>
