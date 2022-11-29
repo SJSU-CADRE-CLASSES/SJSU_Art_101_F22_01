@@ -20,13 +20,14 @@
 
             // SECOND we need a camera!
             // Param (FOV, Aspect Ratio, Near, Far)
+            // DON'T FORGET to set the camera position z for the camera to actually work!!! Ex. "camera.position.z = 5;"
             const camera = new THREE.PerspectiveCamera( 90, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
             // THIRD we need a renderer!
             const renderer = new THREE.WebGLRenderer();
             renderer.setSize( window.innerWidth, window.innerHeight );
             document.body.appendChild( renderer.domElement );
-            
+
         </script> 
     </body>
 </html>
