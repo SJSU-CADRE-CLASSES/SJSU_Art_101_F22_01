@@ -57,7 +57,17 @@
         <a-asset-item id="avatar" src="assets/avatar.gltf"></a-asset-item>
         <a-asset-item id="clown" src="assets/clown.gltf"></a-asset-item>
         <a-asset-item id="jackinthebox" src="assets/jackinthebox.gltf"></a-asset-item>
-        
+//simran's objects//
+        <a-asset-item id="bush1-mlt" src="/assets/bush1.mlt"></a-asset-item>
+        <a-asset-item id="bush1-obj" src="/assets/bush1.obj"></a-asset-item>
+        <a-asset-item id="bush2-mlt" src="/assets/bush2.mtl"></a-asset-item>
+        <a-asset-item id="bush2-obj" src="/assets/bush2.obj"></a-asset-item>
+        <a-asset-item id="tree1-mtl" src="/assets/tree1.mtl"></a-asset-item>
+        <a-asset-item id="tree1-obj" src="/assets/tree1.obj"></a-asset-item>
+        <a-asset-item id="tree2-mtl" src="/assets/tree2.mtl"></a-asset-item>
+        <a-asset-item id="tree2-obj" src="/assets/tree2.obj"></a-asset-item>
+//simran's dream sound//
+        <audio id="dream" src="sounds/dream-music.mp3" preload="auto"></audio>
         <audio id="welcome" src="sounds/welcome-music.mp3" preload="auto"></audio>
         <audio id="ambient" src="sounds/ambient-sound.mp3" preload="auto"></audio>
         <audio id="hello" src="sounds/hello-sound.mp3" preload="auto"></audio>
@@ -88,18 +98,12 @@
         <a-entity gltf-model="#fence-turquoise"></a-entity>
         <a-entity gltf-model="#fence-mutiple-colors"></a-entity>
 
-        <a-scene>
-          <a-assets>
-            <a-asset-item id="tree-obj" src="tree.obj"></a-asset-item>
-            <a-asset-item id="tree-mtl" src="tree.mtl"></a-asset-item>
-          </a-assets>
         
-          <!-- Using the asset management system. -->
-          <a-obj-model src="#tree-obj" mtl="#tree-mtl"></a-obj-model>
+            
+          
+
+      <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
         
-          <!-- Defining the URL inline. Not recommended but may be more comfortable. -->
-          <a-obj-model src="tree.obj" mtl="tree.mtl"></a-obj-model>
-        </a-scene>
 
         <a-entity gltf-model="#avatar" rotation="0 -50 0" position="-3 -1.5 23" sound__mouseenter="src: #hello; on: mouseenter; volume:5; refDistance: 0.5; rolloffFactor: 0.5"></a-entity>
         <a-entity gltf-model="#clown" rotation="0 50 0" position="15 -1.6 8" sound__mouseenter="src: #clown-sound; on: mouseenter; volume:1; refDistance: 0.5; rolloffFactor: 0.5"></a-entity>
