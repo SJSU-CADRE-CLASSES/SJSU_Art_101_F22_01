@@ -92,6 +92,7 @@
         <audio id="jack-in-the-box-sound" src="sounds/jack-in-the-box-sound.mp3" preload="auto"></audio>
         <audio id="boy-sound" src="sounds/little-boy-gibberish-talk-sound.wav" preload="auto"></audio>
         <audio id="door-bell" src="sounds/doorbell-sound.mp3" preload="auto"></audio>
+        <audio id="river-sound" src="sounds/river-sound.mp3" preload="auto"></audio>
         <audio id="piano-g-G-major" src="sounds/piano-g-G-major.wav" preload="auto"></audio>
         <audio id="piano-g-G-hash-major" src="sounds/piano-g-G-hash-major.wav" preload="auto"></audio>
         <audio id="piano-f-F-major" src="sounds/piano-f-F-major.wav" preload="auto"></audio>
@@ -166,7 +167,7 @@
         <!-- character --> 
 
         <!-- ground --> 
-          <a-entity gltf-model="#ground"
+          <a-entity gltf-model="#ground" sound__mouseenter="src: #river-sound; on: mouseenter; poolSize: 20; volume:5; rolloffFactor: 0"
             animation="property: position; to: 1 9 0; from: 0 0 0; dur: 10000; loop:true; dir:alternate"
             animation__2="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-entity>
         <!-- ground --> 
@@ -219,7 +220,7 @@
         <!-- welcome sign --> 
 
         <!-- gate --> 
-        <a-entity sound="src: #welcome; autoplay: true;loop: true; volume:.1 ; refDistance: 1; rolloffFactor: 3" position="0 0.6 25"></a-entity>
+        <a-entity sound="src: #welcome; autoplay: true;loop: true; volume:5 ; refDistance: 1; rolloffFactor: 3" position="0 0.6 25"></a-entity>
         <a-entity gltf-model="#gate-rainbow"></a-entity>
         <!-- gate --> 
 
