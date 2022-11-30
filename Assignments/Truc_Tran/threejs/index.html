@@ -8,8 +8,8 @@
 		</style>
 	</head>
 	<body>
-		<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
-		<script src="js/three.js" type="module"></script>
+		<script src="js/three.js""></script>
+		<script src="js/OrbitControls.js"></script>
 		<script>
             const scene = new THREE.Scene();
 			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -17,6 +17,16 @@
 			const renderer = new THREE.WebGLRenderer();
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			document.body.appendChild( renderer.domElement );
+			
+			window.addEventListener( 'resize', function(){
+				const width = window.innerWidth;
+				const height = window.innerHeight;
+				renderer.setSize( width, height );
+				camera.aspect = width / height; 
+				camera.updateProjectionMatrix();
+			});
+
+			controls = new THREE.OrbitControls( camera, renderer.domElement);
 
 			const geometry = new THREE.BoxGeometry( 1, 1, 1 );
 			const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
@@ -26,11 +36,8 @@
 			camera.position.z = 5;
 
 			function animate() {
-		
-      
-	requestAnimationFrame( animate );
-	renderer.render( scene, camera );
-
+				requestAnimationFrame( animate );
+				renderer.render( scene, camera );
 
 				cube.rotation.x += 0.01;
 				cube.rotation.y += 0.01;
