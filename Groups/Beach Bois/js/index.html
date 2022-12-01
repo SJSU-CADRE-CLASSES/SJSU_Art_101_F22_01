@@ -27,8 +27,10 @@
             import { RenderPass } from './node_modules/three/examples/jsm/postprocessing/RenderPass.js';
             import { AfterimagePass } from './node_modules/three/examples/jsm/postprocessing/AfterimagePass.js';
             import { UnrealBloomPass } from './node_modules/three/examples/jsm/postprocessing/UnrealBloomPass.js';
+						import { OBJLoader } from './node_modules/three/examples/jsm/loaders/OBJLoader.js';
+						import { MTLLoader } from './node_modules/three/examples/jsm/loaders/MTLLoader.js';
 
-            let container;
+						let container;
             let camera, scene, renderer, composer;
             let controls;
             let mouseX = 0, mouseY = 0;
@@ -56,13 +58,13 @@
 						scene.background = texture;
 						scene.environment = texture;
 						render();
+
 						const loader = new GLTFLoader();
-						loader.load( 'poly1.glb', function ( gltf ) {
+						loader.load( 'ball.glb', function ( gltf ) {
 							scene.add( gltf.scene );
 							render();
 						} );
-					} );
-
+			} );
                     renderer = new THREE.WebGLRenderer( { antialias: true } );
                     renderer.setPixelRatio( window.devicePixelRatio );
                     renderer.setSize( window.innerWidth, window.innerHeight );
@@ -97,25 +99,10 @@
                 geometry = new THREE.BoxGeometry( 1, 1, 1 );
                 material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
                 cube = new THREE.Mesh( geometry, material );
-                scene.add( cube );
+							}
 
-            }
-
-// const planeGeometry = new THREE.PlaneGeometry(30, 30);
-// const planeMaterial = new THREE.MeshBasicMaterial({color: OxFFFFFF,
-// side: THREE.DoubleSide
-// });
-// const plane = new THREE.Mesh(planeGeometry, planeMaterial);
-// scene.add(plane);
-// // plane.rotation.x = -0.5 * Math.PI;
-//
-// const sphereGeometry = new THREE.SphereGeometry(4, 50, 50);
-// const sphereMaterial = new THREE.MeshBasicMaterial({
-// 	color: 0x0000FF,
-// 	wireframe: false});
-// const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
-// scene.add(sphere);
-// sphere.position.x = -10;
+								const light = new THREE.AmbientLight( 0x404040, 2); // soft white light
+								scene.add( light );
 
 const gridHelper = new THREE.GridHelper(30);
 scene.add(gridHelper)

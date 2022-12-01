@@ -52,7 +52,7 @@
 						render();
 						const loader = new GLTFLoader();
 						loader.load( 'playground2.glb', function ( gltf ) {
-							texture.encoding = THREE.sRGBEncoding;
+
 							scene.add( gltf.scene );
 							render();
 						} );
