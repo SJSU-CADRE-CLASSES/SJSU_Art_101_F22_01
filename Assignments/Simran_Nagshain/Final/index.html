@@ -10,18 +10,14 @@
 	<body>
 		<script src="js/three.js"></script>
 		<script>
-      const loader = new THREE.ImageLoader();
-      loader.loade
-        'assets/sky.jpg',
-        function ( image )  {
-          const canvas = document.element( 'canvas' );
-          const context = canvas.getContext( '2d' );
-          context.drawImage( image, 100, 100);
-        }
-        undefined,
-        function () {
-          console.error( 'An error happened.' );
-        }
+      var scene = new THREE.scene();
+      var camera = new  THREE.PerspectiveCamera (75,window,innerWidth/window, innerHeight/window);
+      var obj;
+      var loader = new THREE.GLTFLoader();
+      loader.load('purple-cake', function(g,m){
+        obj = new THREE.mesh(g,m);
+        scene.add(obj)
+      })
 		</script>
 	</body>
 </html>
