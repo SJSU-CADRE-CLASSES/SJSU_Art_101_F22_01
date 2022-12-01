@@ -1,51 +1,43 @@
 <!DOCTYPE html>
-<!--html>
+<html>
 	<head>
 		<meta charset="utf-8">
-		<title>My first three.js app</title>
+		<title>Dream.js app</title>
 		<style>
 			body { margin: 0; }
 		</style>
-    <script src="js/three.js"></script>
 	</head>
 	<body>
-		<script type="module">
-        import { GLTFLoader } from 'js/GLTFLoader.js';
-
-          const scene = new THREE.Scene();
-          const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-          const renderer = new THREE.WebGLRenderer();
-          renderer.setSize( window.innerWidth, window.innerHeight );
-          document.body.appendChild( renderer.domElement ); 
-          const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-          const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-          const cube = new THREE.Mesh( geometry, material );
-          scene.add( cube );
-
-          camera.position.z = 5;
-
-          function animate() {
-            requestAnimationFrame( animate );
-            renderer.render( scene, camera );
-          }
-          animate();
+		<script src="js/three.js"></script>
+		<script>
+      const loader = new THREE.ImageLoader();
+      loader.loade
+        'assets/sky.jpg',
+        function ( image )  {
+          const canvas = document.element( 'canvas' );
+          const context = canvas.getContext( '2d' );
+          context.drawImage( image, 100, 100);
+        }
+        undefined,
+        function () {
+          console.error( 'An error happened.' );
+        }
 		</script>
 	</body>
- 
-<!--/html-->
+</html>
 
-<html>
+<!--html>
   <head>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="foo-component.js"></script>
   </head>
 
   <body>
-    <!--Light & Color Management-->
-    <a-scene light="defaultLightsEnabled: true"  renderer="colorManagement: true">
-    <!--Light & Color Management-->
+    <--Light & Color Management-->
+    <!--a-scene light="defaultLightsEnabled: true"  renderer="colorManagement: true">
+    <--Light & Color Management-->
 
-      <a-assets>
+      <!--a-assets>
         <img id="welcome-sign" src="assets/welcome-sign.png">
         <img id="sky" src="assets/sky.jpg">
         <a-asset-item id="gate-rainbow" src="assets/gate-rainbow.gltf"></a-asset-item>
@@ -82,20 +74,20 @@
           animation="property: position; to: 40 15 0; from: -40 15 0; dur: 20000; loop:true; dir:alternate"></a-entity>
           <a-entity gltf-model="#cloud-6" rotation="0 0 0" sound__mouseenter="src: #piano-eb-D-hash-major; on: mouseenter; volume:1; poolSize: 20; rolloffFactor: 0"
           animation="property: position; to: -40 20 10; from: 40 20 -10; dur: 20000; loop:true; dir:alternate"></a-entity>
-        <!-- welcome sign --> 
-        <a-image src="#welcome-sign" position="0 6.7 25.5" scale="20 6 15"></a-image>
-        <!-- welcome sign --> 
+        <-- welcome sign --> 
+        <!--a-image src="#welcome-sign" position="0 6.7 25.5" scale="20 6 15"></a-image>
+        <-- welcome sign --> 
 
         <!-- gate --> 
-        <a-entity sound="src: #welcome; autoplay: true;loop: true; volume:.1 ; refDistance: 1; rolloffFactor: 3" position="0 0.6 25"></a-entity>
+        <!--a-entity sound="src: #welcome; autoplay: true;loop: true; volume:.1 ; refDistance: 1; rolloffFactor: 3" position="0 0.6 25"></a-entity>
         <a-entity gltf-model="#gate-rainbow"></a-entity>
-        <!-- gate --> 
+        <-- gate --> 
 
-        <!-- sky --> 
-        <a-sky src="#sky"  sound="src: #ambient; autoplay: true; loop: true; rolloffFactor: 0; volume: 1;"></a-sky>
-        <!-- sky --> 
+       
+        <!--a-sky src="#sky"  sound="src: #ambient; autoplay: true; loop: true; rolloffFactor: 0; volume: 1;"></a-sky>
+        <-- sky --> 
 
-        <a-entity vive-controls="hand: left"></a-entity>
+        <!--a-entity vive-controls="hand: left"></a-entity>
         <a-entity vive-controls="hand: right"></a-entity>
         <a-entity gearvr-controls></a-entity>
 
@@ -109,7 +101,7 @@
   </a-entity>
     </a-scene>
   </body>
-  </html>
+  <--/html-->
 
 
 
