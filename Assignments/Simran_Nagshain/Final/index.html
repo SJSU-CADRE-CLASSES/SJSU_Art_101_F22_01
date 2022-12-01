@@ -24,6 +24,7 @@
 			import { APP } from './js/app.js';
 			import { VRButton } from './js/VRButton.js';
 
+
 			window.THREE = THREE; // Used by APP Scripts.
 			window.VRButton = VRButton; // Used by APP Scripts.
 
@@ -42,6 +43,7 @@
 					player.setSize( window.innerWidth, window.innerHeight );
 
 				} );
+				const renderer = new THREE.WebGLRenderer();
 
 			} );
 
