@@ -19,8 +19,8 @@
 			let controls;
 
             const scene = new THREE.Scene();
-			const camera = new THREE.PerspectiveCamera( 10, window.innerWidth / window.innerHeight, 5, 100);
-			camera.position.set( -.563, 6.978, -14.061);
+			const camera = new THREE.PerspectiveCamera( 15, window.innerWidth / window.innerHeight, 0.5, 100);
+			camera.position.set( 0, 100, 50);
 			const renderer = new THREE.WebGLRenderer();
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			document.body.appendChild( renderer.domElement );
@@ -46,13 +46,13 @@
 			const loader = new GLTFLoader();
 
 			loader.load('models/purple-cake.gltf', function( gltf ){
-			gltf.scene.position.set( 0, 2, 0);
-			gltf.scene.scale.set( .05, .05, .05);
+			gltf.scene.position.set( 0, 4, -15); //x,y,z//
+			gltf.scene.scale.set(1, 1, 1);
 			scene.add(gltf.scene);});
 
 			loader.load('models/untitled.gltf', function( gltf ){
 			gltf.scene.position.set( 0, 0, 0);
-			gltf.scene.scale.set( 0.05, 0.05, 0.05);
+			gltf.scene.scale.set( 1, 1, 1);
 			scene.add(gltf.scene);});
 			//const geometry = new THREE.BoxGeometry( 1, 1, 1 );
 			//const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
