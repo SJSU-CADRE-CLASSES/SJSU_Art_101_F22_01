@@ -135,7 +135,7 @@ scene.add( rectLight )
 
 				renderer.render( scene, camera );
 				renderer.physicallyCorrectLights = true;
-	
+				renderer.outputEncoding = THREE.sRGBEncoding;
 			};
 			animate();
 			// Our Javascript will go here.
