@@ -16,7 +16,10 @@
 			import { OrbitControls } from './three/examples/jsm/controls/OrbitControls.js';
 			import { GLTFLoader } from './three/examples/jsm/loaders/GLTFLoader.js';
 			import { PLYLoader } from './three/examples/jsm/loaders/PLYLoader.js';
-			let controls;
+			import { StereoEffect } from './three/examples/jsm/effects/StereoEffect.js';
+			let mouseX = 0, mouseY = 0;
+			let controls, effect;
+			const spheres = [];
 
 			
 			THREE.ColorManagement.legacyMode = true;
@@ -91,9 +94,9 @@
 			gltf.scene.scale.set( .2, .2, .2);
 			scene.add(gltf.scene);});
 
-			loader.load('models/untitled-1.gltf', function( gltf ){
-			gltf.scene.position.set( -.5, .95, -4.8);
-			gltf.scene.scale.set( .2, .2, .2);
+			loader.load('models/bed.gltf', function( gltf ){
+			gltf.scene.position.set( -.5, .95, -1.8);
+			gltf.scene.scale.set( .05, .05, .05);
 			scene.add(gltf.scene);});
 			//const geometry = new THREE.BoxGeometry( 1, 1, 1 );
 			//const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
@@ -104,9 +107,40 @@
 			const skybox = new THREE.Mesh(skyboxGeo);
 			scene.add(skybox);
 
+			
+				scene.background = new THREE.CubeTextureLoader()
+					.setPath( 'kurt/' )
+					.load( [ 'sky_bk.png', 'sky_dn.png', 'sky_ft.png', 'sky_lf.png', 'sky_rt.png', 'sky_up.png' ] );
+
+				const geometry = new THREE.SphereGeometry( 100, 32, 16 );
+
+				const textureCube = new THREE.CubeTextureLoader()
+					.setPath( 'kurt/' )
+					.load( [ 'sky_bk.png', 'sky_dn.png', 'sky_ft.png', 'sky_lf.png', 'sky_rt.png', 'sky_up.png' ] );
+				textureCube.mapping = THREE.CubeRefractionMapping;
+
+			const material = new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: textureCube, refractionRatio: 0.95 } );
+
+for ( let i = 0; i < 500; i ++ ) {
+
+	const mesh = new THREE.Mesh( geometry, material );
+	mesh.position.x = Math.random() * 10000 - 5000;
+	mesh.position.y = Math.random() * 10000 - 5000;
+	mesh.position.z = Math.random() * 10000 - 5000;
+	mesh.scale.x = mesh.scale.y = mesh.scale.z = Math.random() * 10 + 1;
+	scene.add( mesh );
+
+	spheres.push( mesh );
+
+}
+
+				
+
+				effect = new StereoEffect( renderer );
+				effect.setSize( window.innerWidth, window.innerHeight );
 
 	
- var ambientLight = new THREE.AmbientLight (0xffffff, 2, 100);
+ var ambientLight = new THREE.AmbientLight (0xffffff, 1.5, 100);
  scene.add( ambientLight );
 
 const light1 = new THREE.HemisphereLight( 0xFFB6C1, 0xFFD580, .5 );
@@ -128,10 +162,23 @@ scene.add( rectLight )
  camera.position.z = 5;
 			function animate() {
 				requestAnimationFrame( animate );
-				renderer.render( scene, camera );
+			
 
-				skybox.rotation.x += 0.01;
-				skybox.rotation.y += 0.01;
+				const timer = 0.0001 * Date.now();
+
+				//camera.position.x += ( mouseX - camera.position.x ) * .05;
+				//camera.position.y += ( - mouseY - camera.position.y ) * .05;
+				//camera.lookAt( scene.position );
+
+				for ( let i = 0, il = spheres.length; i < il; i ++ ) {
+
+					const sphere = spheres[ i ];
+
+					sphere.position.x = 5000 * Math.cos( timer + i );
+					sphere.position.y = 5000 * Math.sin( timer + i * 1.1 );
+
+				}
+
 
 				renderer.render( scene, camera );
 				renderer.physicallyCorrectLights = true;
