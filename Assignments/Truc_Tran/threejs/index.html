@@ -13,10 +13,14 @@
 	
 		<script type ="module">
 			import * as THREE from './three/build/three.module.js'
+			import * as SkeletonUtils from './three/examples/jsm/utils/SkeletonUtils.js';
+			import * as YUKA from './three/build/yuka.module.js';
 			import { OrbitControls } from './three/examples/jsm/controls/OrbitControls.js';
 			import { GLTFLoader } from './three/examples/jsm/loaders/GLTFLoader.js';
 			import { PLYLoader } from './three/examples/jsm/loaders/PLYLoader.js';
 			import { StereoEffect } from './three/examples/jsm/effects/StereoEffect.js';
+
+			
 			let mouseX = 0, mouseY = 0;
 			let controls, effect;
 			const spheres = [];
@@ -47,20 +51,27 @@
 			controls.update();
 			controls.enablePan= false;
 			controls.enableDamping = true;
-		
-			
+
+			//const vehicleMesh = new THREE.Mesh(vehicleGeometry, vehicleMaterial);
+			//vehicleMesh.matrixAutoUpdate = false;
+			//scene.add(vehicleMesh);
+			//const entityManager = new YUKA.EntityManager();
+
 			const ft = new THREE.TextureLoader().load("kurt/space_ft.png");
 		
 			scene.background = new THREE.Color ( 0xbfe3dd);
 
-			
+			let stag;
 			const loader = new GLTFLoader();
+						loader.load('models/purple-cake.gltf', function(gltf){
+						const model = gltf.scene;
+						gltf.scene.position.set( 0.17, 1.265, 1.5); //x,y,z//
+				gltf.scene.scale.set( .2, .2, .2);
+				scene.add(gltf.scene);
 			
-
-			loader.load('models/purple-cake.gltf', function( gltf ){
-			gltf.scene.position.set( 0.17, 1.265, 1.5); //x,y,z//
-			gltf.scene.scale.set( .2, .2, .2);
-			scene.add(gltf.scene);});
+		});
+					
+			
 
 			loader.load('models/orange-cake.gltf', function( gltf ){
 			gltf.scene.position.set( 3.5, 1.265, -.6); //x,y,z//
@@ -160,6 +171,10 @@ scene.add( rectLight )
 
 
  camera.position.z = 5;
+
+
+
+ 
 			function animate() {
 				requestAnimationFrame( animate );
 			
