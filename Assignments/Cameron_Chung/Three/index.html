@@ -79,25 +79,13 @@ camera.position.z = 10;
 
             function onDocumentMouseMove( event ) {
                 mouseX = ( event.clientX - windowHalfX ) / 2;
-<<<<<<< HEAD
-                mouseY = ( event.clientY - windowHalfY ) / 2;}
-=======
                 mouseY = ( event.clientY - windowHalfY ) / 2;
             }
 
         function render() {
             composer.render();
         }
-        function animate(){
-            requestAnimationFrame( animate );
-
-
-				renderer.render( scene, camera );
-				renderer.physicallyCorrectLights = true;
-				renderer.outputEncoding = THREE.sRGBEncoding;
-        }
-        animate();
->>>>>>> c219385290c965d6c11a035231a9b6c5afaf4f39
+   
 
         
 			function animate() {
