@@ -1,0 +1,73 @@
+{
+	"metadata": {
+		"type": "App"
+	},
+	"project": {
+		"shadows": true,
+		"shadowType": 1,
+		"vr": false,
+		"physicallyCorrectLights": false,
+		"toneMapping": 0,
+		"toneMappingExposure": 1
+	},
+	"camera": {
+		"metadata": {
+			"version": 4.5,
+			"type": "Object",
+			"generator": "Object3D.toJSON"
+		},
+		"object": {
+			"uuid": "dad4afd2-540e-4de8-9ece-50751cc0b393",
+			"type": "PerspectiveCamera",
+			"name": "Camera",
+			"layers": 1,
+			"matrix": [0.9762420030353073,-3.4694469519536138e-18,-0.21668306696558196,0,-0.038203720842991624,0.9843344187824923,-0.17212271120884579,0,0.213288600781574,0.17631151976014772,0.9609486046488153,0,3.7264187917038822,3.080382908512399,16.788974774569027,1],
+			"fov": 50,
+			"zoom": 1,
+			"near": 0.01,
+			"far": 1000,
+			"focus": 10,
+			"aspect": 1.0994694960212201,
+			"filmGauge": 35,
+			"filmOffset": 0
+		}
+	},
+	"scene": {
+		"metadata": {
+			"version": 4.5,
+			"type": "Object",
+			"generator": "Object3D.toJSON"
+		},
+		"object": {
+			"uuid": "b1611955-7109-4dd3-bc98-40d8c9a0ae6e",
+			"type": "Scene",
+			"name": "Scene",
+			"layers": 1,
+			"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+			"background": 0,
+			"children": [
+				{
+					"uuid": "024c7a3f-044d-4c75-beb3-e0d57f3fce60",
+					"type": "Group",
+					"name": "Group",
+					"layers": 1,
+					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,4.205077588623842,5.960446707139976,1]
+				},
+				{
+					"uuid": "41ab8091-cc57-45a6-9316-e55e080dd97c",
+					"type": "Group",
+					"name": "Group",
+					"layers": 1,
+					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]
+				},
+				{
+					"uuid": "5e9c550d-0318-4373-a030-db4ee5185c4e",
+					"type": "Group",
+					"name": "Group",
+					"layers": 1,
+					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1]
+				}]
+		}
+	},
+	"scripts": {}
+}
