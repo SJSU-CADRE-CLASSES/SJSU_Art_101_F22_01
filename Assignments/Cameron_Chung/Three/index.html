@@ -54,18 +54,24 @@
             //     camera.updateProjectMatrix();
             // })
 
-                    controls = new OrbitControls( camera, renderer.domElement );
-                    controls.addEventListener( 'change', render ); // use if there is no animation loop
-                    controls.minDistance = 2;
-                    controls.maxDistance = 10;
-                    controls.target.set( 0, 0, - 0.2 );
-                    controls.autoRotate = true;
-                    controls.autoRotateSpeed = 0.5;
+                    //controls = new OrbitControls( camera, renderer.domElement );
+                    //controls.addEventListener( 'change', renderer ); // use if there is no animation loop
+                    //controls.minDistance = 2;
+                    //controls.maxDistance = 10;
+                   //controls.target.set( 0, 0, - 0.2 );
+                    //controls.autoRotate = true;
+                    //controls.autoRotateSpeed = 0.5;
+
+                    controls = new OrbitControls( camera, renderer.domElement);
+			        controls.target.set(.5,1,0);
+			        controls.update();
+			        controls.enablePan= false;
+			        controls.enableDamping = true;
 
                     window.addEventListener( 'resize', onWindowResize );
 
-        }
-
+            }
+            scene.background = new THREE.Color ( 0xbfe3dd);
         function onWindowResize() {
                 camera.aspect = window.innerWidth / window.innerHeight;
                 camera.updateProjectionMatrix();
@@ -79,10 +85,18 @@
                 mouseY = ( event.clientY - windowHalfY ) / 2;
             }
 
-        function render() {
-            composer.render();
-        }
+        
+			function animate() {
+				requestAnimationFrame( animate );
+			
 
+				
+				
+				renderer.render( scene, camera );
+				renderer.physicallyCorrectLights = true;
+				renderer.outputEncoding = THREE.sRGBEncoding;
+			};
+			animate();
 
         </script>
 	</body>
