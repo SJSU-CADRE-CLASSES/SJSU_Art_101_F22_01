@@ -1,37 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
+		<title></title>
 		<meta charset="utf-8">
-        <!--This changes the title of the TAB!-->
-		<title>FunkyChopsticks 2022</title>
+		<meta name="generator" content="Three.js Editor">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<style>
-			body { margin: 0; }
+			body {
+				font-family: sans-serif;
+				font-size: 11px;
+				background-color: #000;
+				margin: 0px;
+			}
+			canvas {
+				display: block;
+			}
 		</style>
 	</head>
-	<body>
-		<script src="three/build/three.js"></script>
-        <!--FROM NOW ON, IT'S JAVA SCRIPT BABY!-->
-		<script>
-			// Our Javascript will go here.
-            // We need THREE things to start the program!
+	<body ontouchstart="">
+		<script type="module">
 
-            // FIRST we need a scene!
-            const scene = new THREE.Scene();
+			import * as THREE from './js/three.module.js';
+			import { APP } from './js/app.js';
+			import { VRButton } from './js/VRButton.js';
 
-            // SECOND we need a camera!
-            // Param (FOV, Aspect Ratio, Near, Far)
-            // DON'T FORGET to set the camera position z for the camera to actually work!!! Ex. "camera.position.z = 5;"
-            const camera = new THREE.PerspectiveCamera( 90, window.innerWidth / window.innerHeight, 0.1, 1000 );
+			window.THREE = THREE; // Used by APP Scripts.
+			window.VRButton = VRButton; // Used by APP Scripts.
 
-            // THIRD we need a renderer!
-            const renderer = new THREE.WebGLRenderer();
-            renderer.setSize( window.innerWidth, window.innerHeight );
-            document.body.appendChild( renderer.domElement );
+			var loader = new THREE.FileLoader();
+			loader.load( 'app.json', function ( text ) {
+
+				var player = new APP.Player();
+				player.load( JSON.parse( text ) );
+				player.setSize( window.innerWidth, window.innerHeight );
+				player.play();
+
+				document.body.appendChild( player.dom );
+
+				window.addEventListener( 'resize', function () {
+
+					player.setSize( window.innerWidth, window.innerHeight );
+			
+			
+			
+				
 
 
-            // Insert Code/ Create the scene here!!!
-            // ...
-            
-        </script> 
-    </body>
+		</script>
+	</body>
 </html>
