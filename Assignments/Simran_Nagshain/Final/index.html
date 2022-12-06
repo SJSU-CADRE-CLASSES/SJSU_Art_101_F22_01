@@ -91,7 +91,10 @@
 			            gltf.scene.scale.set( 9, 9, 9);
 						scene.add( gltf.scene );}); 
 
-					
+					loader.load( 'assets/snowman.gltf', function ( gltf ) {
+                        gltf.scene.position.set( 0, -25, 150); //x,y,z//
+			            gltf.scene.scale.set( 10, 10, 10);
+						scene.add( gltf.scene );}); 
 
 scene.background = new THREE.Color ( 'lavender');
 
