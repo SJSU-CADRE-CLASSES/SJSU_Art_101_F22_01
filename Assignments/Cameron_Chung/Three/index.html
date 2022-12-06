@@ -32,14 +32,6 @@
             camera.position.x = 0;
             camera.position.y = 1000;
             camera.position.z = 800;
-
-            const loader = new GLTFLoader();
-						loader.load( 'models/orange-cake.gltf', function ( gltf ) {
-                            gltf.scene.position.set( 0.17, -2.265, 1.5); //x,y,z//
-			gltf.scene.scale.set( 5, 5, 5);
-							scene.add( gltf.scene );
-						} );
-		
                         
             renderer = new THREE.WebGLRenderer( { antialias:true } );
             renderer.setPixelRatio(window.devicePixelRatio);
@@ -50,7 +42,7 @@
 
              window.addEventListener( 'resize', function(){
                 const width = window.innerwidth;
-                 const height = window.innerHeight;
+                const height = window.innerHeight;
                 renderer.setSize(width, height);
                 camera.aspect = width / height;
                 camera.updateProjectMatrix();})
@@ -62,7 +54,12 @@
 			        controls.enablePan= false;
 			        controls.enableDamping = true;
 
-                
+                    const loader = new GLTFLoader();
+					loader.load( 'models/orange-cake.gltf', function ( gltf ) {
+                        gltf.scene.position.set( 0.17, -2.265, 1.5); //x,y,z//
+			            gltf.scene.scale.set( 5, 5, 5);
+						scene.add( gltf.scene );});
+
 scene.background = new THREE.Color ( 0xbfe3dd);
 
 var ambientLight = new THREE.AmbientLight (0xffffff, 1.5, 100);
@@ -70,7 +67,6 @@ scene.add( ambientLight );
 
 camera.position.z = 10;
 }
-            
 
 
 
