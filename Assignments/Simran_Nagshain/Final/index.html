@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Final</title>
+		<title>final</title>
 		<meta charset="utf-8">
 		<meta name="generator" content="Three.js Editor">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
@@ -23,6 +23,7 @@
 			import * as THREE from './js/three.module.js';
 			import { APP } from './js/app.js';
 			import { VRButton } from './js/VRButton.js';
+			
 
 			window.THREE = THREE; // Used by APP Scripts.
 			window.VRButton = VRButton; // Used by APP Scripts.
@@ -45,7 +46,12 @@
 
 			} );
 
-
+			let button = document.createElement( 'a' );
+			button.href = 'https://threejs.org/editor/#file=' + location.href.split( '/' ).slice( 0, - 1 ).join( '/' ) + '/app.json';
+			button.style.cssText = 'position: absolute; bottom: 20px; right: 20px; padding: 10px 16px; color: #fff; border: 1px solid #fff; border-radius: 20px; text-decoration: none;';
+			button.target = '_blank';
+			button.textContent = 'EDIT';
+			document.body.appendChild( button );
 
 		</script>
 	</body>
