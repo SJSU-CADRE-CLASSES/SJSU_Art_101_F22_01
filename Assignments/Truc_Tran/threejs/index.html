@@ -13,12 +13,12 @@
 	
 		<script type ="module">
 			import * as THREE from './three/build/three.module.js'
-			import * as SkeletonUtils from './three/examples/jsm/utils/SkeletonUtils.js';
+			import { clone } from './three/examples/jsm/utils/SkeletonUtils.js';
 			import * as YUKA from './three/build/yuka.module.js';
 			import { OrbitControls } from './three/examples/jsm/controls/OrbitControls.js';
 			import { GLTFLoader } from './three/examples/jsm/loaders/GLTFLoader.js';
-			import { PLYLoader } from './three/examples/jsm/loaders/PLYLoader.js';
 			import { StereoEffect } from './three/examples/jsm/effects/StereoEffect.js';
+			import { CinematicCamera } from './three/examples/jsm/cameras/CinematicCamera.js';
 
 			
 			let mouseX = 0, mouseY = 0;
@@ -28,10 +28,15 @@
 			
 			THREE.ColorManagement.legacyMode = true;
             const scene = new THREE.Scene();
+
+			//const camera = new CinematicCamera( 40, window.innerWidth / window.innerHeight, .01, 1000 );
+			//	camera.setLens( 5 );
+			//	camera.position.set( 2, 1, 500 );
+
 			const camera = new THREE.PerspectiveCamera( 65, window.innerWidth / window.innerHeight, 0.01, 1000);
 			camera.position.x = 0;
-			camera.position.y = 6.637;
-			camera.position.z = 11.672;
+			camera.position.y = -20;
+			camera.position.z = -100.;
 			camera.rotation.set( -14, 0, 0);
 			const renderer = new THREE.WebGLRenderer();
 			renderer.setSize( window.innerWidth, window.innerHeight );
@@ -52,42 +57,62 @@
 			controls.enablePan= false;
 			controls.enableDamping = true;
 
-			//const vehicleMesh = new THREE.Mesh(vehicleGeometry, vehicleMaterial);
-			//vehicleMesh.matrixAutoUpdate = false;
-			//scene.add(vehicleMesh);
-			//const entityManager = new YUKA.EntityManager();
-
+			
 			const ft = new THREE.TextureLoader().load("kurt/space_ft.png");
 		
 			scene.background = new THREE.Color ( 0xbfe3dd);
 
-			let stag;
+			const geometries = new THREE.BoxGeometry( 20, 20, 20 );
+			for ( let i = 0; i < 1500; i ++ ) {
+			const object = new THREE.Mesh( geometries, new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } ) );
+			object.position.x = Math.random() * 800 - 400;
+		object.position.y = Math.random() * 800 - 400;
+			object.position.z = Math.random() * 800 - 400;
+			scene.add( object );}
+
+			let tree ={};
+
 			const loader = new GLTFLoader();
-						loader.load('models/purple-cake.gltf', function(gltf){
-						const model = gltf.scene;
-						gltf.scene.position.set( 0.17, 1.265, 1.5); //x,y,z//
-				gltf.scene.scale.set( .2, .2, .2);
-				scene.add(gltf.scene);
-			
-		});
+						
+
+			loader.load('models/purple-cake.gltf', function( gltf ){
+			gltf.scene.position.set( 0.17, -2.265, 1.5); //x,y,z//
+			gltf.scene.scale.set( 5, 5, 5);
+			scene.add(gltf.scene);});
+
 					
 			
 
 			loader.load('models/orange-cake.gltf', function( gltf ){
-			gltf.scene.position.set( 3.5, 1.265, -.6); //x,y,z//
-			gltf.scene.scale.set( .2, .2, .2);
+			gltf.scene.position.set( 0.17, 2.265, 1.5); //x,y,z//
+			gltf.scene.scale.set( 4, 4, 4);
 			scene.add(gltf.scene);});
 
-			loader.load('models/fence-orange.gltf', function( gltf ){
-			gltf.scene.position.set( 3.75, 1.265, -.65); //x,y,z//
-			gltf.scene.scale.set( .2, .2, .2);
-			gltf.scene.rotation.set(0, 0, 0);
+			loader.load('models/red-cake.gltf', function( gltf ){
+			gltf.scene.position.set( 0.17, 2.265, -75.5); //x,y,z//
+			gltf.scene.scale.set( 4, 4, 4);
 			scene.add(gltf.scene);});
+
+			loader.load('models/green-cake.gltf', function( gltf ){
+			gltf.scene.position.set( 0.15, 2.265, -75.5); //x,y,z//
+			gltf.scene.scale.set( 4, 4, 4);
+			scene.add(gltf.scene);});
+
+			loader.load('models/green-cake.gltf', function( gltf ){
+			gltf.scene.position.set( 0.15, 2.265, -75.5); //x,y,z//
+			gltf.scene.scale.set( 4, 4, 4);
+			scene.add(gltf.scene);});
+
+
+			//loader.load('models/ground.gltf', function( gltf ){
+			//gltf.scene.position.set( .17, -15.55, -5.3); //x,y,z//
+			//gltf.scene.scale.set( 5, 5, 5);
+			//scene.add(gltf.scene);});
 			
 			
 			loader.load('models/gate-rainbow.gltf', function( gltf ){
 			gltf.scene.position.set( .17, 1.55, -5.3); //x,y,z//
-			gltf.scene.scale.set( .2, .2, .2);
+			gltf.scene.scale.set( 1, 1, 1);
 			scene.add(gltf.scene);});
 
 			loader.load('models/avatar.gltf', function( gltf ){
@@ -95,20 +120,10 @@
 			gltf.scene.scale.set( .2, .2, .2);
 			scene.add(gltf.scene);});
 
-			loader.load('models/bridge-1.gltf', function( gltf ){
-			gltf.scene.position.set( .17, 1.265, -2.7);
-			gltf.scene.scale.set( .2, .2, .2);
-			scene.add(gltf.scene);});
+		
 
-			loader.load('models/untitled.gltf', function( gltf ){
-			gltf.scene.position.set( -.5, .5, -6.2);
-			gltf.scene.scale.set( .2, .2, .2);
-			scene.add(gltf.scene);});
+			
 
-			loader.load('models/bed.gltf', function( gltf ){
-			gltf.scene.position.set( -.5, .95, -1.8);
-			gltf.scene.scale.set( .05, .05, .05);
-			scene.add(gltf.scene);});
 			//const geometry = new THREE.BoxGeometry( 1, 1, 1 );
 			//const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 			//const cube = new THREE.Mesh( geometry, material );
@@ -194,7 +209,7 @@ scene.add( rectLight )
 
 				}
 
-
+				
 				renderer.render( scene, camera );
 				renderer.physicallyCorrectLights = true;
 				renderer.outputEncoding = THREE.sRGBEncoding;
