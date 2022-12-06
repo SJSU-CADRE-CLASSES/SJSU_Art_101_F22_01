@@ -29,16 +29,10 @@
             THREE.ColorManagement.legacyMode = true;
             scene = new THREE.Scene();
             camera = new THREE.PerspectiveCamera(75, window.innerWidth/ window.innerHeight,0.1,1000);
-            camera.position.x = 0;
-            camera.position.y = 1000;
-            camera.position.z = 800;
-
-            const loader = new GLTFLoader();
-						loader.load( 'models/orange-cake.gltf', function ( gltf ) {
-							scene.add( gltf.scene );
-						} );
-		
-
+            camera.position.x = 50;
+            camera.position.y = 50;
+            camera.position.z = 50;
+                        
             renderer = new THREE.WebGLRenderer( { antialias:true } );
             renderer.setPixelRatio(window.devicePixelRatio);
             renderer.setSize(window.innerWidth,window.innerHeight);
@@ -46,35 +40,45 @@
             renderer.outputEncoding = THREE.sRGBEncoding;
             document.body.appendChild(renderer.domElement);
 
-            // window.addEventListener( 'resize', function(){
-            //     const width = window.innerwidth;
-            //     const height = window.innerHeight;
-            //     renderer.setSize(width, height);
-            //     camera.aspect = width / height;
-            //     camera.updateProjectMatrix();
-            // })
+             window.addEventListener( 'resize', function(){
+                const width = window.innerwidth;
+                const height = window.innerHeight;
+                renderer.setSize(width, height);
+                camera.aspect = width / height;
+                camera.updateProjectMatrix();})
 
-                    controls = new OrbitControls( camera, renderer.domElement );
-                    controls.addEventListener( 'change', render ); // use if there is no animation loop
-                    controls.minDistance = 2;
-                    controls.maxDistance = 10;
-                    controls.target.set( 0, 0, - 0.2 );
-                    controls.autoRotate = true;
-                    controls.autoRotateSpeed = 0.5;
 
-                    window.addEventListener( 'resize', onWindowResize );
+                    controls = new OrbitControls( camera, renderer.domElement);
+			        controls.target.set(.5,1,0);
+			        controls.update();
+			        controls.enablePan= false;
+			        controls.enableDamping = false;
 
-        }
+                    const loader = new GLTFLoader();
+					loader.load( 'models/orange-cake.gltf', function ( gltf ) {
+                        // gltf.scene.position.set( 0.17, -2.265, 1.5); //x,y,z//
+                        gltf.scene.position.set( 0.17, -2.2, 1.5); //x,y,z//
+			            gltf.scene.scale.set( 10, 10, 10);
+						scene.add( gltf.scene );});
 
-        function onWindowResize() {
+scene.background = new THREE.Color ( 0xbfe3dd);
+
+var ambientLight = new THREE.AmbientLight (0xffffff, 1.5, 100);
+scene.add( ambientLight );
+
+camera.position.z = 10;
+}
+
+
+
+
+            function onWindowResize() {
                 camera.aspect = window.innerWidth / window.innerHeight;
                 camera.updateProjectionMatrix();
                 renderer.setSize( window.innerWidth, window.innerHeight );
-                composer.render();
+                composer.render();}
 
-            }
-
-        function onDocumentMouseMove( event ) {
+            function onDocumentMouseMove( event ) {
                 mouseX = ( event.clientX - windowHalfX ) / 2;
                 mouseY = ( event.clientY - windowHalfY ) / 2;
             }
@@ -82,16 +86,15 @@
         function render() {
             composer.render();
         }
-        function animate(){
-            requestAnimationFrame( animate );
+   
 
-
+        
+			function animate() {
+				requestAnimationFrame( animate );
 				renderer.render( scene, camera );
 				renderer.physicallyCorrectLights = true;
-				renderer.outputEncoding = THREE.sRGBEncoding;
-        }
-        animate();
-
+				renderer.outputEncoding = THREE.sRGBEncoding;};
+			animate();
 
         </script>
 	</body>
