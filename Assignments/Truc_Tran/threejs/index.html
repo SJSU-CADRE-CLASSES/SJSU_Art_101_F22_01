@@ -127,13 +127,7 @@ audioLoader.load( 'models/ambient-sound.mp3', function( buffer ) {
 	object.position.y = Math.random() * 800 - 400;
 	object.position.z = Math.random() * 800 - 400;
 	scene.add( object );}
-	
-	const square = new THREE.BoxGeometry(1, 1, 1);
-	const materialCube = new THREE.MeshLambertMaterial({color:0xffcc00}); 
-	const round = new THREE.Mesh(square, materialCube);
 
-
-	scene.add(round);
 
 				effect = new StereoEffect( renderer );
 				effect.setSize( window.innerWidth, window.innerHeight );
@@ -170,7 +164,7 @@ scene.add( rectLight )
  
 			function animate() {
 				requestAnimationFrame( animate );
-				square.riat
+				
 
 				const timer = 0.0001 * Date.now();
 
