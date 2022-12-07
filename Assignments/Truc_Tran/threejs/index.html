@@ -56,7 +56,6 @@ audioLoader.load( 'models/ambient-sound.mp3', function( buffer ) {
 	sound.play();
 });
 		
-
 			const renderer = new THREE.WebGLRenderer();
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			document.body.appendChild( renderer.domElement );
@@ -69,107 +68,81 @@ audioLoader.load( 'models/ambient-sound.mp3', function( buffer ) {
 				camera.updateProjectionMatrix();
 			});
 			
-			
 			controls = new OrbitControls( camera, renderer.domElement);
 			controls.target.set(.5,1,0);
 			controls.update();
 			controls.enablePan= false;
 			controls.enableDamping = true;
 
-			
 			scene.background = new THREE.Color ( 0xbfe3dd);
 		
-			
-
-
-
 			const loader = new GLTFLoader();
 						
-
 			loader.load('models/purple-cake.gltf', function( gltf ){
 			gltf.scene.position.set( 0.17, -2.265, 1.5); //x,y,z//
 			gltf.scene.scale.set( 5, 5, 5);
 			scene.add(gltf.scene);});
-
-					
-
-
+			
 			loader.load('models/ground.gltf', function( gltf ){
 			gltf.scene.position.set( .17, -15.55, -5.3); //x,y,z//
 			gltf.scene.scale.set( 7, 7, 7);
 			scene.add(gltf.scene);});
-			
 			
 			loader.load('models/gate-rainbow.gltf', function( gltf ){
 			gltf.scene.position.set( .17, 1.55, -5.3); //x,y,z//
 			gltf.scene.scale.set( 10, 10, 10);
 			scene.add(gltf.scene);});
 
-			
-			
+	const skyboxGeo = new THREE.BoxGeometry(5000, 5000, 5000);
+	const skybox = new THREE.Mesh(skyboxGeo);
+	scene.add(skybox);
 
-		
+	scene.background = new THREE.CubeTextureLoader()
+	.setPath( 'kurt/' )
+	.load( [ 'sky_bk.png', 'sky_dn.png', 'sky_ft.png', 'sky_lf.png', 'sky_rt.png', 'sky_up.png' ] );
+	
+	const textureCube = new THREE.CubeTextureLoader()
+	.setPath( 'kurt/' )
+	.load( [ 'sky_bk.png', 'sky_dn.png', 'sky_ft.png', 'sky_lf.png', 'sky_rt.png', 'sky_up.png' ] );
+	
+	const geometry = new THREE.SphereGeometry( 100, 32, 16 );
+	
+	textureCube.mapping = THREE.CubeRefractionMapping;
 
-			
-
-			//const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-			//const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-			//const cube = new THREE.Mesh( geometry, material );
-			//scene.add( cube );
-
-			const skyboxGeo = new THREE.BoxGeometry(5000, 5000, 5000);
-			const skybox = new THREE.Mesh(skyboxGeo);
-			scene.add(skybox);
-
-			
-				scene.background = new THREE.CubeTextureLoader()
-					.setPath( 'kurt/' )
-					.load( [ 'sky_bk.png', 'sky_dn.png', 'sky_ft.png', 'sky_lf.png', 'sky_rt.png', 'sky_up.png' ] );
-
-				const geometry = new THREE.SphereGeometry( 100, 32, 16 );
-
-				const textureCube = new THREE.CubeTextureLoader()
-					.setPath( 'kurt/' )
-					.load( [ 'sky_bk.png', 'sky_dn.png', 'sky_ft.png', 'sky_lf.png', 'sky_rt.png', 'sky_up.png' ] );
-				textureCube.mapping = THREE.CubeRefractionMapping;
-
-			const material = new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: textureCube, refractionRatio: 0.95, shininess: 150 } );
+	const material = new THREE.MeshBasicMaterial( { color: 0xffffff, envMap: textureCube, refractionRatio: 0.95} );
 
 	for ( let i = 0; i < 500; i ++ ) {
-
 	const mesh = new THREE.Mesh( geometry, material );
 	mesh.position.x = Math.random() * 10000 - 5000;
 	mesh.position.y = Math.random() * 10000 - 5000;
 	mesh.position.z = Math.random() * 10000 - 5000;
 	mesh.scale.x = mesh.scale.y = mesh.scale.z = Math.random() * 10 + 1;
 	scene.add( mesh );
+	spheres.push( mesh );}
 
-	spheres.push( mesh );
+	const geometries = new THREE.BoxGeometry( 20, 20, 20 );
+	for ( let i = 0; i < 1500; i ++ ) {
+	const object = new THREE.Mesh( geometries, material);
+	object.position.x = Math.random() * 800 - 400;
+	object.position.y = Math.random() * 800 - 400;
+	object.position.z = Math.random() * 800 - 400;
+	scene.add( object );}
+	
+	const square = new THREE.BoxGeometry(1, 1, 1);
+	const materialCube = new THREE.MeshLambertMaterial({color:0xffcc00}); 
+	const round = new THREE.Mesh(square, materialCube);
 
-}
 
-			const geometries = new THREE.BoxGeometry( 20, 20, 20 );
+	scene.add(round);
 
-			for ( let i = 0; i < 1500; i ++ ) {
-			const object = new THREE.Mesh( geometries, material);
-			object.position.x = Math.random() * 800 - 400;
-			object.position.y = Math.random() * 800 - 400;
-			object.position.z = Math.random() * 800 - 400;
-			scene.add( object );
-		
-				
-
-		}
-				
-
-				//effect = new StereoEffect( renderer );
-				//effect.setSize( window.innerWidth, window.innerHeight );
+				effect = new StereoEffect( renderer );
+				effect.setSize( window.innerWidth, window.innerHeight );
 				
 				const width1 = window.innerWidth || 2;
 				const height1 = window.innerHeight || 2;
 
-				effect = new ParallaxBarrierEffect( renderer );
-				effect.setSize( window.innerWidth, window.innerHeight );
+				//effect = new ParallaxBarrierEffect( renderer );
+				//effect.setSize( window.innerWidth, window.innerHeight );
 	
  var ambientLight = new THREE.AmbientLight (0xffffff, 1.5, 100);
  scene.add( ambientLight );
@@ -197,7 +170,7 @@ scene.add( rectLight )
  
 			function animate() {
 				requestAnimationFrame( animate );
-			
+				square.riat
 
 				const timer = 0.0001 * Date.now();
 
