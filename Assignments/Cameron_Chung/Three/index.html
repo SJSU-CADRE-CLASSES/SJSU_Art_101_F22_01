@@ -64,6 +64,16 @@
                         gltf.scene.position.set( -90, -20, -80); //x,y,z//
 			            gltf.scene.scale.set( 2.8, 2.8, 2.8);
 					    scene.add( gltf.scene );}); 
+                    
+                    loader.load( 'models/cloud-1.gltf', function ( gltf ) {
+                        gltf.scene.position.set( -190, 70, -145); //x,y,z//
+			            gltf.scene.scale.set( 6, 6, 6);
+					    scene.add( gltf.scene );}); 
+                    
+                    loader.load( 'models/cloud-2.gltf', function ( gltf ) {
+                        gltf.scene.position.set( -120, 30, -120); //x,y,z//
+			            gltf.scene.scale.set( 5.5, 5.5, 5.5);
+					    scene.add( gltf.scene );}); 
 
 scene.background = new THREE.Color ( 0xffeff3);
 
