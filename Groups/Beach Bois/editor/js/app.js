@@ -76,22 +76,22 @@ var APP = {
 
 					var script = scripts[ i ];
 
-					var functions = ( new Function( scriptWrapParams, script.source + '\nreturn ' + scriptWrapResult + ';' ).bind( object ) )( this, renderer, scene, camera );
-
-					for ( var name in functions ) {
-
-						if ( functions[ name ] === undefined ) continue;
-
-						if ( events[ name ] === undefined ) {
-
-							console.warn( 'APP.Player: Event type not supported (', name, ')' );
-							continue;
-
-						}
-
-						events[ name ].push( functions[ name ].bind( object ) );
-
-					}
+					// var functions = ( new Function( scriptWrapParams, script.source + '\nreturn ' + scriptWrapResult + ';' ).bind( object ) )( this, renderer, scene, camera );
+					//
+					// for ( var name in functions ) {
+					//
+					// 	if ( functions[ name ] === undefined ) continue;
+					//
+					// 	if ( events[ name ] === undefined ) {
+					//
+					// 		console.warn( 'APP.Player: Event type not supported (', name, ')' );
+					// 		continue;
+					//
+					// 	}
+					//
+					// 	events[ name ].push( functions[ name ].bind( object ) );
+					//
+					// }
 
 				}
 
