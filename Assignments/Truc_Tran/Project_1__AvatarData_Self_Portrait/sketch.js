@@ -16,7 +16,7 @@ let chainRightLeftTop = [];
 let chainRightLeftBottom = [];
 let helloText;
 
-let myColors = ["#ccaed0", "#eebfd3", "#eeabac", "#f4c9a5", "#f8e7a7", "#cce2bc", #cbe4e4","#c5dbeb"];
+let myColors = ["#ccaed0", "#eebfd3", "#eeabac", "#f4c9a5", "#f8e7a7", "#cce2bc", "#cbe4e4","#c5dbeb"];
 
 function setup() {
   let cnv = createCanvas(400,400, );
