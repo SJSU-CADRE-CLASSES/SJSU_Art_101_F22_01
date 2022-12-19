@@ -1,0 +1,169 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.7.33",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "\u7acb\u65b9\u4f53.006"
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "\u6750\u8d28.001",
+            "normalTexture" : {
+                "index" : 0
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 1
+                },
+                "metallicFactor" : 0,
+                "metallicRoughnessTexture" : {
+                    "index" : 2
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "\u7acb\u65b9\u4f53.006",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2,
+                        "COLOR_0" : 3
+                    },
+                    "indices" : 4,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        },
+        {
+            "sampler" : 0,
+            "source" : 1
+        },
+        {
+            "sampler" : 0,
+            "source" : 2
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "name" : "\u5c0f\u9e21_\u6750\u8d28.001_Normal.1001 copy",
+            "uri" : "%E5%B0%8F%E9%B8%A1_%E6%9D%90%E8%B4%A8_001_Normal_1001%20copy.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "\u5c0f\u9e21_\u6750\u8d28.001_BaseMap.1001 copy",
+            "uri" : "%E5%B0%8F%E9%B8%A1_%E6%9D%90%E8%B4%A8_001_BaseMap_1001%20copy.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "\u5c0f\u9e21_\u6750\u8d28.001_MaskMap.1001 copy",
+            "uri" : "%E5%B0%8F%E9%B8%A1_%E6%9D%90%E8%B4%A8_001_MaskMap_1001%20copy.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 6578,
+            "max" : [
+                -5.5741071701049805,
+                9.647018432617188,
+                33.8401985168457
+            ],
+            "min" : [
+                -16.336463928222656,
+                -2.5677785873413086,
+                21.028268814086914
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 6578,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 6578,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 6578,
+            "normalized" : true,
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5123,
+            "count" : 25872,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 78936,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 78936,
+            "byteOffset" : 78936
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 52624,
+            "byteOffset" : 157872
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 52624,
+            "byteOffset" : 210496
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 51744,
+            "byteOffset" : 263120
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 314864,
+            "uri" : "\u56db\u5408\u9662.bin"
+        }
+    ]
+}
